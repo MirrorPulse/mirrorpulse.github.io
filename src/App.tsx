@@ -22,7 +22,7 @@ function App() {
 
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow"><span className="status-dot" /> Building in public</p>
+          <p className="eyebrow"><span className="status-dot" /> Coming soon · building in public</p>
           <h1 id="hero-title">Infrastructure that keeps your files in rhythm.</h1>
           <p className="hero-lede">
             MirrorPulse is shaping dependable, observable foundations for software that moves
