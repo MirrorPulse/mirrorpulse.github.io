@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CloudSyncRootInfo | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CloudSyncRootInfo | CfSharp documentation ">
+      
+      <meta name="description" content="Represents an immutable snapshot of a registered Cloud Files sync root.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudSyncRootInfo">
+
+
+
+  <h1 id="CfSharp_CloudSyncRootInfo" data-uid="CfSharp.CloudSyncRootInfo" class="text-break">
+Class CloudSyncRootInfo  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an immutable snapshot of a registered Cloud Files sync root.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CloudSyncRootInfo</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CloudSyncRootInfo</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_CloudSyncRootInfo_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>The value owns only managed memory and is safe for concurrent reads. It does not track
+later registration updates or provider status changes; call <a class="xref" href="CfSharp.CloudSyncRoot.html#CfSharp_CloudSyncRoot_GetInfo">GetInfo()</a>
+again to obtain a fresh snapshot.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_CloudSyncRootInfo_FileId_" data-uid="CfSharp.CloudSyncRootInfo.FileId*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_FileId" data-uid="CfSharp.CloudSyncRootInfo.FileId">
+  FileId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the volume-specific file identifier of the sync-root directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long FileId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudSyncRootInfo_HardLinkPolicy_" data-uid="CfSharp.CloudSyncRootInfo.HardLinkPolicy*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_HardLinkPolicy" data-uid="CfSharp.CloudSyncRootInfo.HardLinkPolicy">
+  HardLinkPolicy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the registered hard-link policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudHardLinkPolicy HardLinkPolicy { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudHardLinkPolicy.html">CloudHardLinkPolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudSyncRootInfo_HydrationModifiers_" data-uid="CfSharp.CloudSyncRootInfo.HydrationModifiers*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_HydrationModifiers" data-uid="CfSharp.CloudSyncRootInfo.HydrationModifiers">
+  HydrationModifiers
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the registered hydration-policy modifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudHydrationPolicyModifiers HydrationModifiers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudHydrationPolicyModifiers.html">CloudHydrationPolicyModifiers</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudSyncRootInfo_HydrationPolicy_" data-uid="CfSharp.CloudSyncRootInfo.HydrationPolicy*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_HydrationPolicy" data-uid="CfSharp.CloudSyncRootInfo.HydrationPolicy">
+  HydrationPolicy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the registered primary hydration policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudHydrationPolicy HydrationPolicy { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudHydrationPolicy.html">CloudHydrationPolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudSyncRootInfo_InSyncPolicy_" data-uid="CfSharp.CloudSyncRootInfo.InSyncPolicy*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_InSyncPolicy" data-uid="CfSharp.CloudSyncRootInfo.InSyncPolicy">
+  InSyncPolicy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the registered in-sync metadata tracking policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudInSyncPolicy InSyncPolicy { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudInSyncPolicy.html">CloudInSyncPolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudSyncRootInfo_Path_" data-uid="CfSharp.CloudSyncRootInfo.Path*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_Path" data-uid="CfSharp.CloudSyncRootInfo.Path">
+  Path
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the normalized absolute path used to query the sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudSyncRootInfo_PopulationPolicy_" data-uid="CfSharp.CloudSyncRootInfo.PopulationPolicy*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_PopulationPolicy" data-uid="CfSharp.CloudSyncRootInfo.PopulationPolicy">
+  PopulationPolicy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the registered namespace population policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudPopulationPolicy PopulationPolicy { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudPopulationPolicy.html">CloudPopulationPolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudSyncRootInfo_ProviderName_" data-uid="CfSharp.CloudSyncRootInfo.ProviderName*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_ProviderName" data-uid="CfSharp.CloudSyncRootInfo.ProviderName">
+  ProviderName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the registered user-facing provider name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ProviderName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudSyncRootInfo_ProviderStatus_" data-uid="CfSharp.CloudSyncRootInfo.ProviderStatus*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_ProviderStatus" data-uid="CfSharp.CloudSyncRootInfo.ProviderStatus">
+  ProviderStatus
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the provider status reported by Windows when this snapshot was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudProviderStatus ProviderStatus { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudProviderStatus.html">CloudProviderStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudSyncRootInfo_ProviderVersion_" data-uid="CfSharp.CloudSyncRootInfo.ProviderVersion*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_ProviderVersion" data-uid="CfSharp.CloudSyncRootInfo.ProviderVersion">
+  ProviderVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the registered user-facing provider version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ProviderVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudSyncRootInfo_SyncRootIdentity_" data-uid="CfSharp.CloudSyncRootInfo.SyncRootIdentity*"></a>
+
+  <h3 id="CfSharp_CloudSyncRootInfo_SyncRootIdentity" data-uid="CfSharp.CloudSyncRootInfo.SyncRootIdentity">
+  SyncRootIdentity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a read-only view of the provider-defined sync-root identity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlySpan&lt;byte&gt; SyncRootIdentity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

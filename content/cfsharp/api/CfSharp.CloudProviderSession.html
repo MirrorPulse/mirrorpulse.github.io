@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CloudProviderSession | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CloudProviderSession | CfSharp documentation ">
+      
+      <meta name="description" content="Owns a process-scoped provider connection that hydrates file placeholders.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudProviderSession">
+
+
+
+  <h1 id="CfSharp_CloudProviderSession" data-uid="CfSharp.CloudProviderSession" class="text-break">
+Class CloudProviderSession  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Owns a process-scoped provider connection that hydrates file placeholders.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CloudProviderSession : IDisposable, IAsyncDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CloudProviderSession</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_CloudProviderSession_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+A session owns its native callback table, callback context, cancellation registry, and
+connection key. Create it with <a class="xref" href="CfSharp.CloudProviderSession.html#CfSharp_CloudProviderSession_Connect_CfSharp_CloudSyncRoot_CfSharp_ICloudFileContentProvider_">Connect(CloudSyncRoot, ICloudFileContentProvider)</a>
+and dispose it deterministically before
+unregistering the sync root. One session may serve concurrent Windows requests.
+</p>
+<p>
+Disposal stops new provider dispatch, cancels active requests, drains cooperative handlers,
+disconnects from Windows, and only then releases callback memory. If a handler ignores the
+configured shutdown timeout, callback memory remains owned until that handler exits. The
+persistent sync-root registration is not removed.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_CloudProviderSession_Connect_" data-uid="CfSharp.CloudProviderSession.Connect*"></a>
+
+  <h3 id="CfSharp_CloudProviderSession_Connect_CfSharp_CloudSyncRoot_CfSharp_ICloudFileContentProvider_" data-uid="CfSharp.CloudProviderSession.Connect(CfSharp.CloudSyncRoot,CfSharp.ICloudFileContentProvider)">
+  Connect(CloudSyncRoot, ICloudFileContentProvider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Connects a content provider to a persistently registered sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CloudProviderSession Connect(CloudSyncRoot syncRoot, ICloudFileContentProvider contentProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>syncRoot</code> <a class="xref" href="CfSharp.CloudSyncRoot.html">CloudSyncRoot</a></dt>
+    <dd><p>Registered root that receives hydration callbacks.</p>
+</dd>
+    <dt><code>contentProvider</code> <a class="xref" href="CfSharp.ICloudFileContentProvider.html">ICloudFileContentProvider</a></dt>
+    <dd><p>Thread-safe source of complete logical file streams.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudProviderSession.html">CloudProviderSession</a></dt>
+    <dd><p>An owning session that must be disposed before the root is unregistered.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>An argument is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.platformnotsupportedexception">PlatformNotSupportedException</a></dt>
+    <dd><p>The Cloud Files API is unavailable.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the provider connection.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudProviderSession_Connect_" data-uid="CfSharp.CloudProviderSession.Connect*"></a>
+
+  <h3 id="CfSharp_CloudProviderSession_Connect_CfSharp_CloudSyncRoot_CfSharp_ICloudFileContentProvider_CfSharp_CloudProviderSessionOptions_" data-uid="CfSharp.CloudProviderSession.Connect(CfSharp.CloudSyncRoot,CfSharp.ICloudFileContentProvider,CfSharp.CloudProviderSessionOptions)">
+  Connect(CloudSyncRoot, ICloudFileContentProvider, CloudProviderSessionOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Connects a content provider with an explicit bounded runtime configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CloudProviderSession Connect(CloudSyncRoot syncRoot, ICloudFileContentProvider contentProvider, CloudProviderSessionOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>syncRoot</code> <a class="xref" href="CfSharp.CloudSyncRoot.html">CloudSyncRoot</a></dt>
+    <dd><p>Registered root that receives hydration callbacks.</p>
+</dd>
+    <dt><code>contentProvider</code> <a class="xref" href="CfSharp.ICloudFileContentProvider.html">ICloudFileContentProvider</a></dt>
+    <dd><p>Thread-safe source of complete logical file streams.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="CfSharp.CloudProviderSessionOptions.html">CloudProviderSessionOptions</a></dt>
+    <dd><p>Immutable queue, concurrency, transfer, and shutdown limits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudProviderSession.html">CloudProviderSession</a></dt>
+    <dd><p>An owning session that must be disposed before the root is unregistered.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>An argument is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>An option is outside its supported bound.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudProviderSession_Dispose_" data-uid="CfSharp.CloudProviderSession.Dispose*"></a>
+
+  <h3 id="CfSharp_CloudProviderSession_Dispose" data-uid="CfSharp.CloudProviderSession.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Synchronously stops the provider session and releases its callback resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudProviderSession_Dispose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This compatibility method blocks the calling thread while handlers drain. The configured
+shutdown timeout controls cooperative cancellation; a handler that ignores cancellation
+keeps callback memory and its state-store ownership alive until it exits. Applications
+with a UI or single-threaded synchronization context should call <a class="xref" href="CfSharp.CloudProviderSession.html#CfSharp_CloudProviderSession_DisposeAsync">DisposeAsync()</a>.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_CloudProviderSession_DisposeAsync_" data-uid="CfSharp.CloudProviderSession.DisposeAsync*"></a>
+
+  <h3 id="CfSharp_CloudProviderSession_DisposeAsync" data-uid="CfSharp.CloudProviderSession.DisposeAsync">
+  DisposeAsync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the provider session and asynchronously drains cooperative handlers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask DisposeAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd><p>A task that completes after disconnection and native-memory release.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProviderSession_GetStatus_" data-uid="CfSharp.CloudProviderSession.GetStatus*"></a>
+
+  <h3 id="CfSharp_CloudProviderSession_GetStatus" data-uid="CfSharp.CloudProviderSession.GetStatus">
+  GetStatus()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the native connection status reported by Windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudProviderStatus GetStatus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudProviderStatus.html">CloudProviderStatus</a></dt>
+    <dd><p>A fresh status value for this connection.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The session is stopping or disposed.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows cannot query the connection.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudProviderSession_UpdateStatus_" data-uid="CfSharp.CloudProviderSession.UpdateStatus*"></a>
+
+  <h3 id="CfSharp_CloudProviderSession_UpdateStatus_CfSharp_CloudProviderStatus_" data-uid="CfSharp.CloudProviderSession.UpdateStatus(CfSharp.CloudProviderStatus)">
+  UpdateStatus(CloudProviderStatus)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the activity or terminal status reported for this provider connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateStatus(CloudProviderStatus status)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>status</code> <a class="xref" href="CfSharp.CloudProviderStatus.html">CloudProviderStatus</a></dt>
+    <dd><p>Native-compatible activity flags or terminal status.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The session is stopping or disposed.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the status update.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

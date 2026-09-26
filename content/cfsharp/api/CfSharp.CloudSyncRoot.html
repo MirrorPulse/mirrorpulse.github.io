@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CloudSyncRoot | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CloudSyncRoot | CfSharp documentation ">
+      
+      <meta name="description" content="Represents a path-bound handle to a persistent Cloud Files sync-root registration.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudSyncRoot">
+
+
+
+  <h1 id="CfSharp_CloudSyncRoot" data-uid="CfSharp.CloudSyncRoot" class="text-break">
+Class CloudSyncRoot  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a path-bound handle to a persistent Cloud Files sync-root registration.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CloudSyncRoot</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CloudSyncRoot</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_CloudSyncRoot_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+This object owns no native handle and does not automatically unregister on disposal or
+finalization. Registration is persistent across process exits. Call <a class="xref" href="CfSharp.CloudSyncRoot.html#CfSharp_CloudSyncRoot_Unregister">Unregister()</a>
+only for explicit account removal or product uninstall.
+</p>
+<p>
+Instances are immutable and safe for concurrent use, but Windows may change the underlying
+registration between calls. Concurrent register, update, and unregister operations for the
+same path must be coordinated by the application.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_CloudSyncRoot_Path_" data-uid="CfSharp.CloudSyncRoot.Path*"></a>
+
+  <h3 id="CfSharp_CloudSyncRoot_Path" data-uid="CfSharp.CloudSyncRoot.Path">
+  Path
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the normalized absolute sync-root path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_CloudSyncRoot_ClearStatus_" data-uid="CfSharp.CloudSyncRoot.ClearStatus*"></a>
+
+  <h3 id="CfSharp_CloudSyncRoot_ClearStatus" data-uid="CfSharp.CloudSyncRoot.ClearStatus">
+  ClearStatus()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears rich status previously reported for this sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearStatus()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.platformnotsupportedexception">PlatformNotSupportedException</a></dt>
+    <dd><p>Windows predates version 1803.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the clear operation.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudSyncRoot_CreateFilePlaceholder_" data-uid="CfSharp.CloudSyncRoot.CreateFilePlaceholder*"></a>
+
+  <h3 id="CfSharp_CloudSyncRoot_CreateFilePlaceholder_System_String_System_Int64_System_ReadOnlySpan_System_Byte__" data-uid="CfSharp.CloudSyncRoot.CreateFilePlaceholder(System.String,System.Int64,System.ReadOnlySpan{System.Byte})">
+  CreateFilePlaceholder(string, long, ReadOnlySpan&lt;byte&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an online-only file placeholder beneath this sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudPlaceholderCreationResult CreateFilePlaceholder(string relativePath, long fileSize, ReadOnlySpan&lt;byte&gt; fileIdentity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>relativePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Non-rooted path beneath the sync root. Its parent directory must already exist.</p>
+</dd>
+    <dt><code>fileSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Non-negative logical size of the remote file in bytes.</p>
+</dd>
+    <dt><code>fileIdentity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Provider-defined identity returned with future callbacks. The value is copied by Windows
+and cannot exceed <a class="xref" href="CfSharp.SyncRootRegistrationOptions.html#CfSharp_SyncRootRegistrationOptions_MaxFileIdentityLength">MaxFileIdentityLength</a> bytes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudPlaceholderCreationResult.html">CloudPlaceholderCreationResult</a></dt>
+    <dd><p>The normalized created path and its creation update sequence number.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudSyncRoot_CreateFilePlaceholder_System_String_System_Int64_System_ReadOnlySpan_System_Byte___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The placeholder is marked in sync and initially contains no local data. Reading it requires
+an active <a class="xref" href="CfSharp.CloudProviderSession.html">CloudProviderSession</a> capable of supplying its identity's content.
+This method is thread-safe for distinct paths; callers must coordinate competing operations
+targeting the same path.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The path is empty, rooted, or escapes the sync root.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">fileSize</code> is negative.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>The placeholder's parent directory is absent.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the placeholder creation.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudSyncRoot_GetInfo_" data-uid="CfSharp.CloudSyncRoot.GetInfo*"></a>
+
+  <h3 id="CfSharp_CloudSyncRoot_GetInfo" data-uid="CfSharp.CloudSyncRoot.GetInfo">
+  GetInfo()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queries a fresh immutable snapshot of the current registration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudSyncRootInfo GetInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudSyncRootInfo.html">CloudSyncRootInfo</a></dt>
+    <dd><p>Current provider information, policies, identity, status, and file identifier.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.platformnotsupportedexception">PlatformNotSupportedException</a></dt>
+    <dd><p>The Cloud Files API is unavailable.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows cannot query the registration.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Windows returns internally inconsistent variable-length registration data.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudSyncRoot_Open_" data-uid="CfSharp.CloudSyncRoot.Open*"></a>
+
+  <h3 id="CfSharp_CloudSyncRoot_Open_System_String_" data-uid="CfSharp.CloudSyncRoot.Open(System.String)">
+  Open(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens a previously registered sync root at its exact root path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CloudSyncRoot Open(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Exact registered root path. Passing a descendant path may query successfully, but is
+rejected as an ownership contract because unregister requires the actual root path.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudSyncRoot.html">CloudSyncRoot</a></dt>
+    <dd><p>A path-bound registration object after Windows confirms the registration.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudSyncRoot_Open_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The method cannot derive the root path from an arbitrary descendant. Callers must retain
+the exact registered path as part of their account configuration.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The path is empty or cannot be normalized.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>The directory does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.platformnotsupportedexception">PlatformNotSupportedException</a></dt>
+    <dd><p>The Cloud Files API is unavailable.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows cannot query a registration at the path.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudSyncRoot_Register_" data-uid="CfSharp.CloudSyncRoot.Register*"></a>
+
+  <h3 id="CfSharp_CloudSyncRoot_Register_System_String_CfSharp_SyncRootRegistrationOptions_" data-uid="CfSharp.CloudSyncRoot.Register(System.String,CfSharp.SyncRootRegistrationOptions)">
+  Register(string, SyncRootRegistrationOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers an existing directory as a persistent Cloud Files sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CloudSyncRoot Register(string path, SyncRootRegistrationOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Path of the directory to register.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="CfSharp.SyncRootRegistrationOptions.html">SyncRootRegistrationOptions</a></dt>
+    <dd><p>Immutable provider identity and policy configuration.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudSyncRoot.html">CloudSyncRoot</a></dt>
+    <dd><p>A path-bound object for querying and explicitly unregistering the root.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudSyncRoot_Register_System_String_CfSharp_SyncRootRegistrationOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Registration survives process termination. Registering the same path and equivalent
+values is idempotent on Windows. To replace existing identities or policies, set
+<a class="xref" href="CfSharp.SyncRootRegistrationOptions.html#CfSharp_SyncRootRegistrationOptions_UpdateExisting">UpdateExisting</a>. This method does not introduce
+compensating unregistration after Windows reports success because the registration may
+have existed before the call.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The path is empty or cannot be normalized.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">options</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>The directory does not exist.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.platformnotsupportedexception">PlatformNotSupportedException</a></dt>
+    <dd><p>Windows predates version 1709 or does not expose the required Cloud Files entry points.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects registration. The original <code>HRESULT</code>, operation, and path are retained.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudSyncRoot_ReportStatus_" data-uid="CfSharp.CloudSyncRoot.ReportStatus*"></a>
+
+  <h3 id="CfSharp_CloudSyncRoot_ReportStatus_CfSharp_CloudSyncStatus_" data-uid="CfSharp.CloudSyncRoot.ReportStatus(CfSharp.CloudSyncStatus)">
+  ReportStatus(CloudSyncStatus)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports rich provider status for this registered sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReportStatus(CloudSyncStatus status)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>status</code> <a class="xref" href="CfSharp.CloudSyncStatus.html">CloudSyncStatus</a></dt>
+    <dd><p>Managed status whose text and device bytes are copied for the call.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudSyncRoot_ReportStatus_CfSharp_CloudSyncStatus__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The native buffer is temporary, Windows copies successful data, and no status is written
+to the CfSharp durable state store. A failed call leaves any existing Windows status intact.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>An argument is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The description contains invalid data.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.platformnotsupportedexception">PlatformNotSupportedException</a></dt>
+    <dd><p>Windows predates version 1803.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the report.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudSyncRoot_Unregister_" data-uid="CfSharp.CloudSyncRoot.Unregister*"></a>
+
+  <h3 id="CfSharp_CloudSyncRoot_Unregister" data-uid="CfSharp.CloudSyncRoot.Unregister">
+  Unregister()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Permanently unregisters this sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Unregister()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudSyncRoot_Unregister_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is destructive lifecycle behavior, not session shutdown. Windows traverses the
+tree, reverts fully available placeholders, and may permanently remove incomplete
+placeholders. A successful call does not delete the root directory itself.
+</p>
+<p>The object remains usable as a path value, but subsequent queries will fail.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.platformnotsupportedexception">PlatformNotSupportedException</a></dt>
+    <dd><p>The Cloud Files API is unavailable.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects unregistration, including when a provider remains connected or the path
+is no longer registered.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

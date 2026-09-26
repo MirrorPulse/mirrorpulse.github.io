@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ICloudStateTransaction | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ICloudStateTransaction | CfSharp documentation ">
+      
+      <meta name="description" content="Provides repository access within one atomic durable-state transaction.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.ICloudStateTransaction">
+
+
+
+  <h1 id="CfSharp_ICloudStateTransaction" data-uid="CfSharp.ICloudStateTransaction" class="text-break">
+Interface ICloudStateTransaction  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides repository access within one atomic durable-state transaction.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICloudStateTransaction : IAsyncDisposable</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync">IAsyncDisposable.DisposeAsync()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_ICloudStateTransaction_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>A transaction is not thread-safe. Exactly one of <a class="xref" href="CfSharp.ICloudStateTransaction.html#CfSharp_ICloudStateTransaction_CommitAsync_System_Threading_CancellationToken_">CommitAsync(CancellationToken)</a>,
+<a class="xref" href="CfSharp.ICloudStateTransaction.html#CfSharp_ICloudStateTransaction_RollbackAsync_System_Threading_CancellationToken_">RollbackAsync(CancellationToken)</a>, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync">DisposeAsync()</a> terminates it.
+Disposal without a successful commit rolls back all writes. Repositories become invalid when
+their transaction terminates and must then throw <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a>.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_ICloudStateTransaction_Checkpoints_" data-uid="CfSharp.ICloudStateTransaction.Checkpoints*"></a>
+
+  <h3 id="CfSharp_ICloudStateTransaction_Checkpoints" data-uid="CfSharp.ICloudStateTransaction.Checkpoints">
+  Checkpoints
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets named local and remote synchronization checkpoints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICloudCheckpointRepository Checkpoints { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.ICloudCheckpointRepository.html">ICloudCheckpointRepository</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudStateTransaction_Conflicts_" data-uid="CfSharp.ICloudStateTransaction.Conflicts*"></a>
+
+  <h3 id="CfSharp_ICloudStateTransaction_Conflicts" data-uid="CfSharp.ICloudStateTransaction.Conflicts">
+  Conflicts
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets durable unresolved-conflict records.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICloudConflictRepository Conflicts { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.ICloudConflictRepository.html">ICloudConflictRepository</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudStateTransaction_EchoSuppressions_" data-uid="CfSharp.ICloudStateTransaction.EchoSuppressions*"></a>
+
+  <h3 id="CfSharp_ICloudStateTransaction_EchoSuppressions" data-uid="CfSharp.ICloudStateTransaction.EchoSuppressions">
+  EchoSuppressions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets provider-originated local-change suppression records.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICloudEchoSuppressionRepository EchoSuppressions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.ICloudEchoSuppressionRepository.html">ICloudEchoSuppressionRepository</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudStateTransaction_Items_" data-uid="CfSharp.ICloudStateTransaction.Items*"></a>
+
+  <h3 id="CfSharp_ICloudStateTransaction_Items" data-uid="CfSharp.ICloudStateTransaction.Items">
+  Items
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets item identity, revision, path, and tombstone state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICloudItemStateRepository Items { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.ICloudItemStateRepository.html">ICloudItemStateRepository</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudStateTransaction_Operations_" data-uid="CfSharp.ICloudStateTransaction.Operations*"></a>
+
+  <h3 id="CfSharp_ICloudStateTransaction_Operations" data-uid="CfSharp.ICloudStateTransaction.Operations">
+  Operations
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the ordered, replayable local-operation journal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICloudOperationJournal Operations { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.ICloudOperationJournal.html">ICloudOperationJournal</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudStateTransaction_RemoteBatches_" data-uid="CfSharp.ICloudStateTransaction.RemoteBatches*"></a>
+
+  <h3 id="CfSharp_ICloudStateTransaction_RemoteBatches" data-uid="CfSharp.ICloudStateTransaction.RemoteBatches">
+  RemoteBatches
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets resumable remote-batch progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICloudRemoteBatchRepository RemoteBatches { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.ICloudRemoteBatchRepository.html">ICloudRemoteBatchRepository</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_ICloudStateTransaction_CommitAsync_" data-uid="CfSharp.ICloudStateTransaction.CommitAsync*"></a>
+
+  <h3 id="CfSharp_ICloudStateTransaction_CommitAsync_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudStateTransaction.CommitAsync(System.Threading.CancellationToken)">
+  CommitAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Atomically makes all transaction writes durable and visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask CommitAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels commit before durability is guaranteed. If cancellation races with the
+storage engine's commit point, an implementation must report a deterministic committed or
+rolled-back outcome rather than leave it ambiguous.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd><p>An operation that completes after durability is established.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudStateTransaction_RollbackAsync_" data-uid="CfSharp.ICloudStateTransaction.RollbackAsync*"></a>
+
+  <h3 id="CfSharp_ICloudStateTransaction_RollbackAsync_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudStateTransaction.RollbackAsync(System.Threading.CancellationToken)">
+  RollbackAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Discards every uncommitted write in the transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask RollbackAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels rollback work.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd><p>An operation that completes after the transaction is no longer active.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

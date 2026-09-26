@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CloudLocalChangeFeed | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CloudLocalChangeFeed | CfSharp documentation ">
+      
+      <meta name="description" content="Watches one sync root, normalizes local notifications, and durably journals upload candidates.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudLocalChangeFeed">
+
+
+
+  <h1 id="CfSharp_CloudLocalChangeFeed" data-uid="CfSharp.CloudLocalChangeFeed" class="text-break">
+Class CloudLocalChangeFeed  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Watches one sync root, normalizes local notifications, and durably journals upload candidates.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CloudLocalChangeFeed : IDisposable, IAsyncDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CloudLocalChangeFeed</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_CloudLocalChangeFeed_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The feed does not own the supplied state store. When created by <a class="xref" href="CfSharp.CloudFileSystem.html">CloudFileSystem</a>,
+the file system stops it before disposing that store. A feed never owns file content and never
+invokes remote-provider code.
+</p>
+<p>
+Windows directory notifications are advisory. Buffer overflow, watcher errors, and malformed
+rename pairs produce <a class="xref" href="CfSharp.CloudLocalChangeBatch.html#CfSharp_CloudLocalChangeBatch_RequiresFullRescan">RequiresFullRescan</a>. Applications must
+perform a full reconciliation before acknowledging that condition; periodic reconciliation is
+intentionally outside CfSharp.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_IsStarted_" data-uid="CfSharp.CloudLocalChangeFeed.IsStarted*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_IsStarted" data-uid="CfSharp.CloudLocalChangeFeed.IsStarted">
+  IsStarted
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the feed has been started and can deliver journal entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsStarted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_SyncRootPath_" data-uid="CfSharp.CloudLocalChangeFeed.SyncRootPath*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_SyncRootPath" data-uid="CfSharp.CloudLocalChangeFeed.SyncRootPath">
+  SyncRootPath
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the absolute sync-root path watched by this feed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SyncRootPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_AcknowledgeAsync_" data-uid="CfSharp.CloudLocalChangeFeed.AcknowledgeAsync*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_AcknowledgeAsync_System_Collections_Generic_IEnumerable_CfSharp_CloudLocalChangeAcknowledgement__System_Threading_CancellationToken_" data-uid="CfSharp.CloudLocalChangeFeed.AcknowledgeAsync(System.Collections.Generic.IEnumerable{CfSharp.CloudLocalChangeAcknowledgement},System.Threading.CancellationToken)">
+  AcknowledgeAsync(IEnumerable&lt;CloudLocalChangeAcknowledgement&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Acknowledges local operations and optionally records the remote revision confirmed after
+upload. The journal removal and revision update commit atomically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask AcknowledgeAsync(IEnumerable&lt;CloudLocalChangeAcknowledgement&gt; acknowledgements, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>acknowledgements</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="CfSharp.CloudLocalChangeAcknowledgement.html">CloudLocalChangeAcknowledgement</a>&gt;</dt>
+    <dd><p>Operation acknowledgements from a delivered batch.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels before the acknowledgement commits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_AcknowledgeAsync_" data-uid="CfSharp.CloudLocalChangeFeed.AcknowledgeAsync*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_AcknowledgeAsync_System_Collections_Generic_IEnumerable_System_Guid__System_Threading_CancellationToken_" data-uid="CfSharp.CloudLocalChangeFeed.AcknowledgeAsync(System.Collections.Generic.IEnumerable{System.Guid},System.Threading.CancellationToken)">
+  AcknowledgeAsync(IEnumerable&lt;Guid&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Acknowledges journal entries after the application has durably accepted their meaning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask AcknowledgeAsync(IEnumerable&lt;Guid&gt; operationIds, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>operationIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</dt>
+    <dd><p>One or more operation identifiers from a delivered batch.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels before the acknowledgement commits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudLocalChangeFeed_AcknowledgeAsync_System_Collections_Generic_IEnumerable_System_Guid__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Acknowledgement is idempotent: an already removed operation is ignored. The overload
+accepting revision-aware acknowledgements can atomically update the durable revision.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_AcknowledgeFullRescanAsync_" data-uid="CfSharp.CloudLocalChangeFeed.AcknowledgeFullRescanAsync*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_AcknowledgeFullRescanAsync_System_Threading_CancellationToken_" data-uid="CfSharp.CloudLocalChangeFeed.AcknowledgeFullRescanAsync(System.Threading.CancellationToken)">
+  AcknowledgeFullRescanAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the durable rescan-required marker after the application has completed a full
+reconciliation of the sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask AcknowledgeFullRescanAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels before the marker commit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_Dispose_" data-uid="CfSharp.CloudLocalChangeFeed.Dispose*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_Dispose" data-uid="CfSharp.CloudLocalChangeFeed.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Synchronously stops the watcher and processor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudLocalChangeFeed_Dispose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Use <a class="xref" href="CfSharp.CloudLocalChangeFeed.html#CfSharp_CloudLocalChangeFeed_DisposeAsync">DisposeAsync()</a> on UI or single-threaded contexts. If the processor does
+not stop within the configured shutdown timeout, this method blocks until the timeout and
+propagates <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeoutexception">TimeoutException</a> while deferred cleanup continues in the
+background.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeoutexception">TimeoutException</a></dt>
+    <dd><p>The processor did not stop within the configured shutdown timeout.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_DisposeAsync_" data-uid="CfSharp.CloudLocalChangeFeed.DisposeAsync*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_DisposeAsync" data-uid="CfSharp.CloudLocalChangeFeed.DisposeAsync">
+  DisposeAsync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the watcher and releases all feed-owned resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask DisposeAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeoutexception">TimeoutException</a></dt>
+    <dd><p>The processor did not stop within the configured shutdown timeout. Deferred cleanup keeps
+feed-owned resources alive until the processor exits.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_ReadBatchAsync_" data-uid="CfSharp.CloudLocalChangeFeed.ReadBatchAsync*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_ReadBatchAsync_System_Threading_CancellationToken_" data-uid="CfSharp.CloudLocalChangeFeed.ReadBatchAsync(System.Threading.CancellationToken)">
+  ReadBatchAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the earliest durable local operations, waiting until at least one operation or a
+full-rescan signal is available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudLocalChangeBatch&gt; ReadBatchAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels the read without acknowledging anything.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudLocalChangeBatch.html">CloudLocalChangeBatch</a>&gt;</dt>
+    <dd><p>An ordered bounded batch. The batch is immutable and safe to retain.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The feed has not been started.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The feed has been disposed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_StartAsync_" data-uid="CfSharp.CloudLocalChangeFeed.StartAsync*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_StartAsync_System_Threading_CancellationToken_" data-uid="CfSharp.CloudLocalChangeFeed.StartAsync(System.Threading.CancellationToken)">
+  StartAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the native watcher and the durable normalization worker.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask StartAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels startup before the watcher is opened.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The feed has already been started.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The feed has been disposed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_SuppressProviderEchoAsync_" data-uid="CfSharp.CloudLocalChangeFeed.SuppressProviderEchoAsync*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_SuppressProviderEchoAsync_CfSharp_CloudStateOperationKind_System_String_System_DateTimeOffset_System_Nullable_System_Guid__System_String_System_Int32_System_Threading_CancellationToken_" data-uid="CfSharp.CloudLocalChangeFeed.SuppressProviderEchoAsync(CfSharp.CloudStateOperationKind,System.String,System.DateTimeOffset,System.Nullable{System.Guid},System.String,System.Int32,System.Threading.CancellationToken)">
+  SuppressProviderEchoAsync(CloudStateOperationKind, string, DateTimeOffset, Guid?, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Records a provider-originated write suppression window with optional source-path and
+multi-observation matching data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask SuppressProviderEchoAsync(CloudStateOperationKind kind, string relativePath, DateTimeOffset expiresAt, Guid? itemId, string? previousRelativePath, int expectedObservationCount = 1, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kind</code> <a class="xref" href="CfSharp.CloudStateOperationKind.html">CloudStateOperationKind</a></dt>
+    <dd><p>Expected local operation kind.</p>
+</dd>
+    <dt><code>relativePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Canonical path relative to the sync root.</p>
+</dd>
+    <dt><code>expiresAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>UTC time after which the suppression is ignored.</p>
+</dd>
+    <dt><code>itemId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>?</dt>
+    <dd><p>Known item identity, when available.</p>
+</dd>
+    <dt><code>previousRelativePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional second canonical path associated with the provider operation, such as a move source.</p>
+</dd>
+    <dt><code>expectedObservationCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of matching watcher observations to consume before the suppression is removed.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels before the suppression commits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudLocalChangeFeed_SuppressProviderEchoAsync_" data-uid="CfSharp.CloudLocalChangeFeed.SuppressProviderEchoAsync*"></a>
+
+  <h3 id="CfSharp_CloudLocalChangeFeed_SuppressProviderEchoAsync_CfSharp_CloudStateOperationKind_System_String_System_DateTimeOffset_System_Nullable_System_Guid__System_Threading_CancellationToken_" data-uid="CfSharp.CloudLocalChangeFeed.SuppressProviderEchoAsync(CfSharp.CloudStateOperationKind,System.String,System.DateTimeOffset,System.Nullable{System.Guid},System.Threading.CancellationToken)">
+  SuppressProviderEchoAsync(CloudStateOperationKind, string, DateTimeOffset, Guid?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Records a provider-originated write suppression window so its local echo is not journaled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask SuppressProviderEchoAsync(CloudStateOperationKind kind, string relativePath, DateTimeOffset expiresAt, Guid? itemId = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kind</code> <a class="xref" href="CfSharp.CloudStateOperationKind.html">CloudStateOperationKind</a></dt>
+    <dd><p>Expected local operation kind.</p>
+</dd>
+    <dt><code>relativePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Canonical path relative to the sync root.</p>
+</dd>
+    <dt><code>expiresAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>UTC time after which the suppression is ignored.</p>
+</dd>
+    <dt><code>itemId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>?</dt>
+    <dd><p>Known item identity, when available.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels before the suppression commits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

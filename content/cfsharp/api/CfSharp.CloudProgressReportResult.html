@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct CloudProgressReportResult | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct CloudProgressReportResult | CfSharp documentation ">
+      
+      <meta name="description" content="Returns the outcome and native route of one progress report.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudProgressReportResult">
+
+
+
+  <h1 id="CfSharp_CloudProgressReportResult" data-uid="CfSharp.CloudProgressReportResult" class="text-break">
+Struct CloudProgressReportResult  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Returns the outcome and native route of one progress report.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly struct CloudProgressReportResult : IEquatable&lt;CloudProgressReportResult&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="CfSharp.CloudProgressReportResult.html">CloudProgressReportResult</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="CfSharp_CloudProgressReportResult__ctor_" data-uid="CfSharp.CloudProgressReportResult.#ctor*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult__ctor_CfSharp_CloudProgressReportState_System_Boolean_System_Int32_" data-uid="CfSharp.CloudProgressReportResult.#ctor(CfSharp.CloudProgressReportState,System.Boolean,System.Int32)">
+  CloudProgressReportResult(CloudProgressReportState, bool, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the outcome and native route of one progress report.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudProgressReportResult(CloudProgressReportState State, bool UsedV2, int HResult)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>State</code> <a class="xref" href="CfSharp.CloudProgressReportState.html">CloudProgressReportState</a></dt>
+    <dd></dd>
+    <dt><code>UsedV2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>HResult</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_CloudProgressReportResult_HResult_" data-uid="CfSharp.CloudProgressReportResult.HResult*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_HResult" data-uid="CfSharp.CloudProgressReportResult.HResult">
+  HResult
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int HResult { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressReportResult_State_" data-uid="CfSharp.CloudProgressReportResult.State*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_State" data-uid="CfSharp.CloudProgressReportResult.State">
+  State
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudProgressReportState State { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudProgressReportState.html">CloudProgressReportState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressReportResult_UsedV2_" data-uid="CfSharp.CloudProgressReportResult.UsedV2*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_UsedV2" data-uid="CfSharp.CloudProgressReportResult.UsedV2">
+  UsedV2
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UsedV2 { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressReportResult_WasSent_" data-uid="CfSharp.CloudProgressReportResult.WasSent*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_WasSent" data-uid="CfSharp.CloudProgressReportResult.WasSent">
+  WasSent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the report reached a native progress API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WasSent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_CloudProgressReportResult_Deconstruct_" data-uid="CfSharp.CloudProgressReportResult.Deconstruct*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_Deconstruct_CfSharp_CloudProgressReportState__System_Boolean__System_Int32__" data-uid="CfSharp.CloudProgressReportResult.Deconstruct(CfSharp.CloudProgressReportState@,System.Boolean@,System.Int32@)">
+  Deconstruct(out CloudProgressReportState, out bool, out int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out CloudProgressReportState State, out bool UsedV2, out int HResult)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>State</code> <a class="xref" href="CfSharp.CloudProgressReportState.html">CloudProgressReportState</a></dt>
+    <dd></dd>
+    <dt><code>UsedV2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>HResult</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressReportResult_Equals_" data-uid="CfSharp.CloudProgressReportResult.Equals*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_Equals_CfSharp_CloudProgressReportResult_" data-uid="CfSharp.CloudProgressReportResult.Equals(CfSharp.CloudProgressReportResult)">
+  Equals(CloudProgressReportResult)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(CloudProgressReportResult other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="CfSharp.CloudProgressReportResult.html">CloudProgressReportResult</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressReportResult_Equals_" data-uid="CfSharp.CloudProgressReportResult.Equals*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_Equals_System_Object_" data-uid="CfSharp.CloudProgressReportResult.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressReportResult_GetHashCode_" data-uid="CfSharp.CloudProgressReportResult.GetHashCode*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_GetHashCode" data-uid="CfSharp.CloudProgressReportResult.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressReportResult_ToString_" data-uid="CfSharp.CloudProgressReportResult.ToString*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_ToString" data-uid="CfSharp.CloudProgressReportResult.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="CfSharp_CloudProgressReportResult_op_Equality_" data-uid="CfSharp.CloudProgressReportResult.op_Equality*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_op_Equality_CfSharp_CloudProgressReportResult_CfSharp_CloudProgressReportResult_" data-uid="CfSharp.CloudProgressReportResult.op_Equality(CfSharp.CloudProgressReportResult,CfSharp.CloudProgressReportResult)">
+  operator ==(CloudProgressReportResult, CloudProgressReportResult)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(CloudProgressReportResult left, CloudProgressReportResult right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="CfSharp.CloudProgressReportResult.html">CloudProgressReportResult</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="CfSharp.CloudProgressReportResult.html">CloudProgressReportResult</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressReportResult_op_Inequality_" data-uid="CfSharp.CloudProgressReportResult.op_Inequality*"></a>
+
+  <h3 id="CfSharp_CloudProgressReportResult_op_Inequality_CfSharp_CloudProgressReportResult_CfSharp_CloudProgressReportResult_" data-uid="CfSharp.CloudProgressReportResult.op_Inequality(CfSharp.CloudProgressReportResult,CfSharp.CloudProgressReportResult)">
+  operator !=(CloudProgressReportResult, CloudProgressReportResult)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(CloudProgressReportResult left, CloudProgressReportResult right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="CfSharp.CloudProgressReportResult.html">CloudProgressReportResult</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="CfSharp.CloudProgressReportResult.html">CloudProgressReportResult</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

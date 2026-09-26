@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SqliteCloudStateStoreFactory | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SqliteCloudStateStoreFactory | CfSharp documentation ">
+      
+      <meta name="description" content="Creates official SQLite durable-state stores for CfSharp file systems.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory">
+
+
+
+  <h1 id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory" data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory" class="text-break">
+Class SqliteCloudStateStoreFactory  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a>.<span class="xref">Storage</span>.<a class="xref" href="CfSharp.Storage.Sqlite.html">Sqlite</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.Storage.Sqlite.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Creates official SQLite durable-state stores for CfSharp file systems.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SqliteCloudStateStoreFactory : ICloudStateStoreFactory</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SqliteCloudStateStoreFactory</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="CfSharp.ICloudStateStoreFactory.html">ICloudStateStoreFactory</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The caller supplies an absolute database path. The path, its WAL and shared-memory sidecars,
+and the CfSharp ownership lock must remain outside the managed sync root. Existing directory
+junctions and symbolic links are resolved before this invariant is checked.
+</p>
+<p>
+Opening acquires an exclusive cross-process ownership lock, creates or migrates the schema,
+enables foreign keys and WAL mode, and applies the configured busy timeout. One database may
+be owned by only one open store and is permanently bound to one sync-root path. Dispose the
+returned store to release process ownership.
+</p>
+<p>
+The factory is immutable and safe for concurrent calls, although concurrent opens for the same
+database deterministically allow only one owner. The returned store serializes SQLite writes;
+each transaction and its repositories remain single-consumer objects as required by the core
+state-store contract. This provider supports Windows only.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory__ctor_" data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory.#ctor*"></a>
+
+  <h3 id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory__ctor_System_String_System_Nullable_System_TimeSpan__" data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory.#ctor(System.String,System.Nullable{System.TimeSpan})">
+  SqliteCloudStateStoreFactory(string, TimeSpan?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a factory for an explicit SQLite database path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SqliteCloudStateStoreFactory(string databasePath, TimeSpan? busyTimeout = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>databasePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Absolute path of the database. It must be outside every sync root that uses this factory.</p>
+</dd>
+    <dt><code>busyTimeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd><p>Optional positive lock-wait timeout. The default is five seconds.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The path is empty, relative, names a directory, or has no file name.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>The timeout is not positive or exceeds the SQLite integer millisecond range.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory_DefaultBusyTimeout" data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory.DefaultBusyTimeout">
+  DefaultBusyTimeout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The default time SQLite waits for a conflicting lock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly TimeSpan DefaultBusyTimeout</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory_BusyTimeout_" data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory.BusyTimeout*"></a>
+
+  <h3 id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory_BusyTimeout" data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory.BusyTimeout">
+  BusyTimeout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the configured SQLite lock-wait timeout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan BusyTimeout { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory_DatabasePath_" data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory.DatabasePath*"></a>
+
+  <h3 id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory_DatabasePath" data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory.DatabasePath">
+  DatabasePath
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the normalized absolute database path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DatabasePath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory_OpenAsync_" data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory.OpenAsync*"></a>
+
+  <h3 id="CfSharp_Storage_Sqlite_SqliteCloudStateStoreFactory_OpenAsync_CfSharp_CloudStateStoreContext_System_Threading_CancellationToken_" data-uid="CfSharp.Storage.Sqlite.SqliteCloudStateStoreFactory.OpenAsync(CfSharp.CloudStateStoreContext,System.Threading.CancellationToken)">
+  OpenAsync(CloudStateStoreContext, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens, creates, or migrates the configured SQLite state database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;ICloudStateStore&gt; OpenAsync(CloudStateStoreContext context, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="CfSharp.CloudStateStoreContext.html">CloudStateStoreContext</a></dt>
+    <dd><p>The validated sync root that permanently owns the database.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels opening before ownership transfers.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.ICloudStateStore.html">ICloudStateStore</a>&gt;</dt>
+    <dd><p>An exclusively owned transactional store. The caller must dispose it after every active
+transaction has terminated.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Opening was canceled.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.Storage.Sqlite.SqliteCloudStateStoreException.html">SqliteCloudStateStoreException</a></dt>
+    <dd><p>The path is unsafe, the database is already owned or bound to another root, its schema is
+incompatible, or SQLite could not initialize it. SQLite result codes are retained when
+available.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

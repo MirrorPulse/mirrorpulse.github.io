@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum CloudHydrationPolicyModifiers | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum CloudHydrationPolicyModifiers | CfSharp documentation ">
+      
+      <meta name="description" content="Adds optional behavior to a sync root&#39;s hydration policy.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudHydrationPolicyModifiers">
+
+
+
+
+  <h1 id="CfSharp_CloudHydrationPolicyModifiers" data-uid="CfSharp.CloudHydrationPolicyModifiers" class="text-break">
+Enum CloudHydrationPolicyModifiers  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Adds optional behavior to a sync root's hydration policy.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Flags]
+public enum CloudHydrationPolicyModifiers</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="CfSharp_CloudHydrationPolicyModifiers_AllowFullRestartHydration"><code>AllowFullRestartHydration = 8</code></dt>
+  
+  <dd><p>Allows full synchronous hydration when antivirus software scans content whose
+provider may restart hydration with a different file size.</p>
+</dd>
+    <dt id="CfSharp_CloudHydrationPolicyModifiers_AutoDehydrationAllowed"><code>AutoDehydrationAllowed = 4</code></dt>
+  
+  <dd><p>Allows Windows to dehydrate in-sync placeholders automatically.</p>
+</dd>
+    <dt id="CfSharp_CloudHydrationPolicyModifiers_None"><code>None = 0</code></dt>
+  
+  <dd><p>Applies no additional hydration behavior.</p>
+</dd>
+    <dt id="CfSharp_CloudHydrationPolicyModifiers_StreamingAllowed"><code>StreamingAllowed = 2</code></dt>
+  
+  <dd><p>Allows Windows to deliver provider data without persisting it locally.</p>
+</dd>
+    <dt id="CfSharp_CloudHydrationPolicyModifiers_ValidationRequired"><code>ValidationRequired = 1</code></dt>
+  
+  <dd><p>Requires provider validation before hydrated data is returned to user I/O.</p>
+</dd>
+  </dl>
+
+
+  <h2 id="CfSharp_CloudHydrationPolicyModifiers_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p><a class="xref" href="CfSharp.CloudHydrationPolicyModifiers.html#CfSharp_CloudHydrationPolicyModifiers_ValidationRequired">ValidationRequired</a> and <a class="xref" href="CfSharp.CloudHydrationPolicyModifiers.html#CfSharp_CloudHydrationPolicyModifiers_StreamingAllowed">StreamingAllowed</a> cannot be combined.
+<a class="xref" href="CfSharp.CloudHydrationPolicyModifiers.html#CfSharp_CloudHydrationPolicyModifiers_AllowFullRestartHydration">AllowFullRestartHydration</a> requires Cloud Files platform integration number
+<code>0x500</code> or later.</p>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

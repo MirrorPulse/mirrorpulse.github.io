@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CloudFileSystem | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CloudFileSystem | CfSharp documentation ">
+      
+      <meta name="description" content="Owns the process-scoped resources for one persistent Windows Cloud Files sync root.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudFileSystem">
+
+
+
+  <h1 id="CfSharp_CloudFileSystem" data-uid="CfSharp.CloudFileSystem" class="text-break">
+Class CloudFileSystem  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Owns the process-scoped resources for one persistent Windows Cloud Files sync root.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CloudFileSystem : IDisposable, IAsyncDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CloudFileSystem</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_CloudFileSystem_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Build an instance with <a class="xref" href="CfSharp.CloudFileSystem.html#CfSharp_CloudFileSystem_CreateBuilder_System_String_">CreateBuilder(string)</a>, then call <a class="xref" href="CfSharp.CloudFileSystem.html#CfSharp_CloudFileSystem_StartAsync_System_Threading_CancellationToken_">StartAsync(CancellationToken)</a> once
+before performing file-system operations. Starting validates the local root again, opens the
+configured durable state store, opens or registers the persistent sync root, and optionally
+connects a content provider. The state-store factory is never called for invalid local-root or
+builder configuration.
+</p>
+<p>
+A successfully opened state store and provider session are owned exclusively by this instance.
+Synchronous or asynchronous disposal first stops the provider session and then disposes the
+store. Disposal never unregisters the persistent sync root; account removal remains an explicit
+<a class="xref" href="CfSharp.CloudSyncRoot.html#CfSharp_CloudSyncRoot_Unregister">Unregister()</a> operation.
+</p>
+<p>
+A local-change feed created after startup is also owned by this instance. It is stopped before
+the state store is disposed, while its durable journal entries remain available for replay.
+</p>
+<p>
+Public lifecycle members are safe for concurrent calls. Startup and disposal are serialized.
+A failed startup can be retried only when all partially acquired resources were released. Item
+operations admitted while started hold explicit resource-lifetime leases. Conflicting path
+scopes are serialized while non-overlapping paths may proceed concurrently. Disposal rejects
+new work, drains admitted work, and then releases resources. If resource disposal fails,
+successfully released resources remain released and the instance stays in
+<a class="xref" href="CfSharp.CloudFileSystemLifecycleState.html#CfSharp_CloudFileSystemLifecycleState_Stopping">Stopping</a> so disposal can be retried for the
+remaining resources.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_CloudFileSystem_LifecycleState_" data-uid="CfSharp.CloudFileSystem.LifecycleState*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_LifecycleState" data-uid="CfSharp.CloudFileSystem.LifecycleState">
+  LifecycleState
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a thread-safe snapshot of the current process lifecycle state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudFileSystemLifecycleState LifecycleState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudFileSystemLifecycleState.html">CloudFileSystemLifecycleState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudFileSystem_Root_" data-uid="CfSharp.CloudFileSystem.Root*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_Root" data-uid="CfSharp.CloudFileSystem.Root">
+  Root
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an immutable reference to the sync-root directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudDirectory Root { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudDirectory.html">CloudDirectory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The file system has not finished starting.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The file system is stopping or disposed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_SyncRootPath_" data-uid="CfSharp.CloudFileSystem.SyncRootPath*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_SyncRootPath" data-uid="CfSharp.CloudFileSystem.SyncRootPath">
+  SyncRootPath
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the normalized absolute path of the managed sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SyncRootPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_CloudFileSystem_ApplyRemoteChangesAsync_" data-uid="CfSharp.CloudFileSystem.ApplyRemoteChangesAsync*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_ApplyRemoteChangesAsync_CfSharp_CloudRemoteChangeBatch_CfSharp_CloudRemoteApplyOptions_System_Threading_CancellationToken_" data-uid="CfSharp.CloudFileSystem.ApplyRemoteChangesAsync(CfSharp.CloudRemoteChangeBatch,CfSharp.CloudRemoteApplyOptions,System.Threading.CancellationToken)">
+  ApplyRemoteChangesAsync(CloudRemoteChangeBatch, CloudRemoteApplyOptions?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies an immutable application-supplied remote change batch to this sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudRemoteApplyResult&gt; ApplyRemoteChangesAsync(CloudRemoteChangeBatch batch, CloudRemoteApplyOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>batch</code> <a class="xref" href="CfSharp.CloudRemoteChangeBatch.html">CloudRemoteChangeBatch</a></dt>
+    <dd><p>Ordered remote changes and their opaque cursor envelope.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="CfSharp.CloudRemoteApplyOptions.html">CloudRemoteApplyOptions</a></dt>
+    <dd><p>Apply policy, or the conservative defaults.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed between durable entries and before native namespace mutations. A native call
+that has already started cannot be interrupted.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudRemoteApplyResult.html">CloudRemoteApplyResult</a>&gt;</dt>
+    <dd><p>Per-entry outcomes and the cursor after the highest durably completed entry. Entries after
+a failure or the per-call limit are reported as not processed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudFileSystem_ApplyRemoteChangesAsync_CfSharp_CloudRemoteChangeBatch_CfSharp_CloudRemoteApplyOptions_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Remote content bytes never enter this method. File upserts update placeholder length,
+metadata, identity, and revision while leaving hydration to the configured provider. A
+durable batch record is written after each entry, so a process restart resumes from the
+last committed entry without publishing an unsafe cursor.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The batch is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The batch conflicts with existing durable progress.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The file system has not started.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects a requested namespace mutation.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Cancellation was observed at a safe boundary.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_CreateBuilder_" data-uid="CfSharp.CloudFileSystem.CreateBuilder*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_CreateBuilder_System_String_" data-uid="CfSharp.CloudFileSystem.CreateBuilder(System.String)">
+  CreateBuilder(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a mutable builder for one local sync-root directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CloudFileSystem.Builder CreateBuilder(string syncRootPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>syncRootPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Absolute path of the existing directory that is or will become a Cloud Files sync root.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudFileSystem.html">CloudFileSystem</a>.<a class="xref" href="CfSharp.CloudFileSystem.Builder.html">Builder</a></dt>
+    <dd><p>A builder that requires an explicit durable state-store factory.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The path is empty, relative, or cannot be normalized.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_CreateLocalChangeFeed_" data-uid="CfSharp.CloudFileSystem.CreateLocalChangeFeed*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_CreateLocalChangeFeed_CfSharp_CloudLocalChangeFeedOptions_" data-uid="CfSharp.CloudFileSystem.CreateLocalChangeFeed(CfSharp.CloudLocalChangeFeedOptions)">
+  CreateLocalChangeFeed(CloudLocalChangeFeedOptions?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates or returns the explicit local-change feed owned by this started file system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudLocalChangeFeed CreateLocalChangeFeed(CloudLocalChangeFeedOptions? options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="CfSharp.CloudLocalChangeFeedOptions.html">CloudLocalChangeFeedOptions</a></dt>
+    <dd><p>Bounded watcher and delivery settings, or the defaults.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudLocalChangeFeed.html">CloudLocalChangeFeed</a></dt>
+    <dd><p>A feed that must be started explicitly with <a class="xref" href="CfSharp.CloudLocalChangeFeed.html#CfSharp_CloudLocalChangeFeed_StartAsync_System_Threading_CancellationToken_">StartAsync(CancellationToken)</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudFileSystem_CreateLocalChangeFeed_CfSharp_CloudLocalChangeFeedOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Only one feed is created for a file system. The file system stops it before disposing the
+durable state store. The feed does not perform remote synchronization or periodic full
+reconciliation; applications must acknowledge a rescan-required batch only after a full
+reconciliation of <a class="xref" href="CfSharp.CloudFileSystem.html#CfSharp_CloudFileSystem_SyncRootPath">SyncRootPath</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The file system has not started.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The file system is stopping or disposed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_Dispose_" data-uid="CfSharp.CloudFileSystem.Dispose*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_Dispose" data-uid="CfSharp.CloudFileSystem.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Synchronously releases process resources without unregistering the sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudFileSystem_Dispose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This compatibility method blocks the calling thread until admitted operations and owned
+resources finish disposal. Applications with a UI or single-threaded synchronization
+context should call <a class="xref" href="CfSharp.CloudFileSystem.html#CfSharp_CloudFileSystem_DisposeAsync">DisposeAsync()</a> instead and await it.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a></dt>
+    <dd><p>More than one owned resource failed during disposal. Every resource is still attempted.
+Failed resources remain owned so disposal can be retried.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_DisposeAsync_" data-uid="CfSharp.CloudFileSystem.DisposeAsync*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_DisposeAsync" data-uid="CfSharp.CloudFileSystem.DisposeAsync">
+  DisposeAsync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases process resources without unregistering the persistent sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask DisposeAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd><p>An operation that completes after admitted item operations drain and the provider session
+and state store terminate.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a></dt>
+    <dd><p>More than one owned resource failed during disposal. Every resource is still attempted.
+Failed resources remain owned so disposal can be retried.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_GetDirectory_" data-uid="CfSharp.CloudFileSystem.GetDirectory*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_GetDirectory_System_String_" data-uid="CfSharp.CloudFileSystem.GetDirectory(System.String)">
+  GetDirectory(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an immutable path-bound directory reference without opening the item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudDirectory GetDirectory(string relativePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>relativePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Path relative to the sync root, or an empty string for the root. It need not currently exist.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudDirectory.html">CloudDirectory</a></dt>
+    <dd><p>A directory reference whose inspections read fresh state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The path is rooted, escapes the sync root lexically, or resolves outside it through an
+existing symbolic link or junction.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The file system has not finished starting.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The file system is stopping or disposed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_GetFile_" data-uid="CfSharp.CloudFileSystem.GetFile*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_GetFile_System_String_" data-uid="CfSharp.CloudFileSystem.GetFile(System.String)">
+  GetFile(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an immutable path-bound file reference without opening the item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudFile GetFile(string relativePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>relativePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Path relative to the sync root. It need not currently exist.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudFile.html">CloudFile</a></dt>
+    <dd><p>A file reference whose inspections read fresh state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The path is rooted, identifies the sync root, escapes it lexically, or resolves outside it
+through an existing symbolic link or junction.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The file system has not finished starting.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The file system is stopping or disposed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_ReadRemoteDirectoryPageAsync_" data-uid="CfSharp.CloudFileSystem.ReadRemoteDirectoryPageAsync*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_ReadRemoteDirectoryPageAsync_CfSharp_ICloudRemoteDirectoryCatalog_CfSharp_CloudRemoteDirectoryQuery_System_Threading_CancellationToken_" data-uid="CfSharp.CloudFileSystem.ReadRemoteDirectoryPageAsync(CfSharp.ICloudRemoteDirectoryCatalog,CfSharp.CloudRemoteDirectoryQuery,System.Threading.CancellationToken)">
+  ReadRemoteDirectoryPageAsync(ICloudRemoteDirectoryCatalog, CloudRemoteDirectoryQuery, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads one page from an application-owned remote directory catalog without mutating the
+managed namespace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudRemoteDirectoryPage&gt; ReadRemoteDirectoryPageAsync(ICloudRemoteDirectoryCatalog catalog, CloudRemoteDirectoryQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>catalog</code> <a class="xref" href="CfSharp.ICloudRemoteDirectoryCatalog.html">ICloudRemoteDirectoryCatalog</a></dt>
+    <dd><p>Application adapter that owns remote transport and consistency.</p>
+</dd>
+    <dt><code>query</code> <a class="xref" href="CfSharp.CloudRemoteDirectoryQuery.html">CloudRemoteDirectoryQuery</a></dt>
+    <dd><p>Validated remote directory path, filters, page size, and cursor.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed while the catalog reads its remote source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudRemoteDirectoryPage.html">CloudRemoteDirectoryPage</a>&gt;</dt>
+    <dd><p>A validated page of immediate remote children.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudFileSystem_ReadRemoteDirectoryPageAsync_CfSharp_ICloudRemoteDirectoryCatalog_CfSharp_CloudRemoteDirectoryQuery_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method deliberately does not create placeholders, advance remote cursors, or invoke
+Windows Cloud Files APIs. The adapter callback runs outside CfSharp state transactions and
+operation leases, so it may perform network I/O or application-level retries safely.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The catalog or query is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>The catalog returned an invalid page.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The file system has not started.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_ReadSynchronizedDirectoryPageAsync_" data-uid="CfSharp.CloudFileSystem.ReadSynchronizedDirectoryPageAsync*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_ReadSynchronizedDirectoryPageAsync_CfSharp_CloudSynchronizedDirectoryQuery_System_Threading_CancellationToken_" data-uid="CfSharp.CloudFileSystem.ReadSynchronizedDirectoryPageAsync(CfSharp.CloudSynchronizedDirectoryQuery,System.Threading.CancellationToken)">
+  ReadSynchronizedDirectoryPageAsync(CloudSynchronizedDirectoryQuery, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads one paged view that combines materialized local children with durable remote identity
+and revision state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudSynchronizedDirectoryPage&gt; ReadSynchronizedDirectoryPageAsync(CloudSynchronizedDirectoryQuery query, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="CfSharp.CloudSynchronizedDirectoryQuery.html">CloudSynchronizedDirectoryQuery</a></dt>
+    <dd><p>Validated local path, filters, page size, tombstone policy, and cursor.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed during local enumeration and state reads.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudSynchronizedDirectoryPage.html">CloudSynchronizedDirectoryPage</a>&gt;</dt>
+    <dd><p>A deterministic, side-effect-free synchronized directory page.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudFileSystem_ReadSynchronizedDirectoryPageAsync_CfSharp_CloudSynchronizedDirectoryQuery_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This view never calls a remote catalog and never applies a remote change. Callers first
+apply a remote batch explicitly, then use this method to inspect the durable/local result.
+The complete local enumeration and durable read are admitted as one operation so disposal
+cannot release the state store between the two phases.
+Online-only placeholders are represented as materialized entries; durable records whose
+local path is temporarily absent remain visible with <a class="xref" href="CfSharp.CloudSynchronizedDirectoryEntry.html#CfSharp_CloudSynchronizedDirectoryEntry_IsMaterialized">IsMaterialized</a>
+set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The query is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>The requested local directory is missing.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>The local namespace or durable state is inconsistent.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The file system has not started.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_ResolveRemoteConflictAsync_" data-uid="CfSharp.CloudFileSystem.ResolveRemoteConflictAsync*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_ResolveRemoteConflictAsync_System_Guid_CfSharp_CloudRemoteConflictResolution_System_Threading_CancellationToken_" data-uid="CfSharp.CloudFileSystem.ResolveRemoteConflictAsync(System.Guid,CfSharp.CloudRemoteConflictResolution,System.Threading.CancellationToken)">
+  ResolveRemoteConflictAsync(Guid, CloudRemoteConflictResolution, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves one durable remote conflict after an earlier batch recorded it safely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudRemoteApplyEntryResult&gt; ResolveRemoteConflictAsync(Guid conflictId, CloudRemoteConflictResolution resolution, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conflictId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>Stable identifier returned by a remote apply result.</p>
+</dd>
+    <dt><code>resolution</code> <a class="xref" href="CfSharp.CloudRemoteConflictResolution.html">CloudRemoteConflictResolution</a></dt>
+    <dd><p>Explicit keep-local, keep-remote, keep-both, or defer decision.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before durable and native work.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudRemoteApplyEntryResult.html">CloudRemoteApplyEntryResult</a>&gt;</dt>
+    <dd><p>The resulting entry status. A deferred decision leaves the conflict durable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keynotfoundexception">KeyNotFoundException</a></dt>
+    <dd><p>The conflict no longer exists.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>The durable conflict envelope is corrupt.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFileSystem_StartAsync_" data-uid="CfSharp.CloudFileSystem.StartAsync*"></a>
+
+  <h3 id="CfSharp_CloudFileSystem_StartAsync_System_Threading_CancellationToken_" data-uid="CfSharp.CloudFileSystem.StartAsync(System.Threading.CancellationToken)">
+  StartAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens all configured process resources and makes the file system ready.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask StartAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels waiting for lifecycle ownership or opening the state store. Native
+registration and connection calls are synchronous and cannot be interrupted once entered.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd><p>An operation that completes after the store and optional provider session open.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>The configured local root no longer exists when startup begins.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The instance is already starting or started.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The instance is stopping or disposed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Startup was canceled before completion.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects sync-root registration, lookup, or provider connection.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

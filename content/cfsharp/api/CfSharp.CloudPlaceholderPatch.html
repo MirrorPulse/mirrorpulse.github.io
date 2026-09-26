@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CloudPlaceholderPatch | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CloudPlaceholderPatch | CfSharp documentation ">
+      
+      <meta name="description" content="Describes an explicit immutable patch for an existing placeholder.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudPlaceholderPatch">
+
+
+
+  <h1 id="CfSharp_CloudPlaceholderPatch" data-uid="CfSharp.CloudPlaceholderPatch" class="text-break">
+Class CloudPlaceholderPatch  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Describes an explicit immutable patch for an existing placeholder.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CloudPlaceholderPatch</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CloudPlaceholderPatch</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_CloudPlaceholderPatch_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Omitted values remain unchanged. Identity removal, property removal, and state changes are
+explicit so null never ambiguously means both remove and preserve. Range data is copied during
+construction and is safe for concurrent reads.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_ContentMode_" data-uid="CfSharp.CloudPlaceholderPatch.ContentMode*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_ContentMode" data-uid="CfSharp.CloudPlaceholderPatch.ContentMode">
+  ContentMode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an optional file content-mode change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudFileContentMode? ContentMode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudFileContentMode.html">CloudFileContentMode</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_DehydrateRanges_" data-uid="CfSharp.CloudPlaceholderPatch.DehydrateRanges*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_DehydrateRanges" data-uid="CfSharp.CloudPlaceholderPatch.DehydrateRanges">
+  DehydrateRanges
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets copied ranges to dehydrate atomically with the update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;CloudFileRange&gt; DehydrateRanges { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="CfSharp.CloudFileRange.html">CloudFileRange</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_DehydrateWholeFile_" data-uid="CfSharp.CloudPlaceholderPatch.DehydrateWholeFile*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_DehydrateWholeFile" data-uid="CfSharp.CloudPlaceholderPatch.DehydrateWholeFile">
+  DehydrateWholeFile
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the complete file is dehydrated atomically with the update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DehydrateWholeFile { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_ExpectedUsn_" data-uid="CfSharp.CloudPlaceholderPatch.ExpectedUsn*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_ExpectedUsn" data-uid="CfSharp.CloudPlaceholderPatch.ExpectedUsn">
+  ExpectedUsn
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the expected current USN, or null for no condition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? ExpectedUsn { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_FileSize_" data-uid="CfSharp.CloudPlaceholderPatch.FileSize*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_FileSize" data-uid="CfSharp.CloudPlaceholderPatch.FileSize">
+  FileSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the replacement logical file length, or null when the current length is preserved.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? FileSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="CfSharp_CloudPlaceholderPatch_FileSize_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The value is valid only when replacement metadata is also supplied.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_IdentityChange_" data-uid="CfSharp.CloudPlaceholderPatch.IdentityChange*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_IdentityChange" data-uid="CfSharp.CloudPlaceholderPatch.IdentityChange">
+  IdentityChange
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether identity is unchanged, replaced, or removed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudPlaceholderIdentityChange IdentityChange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudPlaceholderIdentityChange.html">CloudPlaceholderIdentityChange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_Metadata_" data-uid="CfSharp.CloudPlaceholderPatch.Metadata*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_Metadata" data-uid="CfSharp.CloudPlaceholderPatch.Metadata">
+  Metadata
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets replacement metadata, or null when metadata remains unchanged.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudPlaceholderMetadata? Metadata { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudPlaceholderMetadata.html">CloudPlaceholderMetadata</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_MetadataWriteMode_" data-uid="CfSharp.CloudPlaceholderPatch.MetadataWriteMode*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_MetadataWriteMode" data-uid="CfSharp.CloudPlaceholderPatch.MetadataWriteMode">
+  MetadataWriteMode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets how zero-valued metadata fields are written.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudMetadataWriteMode MetadataWriteMode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudMetadataWriteMode.html">CloudMetadataWriteMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_PopulationState_" data-uid="CfSharp.CloudPlaceholderPatch.PopulationState*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_PopulationState" data-uid="CfSharp.CloudPlaceholderPatch.PopulationState">
+  PopulationState
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an optional directory population-state change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudDirectoryPopulationState? PopulationState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudDirectoryPopulationState.html">CloudDirectoryPopulationState</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_RemoveExtrinsicProperties_" data-uid="CfSharp.CloudPlaceholderPatch.RemoveExtrinsicProperties*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_RemoveExtrinsicProperties" data-uid="CfSharp.CloudPlaceholderPatch.RemoveExtrinsicProperties">
+  RemoveExtrinsicProperties
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether all extrinsic placeholder properties are removed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveExtrinsicProperties { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_ReplacementIdentity_" data-uid="CfSharp.CloudPlaceholderPatch.ReplacementIdentity*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_ReplacementIdentity" data-uid="CfSharp.CloudPlaceholderPatch.ReplacementIdentity">
+  ReplacementIdentity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets replacement identity when <a class="xref" href="CfSharp.CloudPlaceholderPatch.html#CfSharp_CloudPlaceholderPatch_IdentityChange">IdentityChange</a> is Replace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudPlaceholderIdentity? ReplacementIdentity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudPlaceholderIdentity.html">CloudPlaceholderIdentity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_RequireInSync_" data-uid="CfSharp.CloudPlaceholderPatch.RequireInSync*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_RequireInSync" data-uid="CfSharp.CloudPlaceholderPatch.RequireInSync">
+  RequireInSync
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the update fails unless the placeholder is currently in sync.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequireInSync { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_SynchronizationChange_" data-uid="CfSharp.CloudPlaceholderPatch.SynchronizationChange*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_SynchronizationChange" data-uid="CfSharp.CloudPlaceholderPatch.SynchronizationChange">
+  SynchronizationChange
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an explicit in-sync state change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudPlaceholderSynchronizationChange SynchronizationChange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudPlaceholderSynchronizationChange.html">CloudPlaceholderSynchronizationChange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_CloudPlaceholderPatch_CreateBuilder_" data-uid="CfSharp.CloudPlaceholderPatch.CreateBuilder*"></a>
+
+  <h3 id="CfSharp_CloudPlaceholderPatch_CreateBuilder" data-uid="CfSharp.CloudPlaceholderPatch.CreateBuilder">
+  CreateBuilder()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a mutable patch builder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CloudPlaceholderPatch.Builder CreateBuilder()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudPlaceholderPatch.html">CloudPlaceholderPatch</a>.<a class="xref" href="CfSharp.CloudPlaceholderPatch.Builder.html">Builder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

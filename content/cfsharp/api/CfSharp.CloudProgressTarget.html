@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CloudProgressTarget | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CloudProgressTarget | CfSharp documentation ">
+      
+      <meta name="description" content="Identifies the destination of a provider progress report.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudProgressTarget">
+
+
+
+  <h1 id="CfSharp_CloudProgressTarget" data-uid="CfSharp.CloudProgressTarget" class="text-break">
+Class CloudProgressTarget  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Identifies the destination of a provider progress report.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record CloudProgressTarget : IEquatable&lt;CloudProgressTarget&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CloudProgressTarget</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="CfSharp.CloudProgressTarget.html">CloudProgressTarget</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_CloudProgressTarget_CurrentHydrationRequest_" data-uid="CfSharp.CloudProgressTarget.CurrentHydrationRequest*"></a>
+
+  <h3 id="CfSharp_CloudProgressTarget_CurrentHydrationRequest" data-uid="CfSharp.CloudProgressTarget.CurrentHydrationRequest">
+  CurrentHydrationRequest
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a target that reports the current hydration request through V1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CloudProgressTarget CurrentHydrationRequest { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudProgressTarget.html">CloudProgressTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressTarget_RequestId_" data-uid="CfSharp.CloudProgressTarget.RequestId*"></a>
+
+  <h3 id="CfSharp_CloudProgressTarget_RequestId" data-uid="CfSharp.CloudProgressTarget.RequestId">
+  RequestId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the optional request identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudProviderRequestId? RequestId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudProviderRequestId.html">CloudProviderRequestId</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressTarget_TargetSessionId_" data-uid="CfSharp.CloudProgressTarget.TargetSessionId*"></a>
+
+  <h3 id="CfSharp_CloudProgressTarget_TargetSessionId" data-uid="CfSharp.CloudProgressTarget.TargetSessionId">
+  TargetSessionId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the target Windows session identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint TargetSessionId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_CloudProgressTarget_Equals_" data-uid="CfSharp.CloudProgressTarget.Equals*"></a>
+
+  <h3 id="CfSharp_CloudProgressTarget_Equals_CfSharp_CloudProgressTarget_" data-uid="CfSharp.CloudProgressTarget.Equals(CfSharp.CloudProgressTarget)">
+  Equals(CloudProgressTarget?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(CloudProgressTarget? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="CfSharp.CloudProgressTarget.html">CloudProgressTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressTarget_Equals_" data-uid="CfSharp.CloudProgressTarget.Equals*"></a>
+
+  <h3 id="CfSharp_CloudProgressTarget_Equals_System_Object_" data-uid="CfSharp.CloudProgressTarget.Equals(System.Object)">
+  Equals(object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressTarget_GetHashCode_" data-uid="CfSharp.CloudProgressTarget.GetHashCode*"></a>
+
+  <h3 id="CfSharp_CloudProgressTarget_GetHashCode" data-uid="CfSharp.CloudProgressTarget.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressTarget_Request_" data-uid="CfSharp.CloudProgressTarget.Request*"></a>
+
+  <h3 id="CfSharp_CloudProgressTarget_Request_CfSharp_CloudProviderRequestId_System_UInt32_" data-uid="CfSharp.CloudProgressTarget.Request(CfSharp.CloudProviderRequestId,System.UInt32)">
+  Request(CloudProviderRequestId, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a request/session target for the V2 progress API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CloudProgressTarget Request(CloudProviderRequestId requestId, uint targetSessionId = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requestId</code> <a class="xref" href="CfSharp.CloudProviderRequestId.html">CloudProviderRequestId</a></dt>
+    <dd><p>Opaque request identifier copied from a callback.</p>
+</dd>
+    <dt><code>targetSessionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Windows target session, or zero for the default session.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudProgressTarget.html">CloudProgressTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressTarget_ToString_" data-uid="CfSharp.CloudProgressTarget.ToString*"></a>
+
+  <h3 id="CfSharp_CloudProgressTarget_ToString" data-uid="CfSharp.CloudProgressTarget.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="CfSharp_CloudProgressTarget_op_Equality_" data-uid="CfSharp.CloudProgressTarget.op_Equality*"></a>
+
+  <h3 id="CfSharp_CloudProgressTarget_op_Equality_CfSharp_CloudProgressTarget_CfSharp_CloudProgressTarget_" data-uid="CfSharp.CloudProgressTarget.op_Equality(CfSharp.CloudProgressTarget,CfSharp.CloudProgressTarget)">
+  operator ==(CloudProgressTarget?, CloudProgressTarget?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(CloudProgressTarget? left, CloudProgressTarget? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="CfSharp.CloudProgressTarget.html">CloudProgressTarget</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="CfSharp.CloudProgressTarget.html">CloudProgressTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudProgressTarget_op_Inequality_" data-uid="CfSharp.CloudProgressTarget.op_Inequality*"></a>
+
+  <h3 id="CfSharp_CloudProgressTarget_op_Inequality_CfSharp_CloudProgressTarget_CfSharp_CloudProgressTarget_" data-uid="CfSharp.CloudProgressTarget.op_Inequality(CfSharp.CloudProgressTarget,CfSharp.CloudProgressTarget)">
+  operator !=(CloudProgressTarget?, CloudProgressTarget?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(CloudProgressTarget? left, CloudProgressTarget? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="CfSharp.CloudProgressTarget.html">CloudProgressTarget</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="CfSharp.CloudProgressTarget.html">CloudProgressTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

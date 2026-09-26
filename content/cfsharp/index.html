@@ -1,23 +1,219 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CfSharp documentation</title>
-    <style>
-      :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #08121e; color: #f2fbf8; }
-      body { display: grid; min-height: 100vh; place-items: center; margin: 0; }
-      main { width: min(34rem, calc(100% - 3rem)); padding: 2.5rem; border: 1px solid #24434b; border-radius: 1.5rem; background: #10222d; }
-      p { color: #9daebb; line-height: 1.7; }
-      a { color: #84f5d3; }
-    </style>
+      <title>CfSharp | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="CfSharp | CfSharp documentation ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MirrorPulse/CfSharp/blob/main/artifacts/docs/workspace/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body>
-    <main>
-      <p>CfSharp documentation</p>
-      <h1>Documentation is being prepared.</h1>
-      <p>The first guide and API reference build will appear here before the first preview release.</p>
-      <p><a href="https://github.com/MirrorPulse/CfSharp">View CfSharp on GitHub</a></p>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="cfsharp">CfSharp</h1>
+
+<p><a href="https://github.com/MirrorPulse/CfSharp/actions/workflows/ci.yml"><img src="https://github.com/MirrorPulse/CfSharp/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+<a href="https://github.com/MirrorPulse/CfSharp/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-84f5d3.svg" alt="License: Apache-2.0"></a>
+<a href="articles/platform-support.html"><img src="https://img.shields.io/badge/platform-Windows-0078d4.svg" alt="Windows"></a></p>
+<p>CfSharp is a Windows-only .NET library for building Cloud Files sync providers with a safe,
+idiomatic C# API. It keeps the complete Windows Cloud Files surface reachable while taking care
+of native structure layout, callback lifetime, cancellation, durable coordination, and failure
+translation.</p>
+<blockquote>
+<p><strong>Development preview:</strong> CfSharp is under active development. Packages have not been released
+to NuGet yet. Build from source while the first preview is being prepared.</p>
+</blockquote>
+<h2 id="what-is-included">What is included</h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CfSharp.Native</code></td>
+<td>ABI-accurate bindings for <code>cfapi.h</code> and <code>CldApi.dll</code>.</td>
+</tr>
+<tr>
+<td><code>CfSharp</code></td>
+<td>High-level sync-root, placeholder, hydration, provider, local-change, and remote-change APIs.</td>
+</tr>
+<tr>
+<td><code>CfSharp.Storage.Sqlite</code></td>
+<td>Optional transactional state store using a caller-owned SQLite database.</td>
+</tr>
+</tbody>
+</table>
+<p>The dependency direction is one way: <code>CfSharp.Native</code> is the interop layer, <code>CfSharp</code> provides
+the safe domain API, and the SQLite package depends on <code>CfSharp</code>. Remote transport, authentication,
+content bytes, and business conflict policy remain application-owned.</p>
+<h2 id="quick-start">Quick start</h2>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Windows 10 version 1709 (build 16299) or later for the core Cloud Files API;</li>
+<li>.NET 10 SDK selected by <a href="https://github.com/MirrorPulse/CfSharp/blob/main/global.json"><code>global.json</code></a>;</li>
+<li>x64 or ARM64 for the current support target. x86 is outside the stable release matrix;</li>
+<li>a sync root directory and a durable state database located outside that sync root.</li>
+</ul>
+<h3 id="build-from-source">Build from source</h3>
+<pre><code class="lang-powershell">git clone https://github.com/MirrorPulse/CfSharp.git
+cd CfSharp
+dotnet restore CfSharp.sln
+dotnet build CfSharp.sln --configuration Release --no-restore
+dotnet test CfSharp.sln --configuration Release --no-build
+</code></pre>
+<p>The first sample provider is available under
+<a href="https://github.com/MirrorPulse/CfSharp/tree/main/samples/CfSharp.SampleProvider"><code>samples/CfSharp.SampleProvider</code></a>. It mirrors a local content
+directory as online-only placeholders:</p>
+<pre><code class="lang-powershell">dotnet run --project samples/CfSharp.SampleProvider -- `
+  run C:\CloudContent `
+  C:\CloudSyncRoot `
+  --state-db C:\CloudState\cfsharp.db `
+  --once
+</code></pre>
+<h2 id="a-small-example">A small example</h2>
+<p>CfSharp makes ownership and lifecycle boundaries explicit. The SQLite path is supplied by the
+application and must not be placed inside the managed sync root.</p>
+<pre><code class="lang-csharp">ICloudStateStoreFactory stateStoreFactory = new SqliteCloudStateStoreFactory(
+    @&quot;C:\ProgramData\ExampleProvider\Accounts\account-42\cfsharp.db&quot;);
+
+SyncRootRegistrationOptions registration =
+    SyncRootRegistrationOptions.CreateBuilder(&quot;Example Cloud&quot;, &quot;1.0.0&quot;)
+        .WithProviderId(providerId)
+        .WithSyncRootIdentity(accountIdentity)
+        .WithRootMarkedInSync()
+        .Build();
+
+await using CloudFileSystem fileSystem = CloudFileSystem.CreateBuilder(
+        @&quot;C:\Users\Example\Example Cloud&quot;)
+    .WithStateStore(stateStoreFactory)
+    .WithRegistration(registration)
+    .WithContentProvider(contentProvider)
+    .Build();
+
+await fileSystem.StartAsync(cancellationToken);
+CloudFile report = fileSystem.GetFile(@&quot;Documents\report.pdf&quot;);
+CloudItemSnapshot snapshot = await report.InspectAsync(cancellationToken);
+</code></pre>
+<p><code>CloudFileSystem</code> opens the configured store only after validating the sync root and owns it after
+a successful start. Disposing the facade stops process-scoped work and closes durable state, but
+does not unregister the persistent Windows sync-root registration. Call
+<code>CloudSyncRoot.Unregister()</code> only for explicit account removal or uninstall.</p>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li><a href="articles/index.html">Documentation home</a></li>
+<li><a href="articles/getting-started.html">Getting started</a></li>
+<li><a href="articles/architecture.html">Architecture and ownership</a></li>
+<li><a href="articles/sync-root-lifecycle.html">Sync-root lifecycle</a></li>
+<li><a href="articles/placeholders.html">Placeholders and hydration</a></li>
+<li><a href="articles/local-change-feed.html">Local change feed</a></li>
+<li><a href="articles/remote-change-application.html">Remote change application</a></li>
+<li><a href="articles/state-store-sqlite.html">SQLite state</a></li>
+<li><a href="articles/platform-support.html">Platform support</a></li>
+<li><a href="articles/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p>The generated API reference will be published with the documentation site at
+<code>https://mirrorpulse.github.io/cfsharp/</code> when the first preview documentation pipeline is enabled.</p>
+<h2 id="development-notes">Development notes</h2>
+<p>The repository is Windows-first and keeps unsafe interop isolated in <code>CfSharp.Native</code>. Public APIs
+document ownership, lifetime, thread-safety, platform requirements, failure modes, and relevant
+native behavior. Changes should follow the atomic-commit and verification rules in
+<a href="https://github.com/MirrorPulse/CfSharp/blob/main/CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a>.</p>
+<pre><code class="lang-powershell">dotnet format CfSharp.sln --verify-no-changes --no-restore
+dotnet build CfSharp.sln --configuration Release --no-restore
+dotnet test CfSharp.sln --configuration Release --no-build
+pwsh ./eng/verify-platform-matrix.ps1
+pwsh ./eng/verify-runtime-boundaries.ps1 -Configuration Release
+</code></pre>
+<h2 id="license">License</h2>
+<p>CfSharp is licensed under the <a href="https://github.com/MirrorPulse/CfSharp/blob/main/LICENSE">Apache License 2.0</a>. Copyright © MirrorPulse Team.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MirrorPulse/CfSharp/blob/main/artifacts/docs/workspace/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
     </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

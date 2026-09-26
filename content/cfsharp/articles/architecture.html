@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Architecture and ownership | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Architecture and ownership | CfSharp documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MirrorPulse/CfSharp/blob/main/artifacts/docs/workspace/articles/architecture.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="architecture-and-ownership">Architecture and ownership</h1>
+
+<p>CfSharp uses a one-way dependency graph so that safe application code does not need to understand
+native pointers or SQLite implementation details.</p>
+<pre><code class="lang-text">CfSharp.Storage.Sqlite  ──depends on──&gt;  CfSharp  ──depends on──&gt;  CfSharp.Native
+</code></pre>
+<h2 id="native-layer">Native layer</h2>
+<p><code>CfSharp.Native</code> preserves Cloud Files structures, constants, enums, callbacks, and exports. It is
+the escape hatch for complete native coverage and the foundation for ABI probes. Unsafe code,
+marshalling rules, structure sizes, and native error values stay here whenever possible.</p>
+<h2 id="high-level-layer">High-level layer</h2>
+<p><code>CfSharp</code> provides immutable path references, validated operation specifications, capability gates,
+explicit cancellation, and managed exceptions that retain native failure details. <code>CloudFileSystem</code>
+is the normal process-scoped facade. It acquires the durable store only after validating the sync
+root and takes disposal ownership after a successful start.</p>
+<h2 id="durable-state">Durable state</h2>
+<p>State interfaces describe transactions and focused repositories for item mappings, checkpoints,
+local operations, conflicts, remote progress, and echo suppression. A transaction that is disposed
+without commit rolls back. The application chooses the database path and remains responsible for
+backup, retention, and account-level policy.</p>
+<h2 id="application-owned-responsibilities">Application-owned responsibilities</h2>
+<p>CfSharp does not decide how to authenticate, fetch remote bytes, resolve business conflicts, or
+schedule an account's network work. A content provider supplies those behaviors. Remote batches and
+local change acknowledgements are explicit so an application can make retry and recovery decisions
+without hidden network access.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MirrorPulse/CfSharp/blob/main/artifacts/docs/workspace/articles/architecture.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

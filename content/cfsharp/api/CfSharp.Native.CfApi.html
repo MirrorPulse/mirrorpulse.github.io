@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CfApi | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CfApi | CfSharp documentation ">
+      
+      <meta name="description" content="Exposes direct native entry points from the Windows Cloud Files API.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.Native.CfApi">
+
+
+
+  <h1 id="CfSharp_Native_CfApi" data-uid="CfSharp.Native.CfApi" class="text-break">
+Class CfApi  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a>.<a class="xref" href="CfSharp.Native.html">Native</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.Native.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Exposes direct native entry points from the Windows Cloud Files API.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class CfApi</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CfApi</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_Native_CfApi_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Members of this class preserve native signatures and error values for callers that
+require direct CFAPI access. They do not translate <code>HRESULT</code> failures into
+managed exceptions.
+</p>
+<p>
+Unless a member states otherwise, arguments follow the ownership and lifetime rules
+documented for the corresponding function in <code>cfapi.h</code>. The entry points are
+loaded from the copy of <code>CldApi.dll</code> in the Windows system directory.
+</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="CfSharp_Native_CfApi_DefaultRequestKey" data-uid="CfSharp.Native.CfApi.DefaultRequestKey">
+  DefaultRequestKey
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default request-key value for operations that are not associated with a callback request.
+Mirrors <code>CF_REQUEST_KEY_DEFAULT</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const long DefaultRequestKey = 0</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfApi_EndOfFile" data-uid="CfSharp.Native.CfApi.EndOfFile">
+  EndOfFile
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sentinel length indicating that an operation extends from its starting offset to the
+logical end of the file. Mirrors <code>CF_EOF</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const long EndOfFile = -1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfApi_MaxFileIdentityLength" data-uid="CfSharp.Native.CfApi.MaxFileIdentityLength">
+  MaxFileIdentityLength
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum placeholder file-identity length in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaxFileIdentityLength = 4096</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfApi_MaxPriorityHint" data-uid="CfSharp.Native.CfApi.MaxPriorityHint">
+  MaxPriorityHint
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum callback priority hint defined by the Cloud Files API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const byte MaxPriorityHint = 15</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfApi_MaxProviderNameLength" data-uid="CfSharp.Native.CfApi.MaxProviderNameLength">
+  MaxProviderNameLength
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum provider display-name length, excluding the terminating null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaxProviderNameLength = 255</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfApi_MaxProviderVersionLength" data-uid="CfSharp.Native.CfApi.MaxProviderVersionLength">
+  MaxProviderVersionLength
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum provider version length, excluding the terminating null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaxProviderVersionLength = 255</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_Native_CfApi_CfCloseHandle_" data-uid="CfSharp.Native.CfApi.CfCloseHandle*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfCloseHandle_System_IntPtr_" data-uid="CfSharp.Native.CfApi.CfCloseHandle(System.IntPtr)">
+  CfCloseHandle(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes a protected handle returned by <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfOpenFileWithOplock_System_Char__CfSharp_Native_CfOpenFileFlags_System_IntPtr__">CfOpenFileWithOplock(char*, CfOpenFileFlags, out nint)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern void CfCloseHandle(nint fileHandle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Opaque protected handle to close. This must not be an ordinary Win32 handle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfCloseHandle_System_IntPtr__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The call has no return value. The caller must ensure all references acquired through
+<a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfReferenceProtectedHandle_System_IntPtr_">CfReferenceProtectedHandle(nint)</a> have first been released and must not use the
+protected handle again after this call.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfConnectSyncRoot_" data-uid="CfSharp.Native.CfApi.CfConnectSyncRoot*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfConnectSyncRoot_System_Char__CfSharp_Native_CfCallbackRegistration__System_Void__CfSharp_Native_CfConnectFlags_CfSharp_Native_CfConnectionKey__" data-uid="CfSharp.Native.CfApi.CfConnectSyncRoot(System.Char*,CfSharp.Native.CfCallbackRegistration*,System.Void*,CfSharp.Native.CfConnectFlags,CfSharp.Native.CfConnectionKey@)">
+  CfConnectSyncRoot(char*, CfCallbackRegistration*, void*, CfConnectFlags, out CfConnectionKey)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Connects a registered sync root to a provider callback table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CfConnectSyncRoot(char* syncRootPath, CfCallbackRegistration* callbackTable, void* callbackContext, CfConnectFlags connectFlags, out CfConnectionKey connectionKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>syncRootPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>*</dt>
+    <dd><p>Pointer to the null-terminated UTF-16 registered root path.</p>
+</dd>
+    <dt><code>callbackTable</code> <a class="xref" href="CfSharp.Native.CfCallbackRegistration.html">CfCallbackRegistration</a>*</dt>
+    <dd><p>Pointer to an array terminated by <a class="xref" href="CfSharp.Native.CfCallbackType.html#CfSharp_Native_CfCallbackType_None">None</a>. Windows retains
+access to the array and its function pointers for the complete connection lifetime.</p>
+</dd>
+    <dt><code>callbackContext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Optional provider-owned context pointer returned in each <a class="xref" href="CfSharp.Native.CfCallbackInfo.html">CfCallbackInfo</a>.
+Windows does not own or release the target.</p>
+</dd>
+    <dt><code>connectFlags</code> <a class="xref" href="CfSharp.Native.CfConnectFlags.html">CfConnectFlags</a></dt>
+    <dd><p>Flags controlling callback information and hydration behavior.</p>
+</dd>
+    <dt><code>connectionKey</code> <a class="xref" href="CfSharp.Native.CfConnectionKey.html">CfConnectionKey</a></dt>
+    <dd><p>Receives the opaque key for the new connection.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfConnectSyncRoot_System_Char__CfSharp_Native_CfCallbackRegistration__System_Void__CfSharp_Native_CfConnectFlags_CfSharp_Native_CfConnectionKey___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Only one provider may be connected to a given sync root at a time. Callbacks can occur
+concurrently on platform threads as soon as this function succeeds.
+</p>
+<p>
+The path need remain valid only for this call. The callback table, callback entry points,
+and callback context target must remain valid until <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfDisconnectSyncRoot_CfSharp_Native_CfConnectionKey_">CfDisconnectSyncRoot(CfConnectionKey)</a>
+returns. Exceptions must never escape an unmanaged callback entry point.
+</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfConvertToPlaceholder_" data-uid="CfSharp.Native.CfApi.CfConvertToPlaceholder*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfConvertToPlaceholder_System_IntPtr_System_Void__System_UInt32_CfSharp_Native_CfConvertFlags_System_Int64__System_Threading_NativeOverlapped__" data-uid="CfSharp.Native.CfApi.CfConvertToPlaceholder(System.IntPtr,System.Void*,System.UInt32,CfSharp.Native.CfConvertFlags,System.Int64*,System.Threading.NativeOverlapped*)">
+  CfConvertToPlaceholder(nint, void*, uint, CfConvertFlags, long*, NativeOverlapped*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an existing ordinary file or directory into a Cloud Files placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfConvertToPlaceholder(nint fileHandle, void* fileIdentity, uint fileIdentityLength, CfConvertFlags convertFlags, long* convertUsn, NativeOverlapped* overlapped)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle to an item within a registered sync root. Write-data or write-DAC access
+is required. When dehydration is requested, the handle must provide exclusive access.</p>
+</dd>
+    <dt><code>fileIdentity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Optional pointer to caller-owned opaque identity bytes. The buffer need remain valid until
+synchronous completion or until an asynchronous operation completes.</p>
+</dd>
+    <dt><code>fileIdentityLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Length of <code class="paramref">fileIdentity</code> in bytes; cannot exceed
+<a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_MaxFileIdentityLength">MaxFileIdentityLength</a>.</p>
+</dd>
+    <dt><code>convertFlags</code> <a class="xref" href="CfSharp.Native.CfConvertFlags.html">CfConvertFlags</a></dt>
+    <dd><p>Flags controlling synchronization, hydration, and population state.</p>
+</dd>
+    <dt><code>convertUsn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>*</dt>
+    <dd><p>Optional pointer receiving the final update sequence number after conversion.</p>
+</dd>
+    <dt><code>overlapped</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.nativeoverlapped">NativeOverlapped</a>*</dt>
+    <dd><p>Optional caller-owned native overlapped state. When supplied with an asynchronous handle,
+it and every input buffer must remain valid until completion is observed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A pending asynchronous operation is reported
+as the HRESULT form of <code>ERROR_IO_PENDING</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfConvertToPlaceholder_System_IntPtr_System_Void__System_UInt32_CfSharp_Native_CfConvertFlags_System_Int64__System_Threading_NativeOverlapped___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The operation mutates file-system state. <a class="xref" href="CfSharp.Native.CfConvertFlags.html#CfSharp_Native_CfConvertFlags_Dehydrate">Dehydrate</a> requires an
+unpinned, in-sync item and a sync-root hydration policy that permits dehydration. The
+platform does not verify that the caller's handle is exclusive.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfCreatePlaceholders_" data-uid="CfSharp.Native.CfApi.CfCreatePlaceholders*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfCreatePlaceholders_System_Char__CfSharp_Native_CfPlaceholderCreateInfo__System_UInt32_CfSharp_Native_CfCreateFlags_System_UInt32__" data-uid="CfSharp.Native.CfApi.CfCreatePlaceholders(System.Char*,CfSharp.Native.CfPlaceholderCreateInfo*,System.UInt32,CfSharp.Native.CfCreateFlags,System.UInt32*)">
+  CfCreatePlaceholders(char*, CfPlaceholderCreateInfo*, uint, CfCreateFlags, uint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates one or more placeholder files or directories beneath a sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfCreatePlaceholders(char* baseDirectoryPath, CfPlaceholderCreateInfo* placeholderArray, uint placeholderCount, CfCreateFlags createFlags, uint* entriesProcessed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseDirectoryPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>*</dt>
+    <dd><p>Pointer to a null-terminated UTF-16 path under a registered sync root. Every entry name
+is interpreted relative to this directory.</p>
+</dd>
+    <dt><code>placeholderArray</code> <a class="xref" href="CfSharp.Native.CfPlaceholderCreateInfo.html">CfPlaceholderCreateInfo</a>*</dt>
+    <dd><p>Pointer to a mutable array of <code class="paramref">placeholderCount</code> entries. Windows writes
+each entry's result and creation USN before returning.</p>
+</dd>
+    <dt><code>placeholderCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of entries in <code class="paramref">placeholderArray</code>.</p>
+</dd>
+    <dt><code>createFlags</code> <a class="xref" href="CfSharp.Native.CfCreateFlags.html">CfCreateFlags</a></dt>
+    <dd><p>Flags controlling failure behavior for the complete batch.</p>
+</dd>
+    <dt><code>entriesProcessed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>*</dt>
+    <dd><p>Optional pointer receiving the number of entries processed. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>
+when the count is not required.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native batch-level <code>HRESULT</code> without translation. Inspect every processed entry's
+<a class="xref" href="CfSharp.Native.CfPlaceholderCreateInfo.html#CfSharp_Native_CfPlaceholderCreateInfo_Result">Result</a> when the call permits partial success.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfCreatePlaceholders_System_Char__CfSharp_Native_CfPlaceholderCreateInfo__System_UInt32_CfSharp_Native_CfCreateFlags_System_UInt32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The function retains no pointers. The array, relative names, and identity buffers must
+remain valid only until it returns. Entry identities cannot exceed
+<a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_MaxFileIdentityLength">MaxFileIdentityLength</a> bytes.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfDehydratePlaceholder_" data-uid="CfSharp.Native.CfApi.CfDehydratePlaceholder*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfDehydratePlaceholder_System_IntPtr_System_Int64_System_Int64_CfSharp_Native_CfDehydrateFlags_System_Threading_NativeOverlapped__" data-uid="CfSharp.Native.CfApi.CfDehydratePlaceholder(System.IntPtr,System.Int64,System.Int64,CfSharp.Native.CfDehydrateFlags,System.Threading.NativeOverlapped*)">
+  CfDehydratePlaceholder(nint, long, long, CfDehydrateFlags, NativeOverlapped*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes locally present content from a byte range of a placeholder file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfDehydratePlaceholder(nint fileHandle, long startingOffset, long length, CfDehydrateFlags dehydrateFlags, NativeOverlapped* overlapped)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle to an unpinned, in-sync placeholder that permits dehydration.</p>
+</dd>
+    <dt><code>startingOffset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Zero-based first byte to dehydrate.</p>
+</dd>
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Number of bytes to dehydrate, or <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_EndOfFile">EndOfFile</a> to continue to logical end of file.</p>
+</dd>
+    <dt><code>dehydrateFlags</code> <a class="xref" href="CfSharp.Native.CfDehydrateFlags.html">CfDehydrateFlags</a></dt>
+    <dd><p>Flags describing foreground or background dehydration.</p>
+</dd>
+    <dt><code>overlapped</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.nativeoverlapped">NativeOverlapped</a>*</dt>
+    <dd><p>Optional caller-owned native overlapped state that must remain valid through asynchronous
+completion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfDehydratePlaceholder_System_IntPtr_System_Int64_System_Int64_CfSharp_Native_CfDehydrateFlags_System_Threading_NativeOverlapped___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The platform may expand a non-page-aligned requested range to page boundaries. Dehydration
+changes availability only; the placeholder identity and metadata remain present.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfDisconnectSyncRoot_" data-uid="CfSharp.Native.CfApi.CfDisconnectSyncRoot*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfDisconnectSyncRoot_CfSharp_Native_CfConnectionKey_" data-uid="CfSharp.Native.CfApi.CfDisconnectSyncRoot(CfSharp.Native.CfConnectionKey)">
+  CfDisconnectSyncRoot(CfConnectionKey)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disconnects a provider communication channel from its sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfDisconnectSyncRoot(CfConnectionKey connectionKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>connectionKey</code> <a class="xref" href="CfSharp.Native.CfConnectionKey.html">CfConnectionKey</a></dt>
+    <dd><p>Opaque key returned by <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfConnectSyncRoot_System_Char__CfSharp_Native_CfCallbackRegistration__System_Void__CfSharp_Native_CfConnectFlags_CfSharp_Native_CfConnectionKey__">CfConnectSyncRoot(char*, CfCallbackRegistration*, void*, CfConnectFlags, out CfConnectionKey)</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfDisconnectSyncRoot_CfSharp_Native_CfConnectionKey__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Callbacks may still arrive while this function is executing. After it returns, Windows
+no longer invokes the registered callbacks, so the provider may release the callback
+table and context. Unexpected process termination is also detected and cleaned up by
+Windows, but explicit disconnection provides deterministic shutdown.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfExecute_" data-uid="CfSharp.Native.CfApi.CfExecute*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfExecute_CfSharp_Native_CfOperationInfo__CfSharp_Native_CfOperationParameters__" data-uid="CfSharp.Native.CfApi.CfExecute(CfSharp.Native.CfOperationInfo*,CfSharp.Native.CfOperationParameters*)">
+  CfExecute(CfOperationInfo*, CfOperationParameters*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Completes or advances a Cloud Files callback operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfExecute(CfOperationInfo* operationInfo, CfOperationParameters* operationParameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>operationInfo</code> <a class="xref" href="CfSharp.Native.CfOperationInfo.html">CfOperationInfo</a>*</dt>
+    <dd><p>Pointer to operation identity copied from the callback. Its type selects the active
+branch in <code class="paramref">operationParameters</code>.</p>
+</dd>
+    <dt><code>operationParameters</code> <a class="xref" href="CfSharp.Native.CfOperationParameters.html">CfOperationParameters</a>*</dt>
+    <dd><p>Pointer to mutable operation parameters with a branch-specific
+<a class="xref" href="CfSharp.Native.CfOperationParameters.html#CfSharp_Native_CfOperationParameters_ParamSize">ParamSize</a>. Windows may update output fields.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native call-level <code>HRESULT</code> without translation. For completion operations, the
+request outcome is carried separately by the branch's <a class="xref" href="CfSharp.Native.NtStatus.html">NtStatus</a> value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfExecute_CfSharp_Native_CfOperationInfo__CfSharp_Native_CfOperationParameters___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Input buffers need remain valid until this call returns. A successful return means Windows
+accepted this operation; it does not replace the terminal status supplied for the request.
+Calls for separate requests may execute concurrently.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetCorrelationVector_" data-uid="CfSharp.Native.CfApi.CfGetCorrelationVector*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetCorrelationVector_System_IntPtr_CfSharp_Native_CfCorrelationVector__" data-uid="CfSharp.Native.CfApi.CfGetCorrelationVector(System.IntPtr,CfSharp.Native.CfCorrelationVector*)">
+  CfGetCorrelationVector(nint, CfCorrelationVector*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the correlation vector currently associated with a placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfGetCorrelationVector(nint fileHandle, CfCorrelationVector* correlationVector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle with read-data or write-DAC access to the placeholder.</p>
+</dd>
+    <dt><code>correlationVector</code> <a class="xref" href="CfSharp.Native.CfCorrelationVector.html">CfCorrelationVector</a>*</dt>
+    <dd><p>Pointer to caller-owned storage receiving the vector.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetCorrelationVector_System_IntPtr_CfSharp_Native_CfCorrelationVector___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Windows can assign the initial vector when the file is first opened. A successful query can
+return a zero-initialized vector before assignment; callers must inspect
+<a class="xref" href="CfSharp.Native.CfCorrelationVector.html#CfSharp_Native_CfCorrelationVector_Version">Version</a>. The returned structure owns no external memory
+and can be copied after the function returns.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetPlaceholderInfo_" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderInfo*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetPlaceholderInfo_System_IntPtr_CfSharp_Native_CfPlaceholderInfoClass_System_Void__System_UInt32_System_UInt32__" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderInfo(System.IntPtr,CfSharp.Native.CfPlaceholderInfoClass,System.Void*,System.UInt32,System.UInt32*)">
+  CfGetPlaceholderInfo(nint, CfPlaceholderInfoClass, void*, uint, uint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves state, identifiers, storage accounting, and identity for a placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfGetPlaceholderInfo(nint fileHandle, CfPlaceholderInfoClass infoClass, void* infoBuffer, uint infoBufferLength, uint* returnedLength)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle requiring only read-attributes access.</p>
+</dd>
+    <dt><code>infoClass</code> <a class="xref" href="CfSharp.Native.CfPlaceholderInfoClass.html">CfPlaceholderInfoClass</a></dt>
+    <dd><p>Selects the basic or standard variable-length result.</p>
+</dd>
+    <dt><code>infoBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Pointer to caller-owned writable result storage.</p>
+</dd>
+    <dt><code>infoBufferLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Capacity of <code class="paramref">infoBuffer</code> in bytes.</p>
+</dd>
+    <dt><code>returnedLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>*</dt>
+    <dd><p>Optional pointer receiving the number of bytes written or required by the result.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. If the buffer is too small, Windows can
+return a partial result together with the HRESULT form of <code>ERROR_MORE_DATA</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetPlaceholderInfo_System_IntPtr_CfSharp_Native_CfPlaceholderInfoClass_System_Void__System_UInt32_System_UInt32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The fixed structure selected by <code class="paramref">infoClass</code> ends with a variable-length
+identity. The function is observational, retains no memory, and may execute concurrently
+with other read-only queries subject to ordinary handle lifetime rules.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetPlaceholderRangeInfo_" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderRangeInfo*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetPlaceholderRangeInfo_System_IntPtr_CfSharp_Native_CfPlaceholderRangeInfoClass_System_Int64_System_Int64_System_Void__System_UInt32_System_UInt32__" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderRangeInfo(System.IntPtr,CfSharp.Native.CfPlaceholderRangeInfoClass,System.Int64,System.Int64,System.Void*,System.UInt32,System.UInt32*)">
+  CfGetPlaceholderRangeInfo(nint, CfPlaceholderRangeInfoClass, long, long, void*, uint, uint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves on-disk, validated, or modified byte ranges for a placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfGetPlaceholderRangeInfo(nint fileHandle, CfPlaceholderRangeInfoClass infoClass, long startingOffset, long length, void* infoBuffer, uint infoBufferLength, uint* returnedLength)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle requiring only read-attributes access.</p>
+</dd>
+    <dt><code>infoClass</code> <a class="xref" href="CfSharp.Native.CfPlaceholderRangeInfoClass.html">CfPlaceholderRangeInfoClass</a></dt>
+    <dd><p>Category of ranges to return.</p>
+</dd>
+    <dt><code>startingOffset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>First byte included in the query.</p>
+</dd>
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Query length in bytes, or <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_EndOfFile">EndOfFile</a> to query through logical end of file.</p>
+</dd>
+    <dt><code>infoBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Pointer to writable storage for an array of <a class="xref" href="CfSharp.Native.CfFileRange.html">CfFileRange</a>.</p>
+</dd>
+    <dt><code>infoBufferLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Capacity of <code class="paramref">infoBuffer</code> in bytes.</p>
+</dd>
+    <dt><code>returnedLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>*</dt>
+    <dd><p>Optional pointer receiving the number of bytes written.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. The HRESULT forms of
+<code>ERROR_MORE_DATA</code> and <code>ERROR_HANDLE_EOF</code> are part of normal range enumeration.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetPlaceholderRangeInfo_System_IntPtr_CfSharp_Native_CfPlaceholderRangeInfoClass_System_Int64_System_Int64_System_Void__System_UInt32_System_UInt32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The function is observational and retains no caller-owned memory.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetPlaceholderRangeInfoForHydration_" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderRangeInfoForHydration*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetPlaceholderRangeInfoForHydration_CfSharp_Native_CfConnectionKey_CfSharp_Native_CfTransferKey_System_Int64_CfSharp_Native_CfPlaceholderRangeInfoClass_System_Int64_System_Int64_System_Void__System_UInt32_System_UInt32__" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderRangeInfoForHydration(CfSharp.Native.CfConnectionKey,CfSharp.Native.CfTransferKey,System.Int64,CfSharp.Native.CfPlaceholderRangeInfoClass,System.Int64,System.Int64,System.Void*,System.UInt32,System.UInt32*)">
+  CfGetPlaceholderRangeInfoForHydration(CfConnectionKey, CfTransferKey, long, CfPlaceholderRangeInfoClass, long, long, void*, uint, uint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves placeholder ranges by callback identity without opening the file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfGetPlaceholderRangeInfoForHydration(CfConnectionKey connectionKey, CfTransferKey transferKey, long fileId, CfPlaceholderRangeInfoClass infoClass, long startingOffset, long rangeLength, void* infoBuffer, uint infoBufferSize, uint* infoBufferWritten)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>connectionKey</code> <a class="xref" href="CfSharp.Native.CfConnectionKey.html">CfConnectionKey</a></dt>
+    <dd><p>Provider connection from the callback.</p>
+</dd>
+    <dt><code>transferKey</code> <a class="xref" href="CfSharp.Native.CfTransferKey.html">CfTransferKey</a></dt>
+    <dd><p>Transfer stream from the callback or <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfGetTransferKey_System_IntPtr_CfSharp_Native_CfTransferKey__">CfGetTransferKey(nint, CfTransferKey*)</a>.</p>
+</dd>
+    <dt><code>fileId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Volume-wide file identifier supplied with the callback.</p>
+</dd>
+    <dt><code>infoClass</code> <a class="xref" href="CfSharp.Native.CfPlaceholderRangeInfoClass.html">CfPlaceholderRangeInfoClass</a></dt>
+    <dd><p>Category of ranges to return.</p>
+</dd>
+    <dt><code>startingOffset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>First byte included in the query.</p>
+</dd>
+    <dt><code>rangeLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Query length in bytes, or <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_EndOfFile">EndOfFile</a> to query through logical end of file.</p>
+</dd>
+    <dt><code>infoBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Pointer to writable storage for an array of <a class="xref" href="CfSharp.Native.CfFileRange.html">CfFileRange</a>.</p>
+</dd>
+    <dt><code>infoBufferSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Capacity of <code class="paramref">infoBuffer</code> in bytes.</p>
+</dd>
+    <dt><code>infoBufferWritten</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>*</dt>
+    <dd><p>Optional pointer receiving the number of bytes written.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetPlaceholderRangeInfoForHydration_CfSharp_Native_CfConnectionKey_CfSharp_Native_CfTransferKey_System_Int64_CfSharp_Native_CfPlaceholderRangeInfoClass_System_Int64_System_Int64_System_Void__System_UInt32_System_UInt32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This path bypasses file-system filter stacks that could deadlock a fetch callback. Before
+calling it, verify that <a class="xref" href="CfSharp.Native.CfPlatformInfo.html#CfSharp_Native_CfPlatformInfo_IntegrationNumber">IntegrationNumber</a> is at least
+<code>0x600</code>. For queries outside a callback, prefer <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfGetPlaceholderRangeInfo_System_IntPtr_CfSharp_Native_CfPlaceholderRangeInfoClass_System_Int64_System_Int64_System_Void__System_UInt32_System_UInt32__">CfGetPlaceholderRangeInfo(nint, CfPlaceholderRangeInfoClass, long, long, void*, uint, uint*)</a>.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetPlaceholderStateFromAttributeTag_" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderStateFromAttributeTag*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetPlaceholderStateFromAttributeTag_System_UInt32_System_UInt32_" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderStateFromAttributeTag(System.UInt32,System.UInt32)">
+  CfGetPlaceholderStateFromAttributeTag(uint, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Infers Cloud Files state from Win32 file attributes and a reparse tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CfPlaceholderState CfGetPlaceholderStateFromAttributeTag(uint fileAttributes, uint reparseTag)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileAttributes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Win32 file attribute bits.</p>
+</dd>
+    <dt><code>reparseTag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Win32 reparse tag for the item.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.Native.CfPlaceholderState.html">CfPlaceholderState</a></dt>
+    <dd><p>A set of placeholder-state flags, or <a class="xref" href="CfSharp.Native.CfPlaceholderState.html#CfSharp_Native_CfPlaceholderState_Invalid">Invalid</a> when the
+supplied values cannot be interpreted.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetPlaceholderStateFromAttributeTag_System_UInt32_System_UInt32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This function performs no I/O and returns state directly rather than an <code>HRESULT</code>.
+The inputs can be obtained from file attribute-tag information or directory find data.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetPlaceholderStateFromFileInfo_" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderStateFromFileInfo*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetPlaceholderStateFromFileInfo_System_Void__System_Int32_" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderStateFromFileInfo(System.Void*,System.Int32)">
+  CfGetPlaceholderStateFromFileInfo(void*, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Infers Cloud Files state from a buffer returned by a Win32 file-information query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CfPlaceholderState CfGetPlaceholderStateFromFileInfo(void* infoBuffer, int infoClass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>infoBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Pointer to file information returned by <code>GetFileInformationByHandleEx</code>.</p>
+</dd>
+    <dt><code>infoClass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Numeric Win32 <code>FILE_INFO_BY_HANDLE_CLASS</code> value describing
+<code class="paramref">infoBuffer</code>. Unsupported classes return invalid state and set last error.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.Native.CfPlaceholderState.html">CfPlaceholderState</a></dt>
+    <dd><p>A set of placeholder-state flags, or <a class="xref" href="CfSharp.Native.CfPlaceholderState.html#CfSharp_Native_CfPlaceholderState_Invalid">Invalid</a> on failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetPlaceholderStateFromFileInfo_System_Void__System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The input buffer is borrowed for the duration of the call and is never retained.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetPlaceholderStateFromFindData_" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderStateFromFindData*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetPlaceholderStateFromFindData_CfSharp_Native_CfWin32FindData__" data-uid="CfSharp.Native.CfApi.CfGetPlaceholderStateFromFindData(CfSharp.Native.CfWin32FindData*)">
+  CfGetPlaceholderStateFromFindData(CfWin32FindData*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Infers Cloud Files state from Unicode Win32 directory find data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CfPlaceholderState CfGetPlaceholderStateFromFindData(CfWin32FindData* findData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>findData</code> <a class="xref" href="CfSharp.Native.CfWin32FindData.html">CfWin32FindData</a>*</dt>
+    <dd><p>Pointer to caller-owned <a class="xref" href="CfSharp.Native.CfWin32FindData.html">CfWin32FindData</a> obtained from a Unicode Win32 find
+operation. The pointer is borrowed only for this call.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.Native.CfPlaceholderState.html">CfPlaceholderState</a></dt>
+    <dd><p>A set of placeholder-state flags, or <a class="xref" href="CfSharp.Native.CfPlaceholderState.html#CfSharp_Native_CfPlaceholderState_Invalid">Invalid</a> on failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetPlatformInfo_" data-uid="CfSharp.Native.CfApi.CfGetPlatformInfo*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetPlatformInfo_CfSharp_Native_CfPlatformInfo__" data-uid="CfSharp.Native.CfApi.CfGetPlatformInfo(CfSharp.Native.CfPlatformInfo@)">
+  CfGetPlatformInfo(out CfPlatformInfo)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves version and capability information for the installed Cloud Files platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CfGetPlatformInfo(out CfPlatformInfo platformVersion)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>platformVersion</code> <a class="xref" href="CfSharp.Native.CfPlatformInfo.html">CfPlatformInfo</a></dt>
+    <dd><p>Receives a self-contained platform information value. The caller owns the value and
+no cleanup is required, regardless of whether the function succeeds.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetPlatformInfo_CfSharp_Native_CfPlatformInfo___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This function is available on Windows 10, version 1709 and later. Calling it on a
+system where <code>CldApi.dll</code> or the export is unavailable may produce the standard
+.NET native-library loading exceptions before an <code>HRESULT</code> can be returned.
+</p>
+<p>
+The function has no retained callback or buffer lifetime and may be invoked
+concurrently from multiple threads.
+</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetSyncRootInfoByHandle_" data-uid="CfSharp.Native.CfApi.CfGetSyncRootInfoByHandle*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetSyncRootInfoByHandle_System_IntPtr_CfSharp_Native_CfSyncRootInfoClass_System_Void__System_UInt32_System_UInt32__" data-uid="CfSharp.Native.CfApi.CfGetSyncRootInfoByHandle(System.IntPtr,CfSharp.Native.CfSyncRootInfoClass,System.Void*,System.UInt32,System.UInt32*)">
+  CfGetSyncRootInfoByHandle(nint, CfSyncRootInfoClass, void*, uint, uint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queries the sync root containing a file or directory identified by an open handle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfGetSyncRootInfoByHandle(nint fileHandle, CfSyncRootInfoClass infoClass, void* infoBuffer, uint infoBufferLength, uint* returnedLength)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Valid file or directory handle with at least read-attributes access. Ownership remains
+with the caller; this function neither closes nor retains it.</p>
+</dd>
+    <dt><code>infoClass</code> <a class="xref" href="CfSharp.Native.CfSyncRootInfoClass.html">CfSyncRootInfoClass</a></dt>
+    <dd><p>Selects the native result structure written to the buffer.</p>
+</dd>
+    <dt><code>infoBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Pointer to caller-owned writable storage appropriate for <code class="paramref">infoClass</code>.</p>
+</dd>
+    <dt><code>infoBufferLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Available buffer length in bytes.</p>
+</dd>
+    <dt><code>returnedLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>*</dt>
+    <dd><p>Optional pointer receiving the number of result bytes. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>
+when the length is not required.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure, including when the handle is outside a sync root.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetSyncRootInfoByHandle_System_IntPtr_CfSharp_Native_CfSyncRootInfoClass_System_Void__System_UInt32_System_UInt32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The function is observational and does not modify the file. It does not retain the
+handle or result buffer and may be called concurrently. Standard information can
+contain a variable-length trailing identity.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetSyncRootInfoByPath_" data-uid="CfSharp.Native.CfApi.CfGetSyncRootInfoByPath*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetSyncRootInfoByPath_System_Char__CfSharp_Native_CfSyncRootInfoClass_System_Void__System_UInt32_System_UInt32__" data-uid="CfSharp.Native.CfApi.CfGetSyncRootInfoByPath(System.Char*,CfSharp.Native.CfSyncRootInfoClass,System.Void*,System.UInt32,System.UInt32*)">
+  CfGetSyncRootInfoByPath(char*, CfSyncRootInfoClass, void*, uint, uint*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queries the sync root containing a file or directory identified by path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfGetSyncRootInfoByPath(char* filePath, CfSyncRootInfoClass infoClass, void* infoBuffer, uint infoBufferLength, uint* returnedLength)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>*</dt>
+    <dd><p>Pointer to a null-terminated, fully qualified UTF-16 path beneath a registered sync
+root. The pointer need remain valid only until this call returns.</p>
+</dd>
+    <dt><code>infoClass</code> <a class="xref" href="CfSharp.Native.CfSyncRootInfoClass.html">CfSyncRootInfoClass</a></dt>
+    <dd><p>Selects the native result structure written to the buffer.</p>
+</dd>
+    <dt><code>infoBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Pointer to caller-owned writable storage appropriate for <code class="paramref">infoClass</code>.</p>
+</dd>
+    <dt><code>infoBufferLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Available buffer length in bytes.</p>
+</dd>
+    <dt><code>returnedLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>*</dt>
+    <dd><p>Optional pointer receiving the number of result bytes. Pass <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>
+when the length is not required.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure, including when the path is outside a sync root.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetSyncRootInfoByPath_System_Char__CfSharp_Native_CfSyncRootInfoClass_System_Void__System_UInt32_System_UInt32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The function does not retain the path or result buffer and may be called concurrently.
+Standard information can contain a variable-length trailing identity; callers must
+allocate and interpret that result according to <a class="xref" href="CfSharp.Native.CfSyncRootStandardInfo.html">CfSyncRootStandardInfo</a>.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetTransferKey_" data-uid="CfSharp.Native.CfApi.CfGetTransferKey*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetTransferKey_System_IntPtr_CfSharp_Native_CfTransferKey__" data-uid="CfSharp.Native.CfApi.CfGetTransferKey(System.IntPtr,CfSharp.Native.CfTransferKey*)">
+  CfGetTransferKey(nint, CfTransferKey*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Acquires a transfer key for provider-initiated operations on a placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfGetTransferKey(nint fileHandle, CfTransferKey* transferKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle to a placeholder with read-data or write-DAC access. The caller retains
+ownership and must keep it open while the returned key is used.</p>
+</dd>
+    <dt><code>transferKey</code> <a class="xref" href="CfSharp.Native.CfTransferKey.html">CfTransferKey</a>*</dt>
+    <dd><p>Receives the opaque transfer key.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetTransferKey_System_IntPtr_CfSharp_Native_CfTransferKey___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A successful acquisition must be paired with <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfReleaseTransferKey_System_IntPtr_CfSharp_Native_CfTransferKey__">CfReleaseTransferKey(nint, CfTransferKey*)</a> using the
+same open file handle and key. The key may be supplied to <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfExecute_CfSharp_Native_CfOperationInfo__CfSharp_Native_CfOperationParameters__">CfExecute(CfOperationInfo*, CfOperationParameters*)</a> to drive
+proactive data transfer outside a fetch callback. Callers must synchronize handle closure
+with key use.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfGetWin32HandleFromProtectedHandle_" data-uid="CfSharp.Native.CfApi.CfGetWin32HandleFromProtectedHandle*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfGetWin32HandleFromProtectedHandle_System_IntPtr_" data-uid="CfSharp.Native.CfApi.CfGetWin32HandleFromProtectedHandle(System.IntPtr)">
+  CfGetWin32HandleFromProtectedHandle(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the borrowed Win32 handle underlying a referenced protected handle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern nint CfGetWin32HandleFromProtectedHandle(nint protectedHandle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>protectedHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Opaque handle with a currently held reference from <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfReferenceProtectedHandle_System_IntPtr_">CfReferenceProtectedHandle(nint)</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>The borrowed Win32 handle. The caller must not close it and must stop using it before
+releasing the corresponding protected-handle reference.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfGetWin32HandleFromProtectedHandle_System_IntPtr__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This function returns a raw handle rather than an <code>HRESULT</code>. Callers must treat an
+invalid handle value as failure. Concurrent release or closure requires external
+synchronization.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfHydratePlaceholder_" data-uid="CfSharp.Native.CfApi.CfHydratePlaceholder*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfHydratePlaceholder_System_IntPtr_System_Int64_System_Int64_CfSharp_Native_CfHydrateFlags_System_Threading_NativeOverlapped__" data-uid="CfSharp.Native.CfApi.CfHydratePlaceholder(System.IntPtr,System.Int64,System.Int64,CfSharp.Native.CfHydrateFlags,System.Threading.NativeOverlapped*)">
+  CfHydratePlaceholder(nint, long, long, CfHydrateFlags, NativeOverlapped*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures that a byte range of a placeholder file is present locally.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfHydratePlaceholder(nint fileHandle, long startingOffset, long length, CfHydrateFlags hydrateFlags, NativeOverlapped* overlapped)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle to the placeholder with read-data or write-DAC access.</p>
+</dd>
+    <dt><code>startingOffset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Zero-based first byte to hydrate.</p>
+</dd>
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Number of bytes to hydrate, or <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_EndOfFile">EndOfFile</a> to continue to logical end of file.</p>
+</dd>
+    <dt><code>hydrateFlags</code> <a class="xref" href="CfSharp.Native.CfHydrateFlags.html">CfHydrateFlags</a></dt>
+    <dd><p>Hydration behavior; only <a class="xref" href="CfSharp.Native.CfHydrateFlags.html#CfSharp_Native_CfHydrateFlags_None">None</a> is defined.</p>
+</dd>
+    <dt><code>overlapped</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.nativeoverlapped">NativeOverlapped</a>*</dt>
+    <dd><p>Optional caller-owned native overlapped state that must remain valid through asynchronous
+completion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfHydratePlaceholder_System_IntPtr_System_Int64_System_Int64_CfSharp_Native_CfHydrateFlags_System_Threading_NativeOverlapped___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Missing ranges cause fetch callbacks to the connected provider. A null overlapped pointer
+makes the operation synchronous even when the handle was opened for asynchronous I/O.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfOpenFileWithOplock_" data-uid="CfSharp.Native.CfApi.CfOpenFileWithOplock*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfOpenFileWithOplock_System_Char__CfSharp_Native_CfOpenFileFlags_System_IntPtr__" data-uid="CfSharp.Native.CfApi.CfOpenFileWithOplock(System.Char*,CfSharp.Native.CfOpenFileFlags,System.IntPtr@)">
+  CfOpenFileWithOplock(char*, CfOpenFileFlags, out nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens a file or directory as an opaque Cloud Files protected handle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CfOpenFileWithOplock(char* filePath, CfOpenFileFlags flags, out nint protectedHandle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>*</dt>
+    <dd><p>Pointer to a null-terminated, fully qualified UTF-16 path. The pointer need remain valid
+only until this call returns.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="CfSharp.Native.CfOpenFileFlags.html">CfOpenFileFlags</a></dt>
+    <dd><p>Access, sharing, and oplock behavior for the open.</p>
+</dd>
+    <dt><code>protectedHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Receives an opaque protected handle. On success, the caller owns one reference and must
+close it exactly once with <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfCloseHandle_System_IntPtr_">CfCloseHandle(nint)</a>. It must not be passed directly to
+general Win32 APIs.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfOpenFileWithOplock_System_Char__CfSharp_Native_CfOpenFileFlags_System_IntPtr___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Unless <a class="xref" href="CfSharp.Native.CfOpenFileFlags.html#CfSharp_Native_CfOpenFileFlags_Foreground">Foreground</a> is specified, Windows requests an oplock
+and may invalidate the protected handle after draining active references when that oplock
+breaks. The handle can represent either an ordinary item or a placeholder.
+</p>
+<p>
+Call <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfReferenceProtectedHandle_System_IntPtr_">CfReferenceProtectedHandle(nint)</a> before borrowing its Win32 handle and pair
+every successful reference with <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfReleaseProtectedHandle_System_IntPtr_">CfReleaseProtectedHandle(nint)</a>. Closing the
+protected handle while another thread uses it requires caller synchronization.
+</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfQuerySyncProviderStatus_" data-uid="CfSharp.Native.CfApi.CfQuerySyncProviderStatus*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfQuerySyncProviderStatus_CfSharp_Native_CfConnectionKey_CfSharp_Native_CfSyncProviderStatus__" data-uid="CfSharp.Native.CfApi.CfQuerySyncProviderStatus(CfSharp.Native.CfConnectionKey,CfSharp.Native.CfSyncProviderStatus@)">
+  CfQuerySyncProviderStatus(CfConnectionKey, out CfSyncProviderStatus)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queries the activity or terminal status of a connected provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CfQuerySyncProviderStatus(CfConnectionKey connectionKey, out CfSyncProviderStatus providerStatus)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>connectionKey</code> <a class="xref" href="CfSharp.Native.CfConnectionKey.html">CfConnectionKey</a></dt>
+    <dd><p>Opaque key of the active provider connection.</p>
+</dd>
+    <dt><code>providerStatus</code> <a class="xref" href="CfSharp.Native.CfSyncProviderStatus.html">CfSyncProviderStatus</a></dt>
+    <dd><p>Receives the current provider status.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfQuerySyncProviderStatus_CfSharp_Native_CfConnectionKey_CfSharp_Native_CfSyncProviderStatus___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The function retains no managed memory and may be called concurrently.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfReferenceProtectedHandle_" data-uid="CfSharp.Native.CfApi.CfReferenceProtectedHandle*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfReferenceProtectedHandle_System_IntPtr_" data-uid="CfSharp.Native.CfApi.CfReferenceProtectedHandle(System.IntPtr)">
+  CfReferenceProtectedHandle(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Acquires a temporary reference that prevents a protected handle from closing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern byte CfReferenceProtectedHandle(nint protectedHandle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>protectedHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Opaque handle returned by <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfOpenFileWithOplock_System_Char__CfSharp_Native_CfOpenFileFlags_System_IntPtr__">CfOpenFileWithOplock(char*, CfOpenFileFlags, out nint)</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>A nonzero native <code>BOOLEAN</code> on success; otherwise zero.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfReferenceProtectedHandle_System_IntPtr__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Every successful call must be paired with <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfReleaseProtectedHandle_System_IntPtr_">CfReleaseProtectedHandle(nint)</a>. Keep the
+reference short-lived because it delays oplock-break acknowledgement and can block other
+applications from opening the item.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfRegisterSyncRoot_" data-uid="CfSharp.Native.CfApi.CfRegisterSyncRoot*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfRegisterSyncRoot_System_Char__CfSharp_Native_CfSyncRegistration__CfSharp_Native_CfSyncPolicies__CfSharp_Native_CfRegisterFlags_" data-uid="CfSharp.Native.CfApi.CfRegisterSyncRoot(System.Char*,CfSharp.Native.CfSyncRegistration*,CfSharp.Native.CfSyncPolicies*,CfSharp.Native.CfRegisterFlags)">
+  CfRegisterSyncRoot(char*, CfSyncRegistration*, CfSyncPolicies*, CfRegisterFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Persistently registers a directory tree as a Cloud Files sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfRegisterSyncRoot(char* syncRootPath, CfSyncRegistration* registration, CfSyncPolicies* policies, CfRegisterFlags registerFlags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>syncRootPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>*</dt>
+    <dd><p>Pointer to a null-terminated, fully qualified UTF-16 path. The directory must exist,
+reside on a supported file system, and be writable by the caller.</p>
+</dd>
+    <dt><code>registration</code> <a class="xref" href="CfSharp.Native.CfSyncRegistration.html">CfSyncRegistration</a>*</dt>
+    <dd><p>Pointer to initialized provider and identity data. The pointed-to structure, strings,
+and identity buffers need remain valid only until this call returns.</p>
+</dd>
+    <dt><code>policies</code> <a class="xref" href="CfSharp.Native.CfSyncPolicies.html">CfSyncPolicies</a>*</dt>
+    <dd><p>Pointer to initialized sync-root policies. The pointed-to structure need remain valid
+only until this call returns.</p>
+</dd>
+    <dt><code>registerFlags</code> <a class="xref" href="CfSharp.Native.CfRegisterFlags.html">CfRegisterFlags</a></dt>
+    <dd><p>Flags controlling creation or update behavior.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfRegisterSyncRoot_System_Char__CfSharp_Native_CfSyncRegistration__CfSharp_Native_CfSyncPolicies__CfSharp_Native_CfRegisterFlags__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Registration is persistent and survives process termination. A successful call must
+eventually be paired with an explicit <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfUnregisterSyncRoot_System_Char__">CfUnregisterSyncRoot(char*)</a> when the
+account or product registration is removed. Overlapping sync-root trees are rejected.
+</p>
+<p>
+Provider name and version are limited to 255 characters. Sync-root identity is
+limited to 64 KiB and file identity to <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_MaxFileIdentityLength">MaxFileIdentityLength</a> bytes.
+The caller owns every input buffer; Windows copies retained registration data before
+returning. Independent registrations may be performed concurrently.
+</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfReleaseProtectedHandle_" data-uid="CfSharp.Native.CfApi.CfReleaseProtectedHandle*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfReleaseProtectedHandle_System_IntPtr_" data-uid="CfSharp.Native.CfApi.CfReleaseProtectedHandle(System.IntPtr)">
+  CfReleaseProtectedHandle(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases one reference acquired with <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfReferenceProtectedHandle_System_IntPtr_">CfReferenceProtectedHandle(nint)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern void CfReleaseProtectedHandle(nint protectedHandle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>protectedHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Opaque protected handle whose reference is released.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfReleaseProtectedHandle_System_IntPtr__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The call has no return value. The protected handle remains owned by its original caller and
+still requires <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfCloseHandle_System_IntPtr_">CfCloseHandle(nint)</a>. Do not use the borrowed Win32 handle after this
+call.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfReleaseTransferKey_" data-uid="CfSharp.Native.CfApi.CfReleaseTransferKey*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfReleaseTransferKey_System_IntPtr_CfSharp_Native_CfTransferKey__" data-uid="CfSharp.Native.CfApi.CfReleaseTransferKey(System.IntPtr,CfSharp.Native.CfTransferKey*)">
+  CfReleaseTransferKey(nint, CfTransferKey*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases a transfer key obtained by <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfGetTransferKey_System_IntPtr_CfSharp_Native_CfTransferKey__">CfGetTransferKey(nint, CfTransferKey*)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern void CfReleaseTransferKey(nint fileHandle, CfTransferKey* transferKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>The same still-open Win32 handle used to acquire the key.</p>
+</dd>
+    <dt><code>transferKey</code> <a class="xref" href="CfSharp.Native.CfTransferKey.html">CfTransferKey</a>*</dt>
+    <dd><p>Pointer to the transfer key being released.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfReleaseTransferKey_System_IntPtr_CfSharp_Native_CfTransferKey___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The call has no return value and retains no memory. It does not close
+<code class="paramref">fileHandle</code>. The caller must prevent concurrent handle closure.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfReportProviderProgress_" data-uid="CfSharp.Native.CfApi.CfReportProviderProgress*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfReportProviderProgress_CfSharp_Native_CfConnectionKey_CfSharp_Native_CfTransferKey_System_Int64_System_Int64_" data-uid="CfSharp.Native.CfApi.CfReportProviderProgress(CfSharp.Native.CfConnectionKey,CfSharp.Native.CfTransferKey,System.Int64,System.Int64)">
+  CfReportProviderProgress(CfConnectionKey, CfTransferKey, long, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports out-of-band progress for an active hydration request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfReportProviderProgress(CfConnectionKey connectionKey, CfTransferKey transferKey, long providerProgressTotal, long providerProgressCompleted)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>connectionKey</code> <a class="xref" href="CfSharp.Native.CfConnectionKey.html">CfConnectionKey</a></dt>
+    <dd><p>Connection on which the fetch-data request was received.</p>
+</dd>
+    <dt><code>transferKey</code> <a class="xref" href="CfSharp.Native.CfTransferKey.html">CfTransferKey</a></dt>
+    <dd><p>Transfer stream supplied with the fetch-data callback.</p>
+</dd>
+    <dt><code>providerProgressTotal</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Total provider work represented by this report.</p>
+</dd>
+    <dt><code>providerProgressCompleted</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Provider work completed so far.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfReportProviderProgress_CfSharp_Native_CfConnectionKey_CfSharp_Native_CfTransferKey_System_Int64_System_Int64__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Reporting progress resets the request's 60-second timeout while the provider performs work
+before transferring data. Keys are copied by value and no caller memory is retained. Calls
+for independent requests may run concurrently.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://learn.microsoft.com/windows/win32/api/cfapi/nf-cfapi-cfreportproviderprogress">https://learn.microsoft.com/windows/win32/api/cfapi/nf-cfapi-cfreportproviderprogress</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="CfSharp_Native_CfApi_CfReportProviderProgress2_" data-uid="CfSharp.Native.CfApi.CfReportProviderProgress2*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfReportProviderProgress2_CfSharp_Native_CfConnectionKey_CfSharp_Native_CfTransferKey_CfSharp_Native_CfRequestKey_System_Int64_System_Int64_System_UInt32_" data-uid="CfSharp.Native.CfApi.CfReportProviderProgress2(CfSharp.Native.CfConnectionKey,CfSharp.Native.CfTransferKey,CfSharp.Native.CfRequestKey,System.Int64,System.Int64,System.UInt32)">
+  CfReportProviderProgress2(CfConnectionKey, CfTransferKey, CfRequestKey, long, long, uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports out-of-band progress for a specific Cloud Files request and session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfReportProviderProgress2(CfConnectionKey connectionKey, CfTransferKey transferKey, CfRequestKey requestKey, long providerProgressTotal, long providerProgressCompleted, uint targetSessionId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>connectionKey</code> <a class="xref" href="CfSharp.Native.CfConnectionKey.html">CfConnectionKey</a></dt>
+    <dd><p>Connection on which the request was received.</p>
+</dd>
+    <dt><code>transferKey</code> <a class="xref" href="CfSharp.Native.CfTransferKey.html">CfTransferKey</a></dt>
+    <dd><p>Transfer stream supplied with the callback.</p>
+</dd>
+    <dt><code>requestKey</code> <a class="xref" href="CfSharp.Native.CfRequestKey.html">CfRequestKey</a></dt>
+    <dd><p>Specific callback request whose progress is being reported.</p>
+</dd>
+    <dt><code>providerProgressTotal</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Total provider work represented by this report.</p>
+</dd>
+    <dt><code>providerProgressCompleted</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Provider work completed so far.</p>
+</dd>
+    <dt><code>targetSessionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Windows session that receives the progress information.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfReportProviderProgress2_CfSharp_Native_CfConnectionKey_CfSharp_Native_CfTransferKey_CfSharp_Native_CfRequestKey_System_Int64_System_Int64_System_UInt32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This Windows 10 version 1809 extension can identify non-hydration operations through
+<code class="paramref">requestKey</code>. All keys are copied by value and no caller memory is retained.
+Calls for independent requests may run concurrently.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://learn.microsoft.com/windows/win32/api/cfapi/nf-cfapi-cfreportproviderprogress2">https://learn.microsoft.com/windows/win32/api/cfapi/nf-cfapi-cfreportproviderprogress2</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="CfSharp_Native_CfApi_CfReportSyncStatus_" data-uid="CfSharp.Native.CfApi.CfReportSyncStatus*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfReportSyncStatus_System_Char__CfSharp_Native_CfSyncStatus__" data-uid="CfSharp.Native.CfApi.CfReportSyncStatus(System.Char*,CfSharp.Native.CfSyncStatus*)">
+  CfReportSyncStatus(char*, CfSyncStatus*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores or clears rich provider status for a registered sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfReportSyncStatus(char* syncRootPath, CfSyncStatus* syncStatus)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>syncRootPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>*</dt>
+    <dd><p>Pointer to the null-terminated UTF-16 registered root path.</p>
+</dd>
+    <dt><code>syncStatus</code> <a class="xref" href="CfSharp.Native.CfSyncStatus.html">CfSyncStatus</a>*</dt>
+    <dd><p>Pointer to one caller-owned contiguous <a class="xref" href="CfSharp.Native.CfSyncStatus.html">CfSyncStatus</a> buffer, or null to clear
+the status previously stored for the root.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A failed call leaves any previously stored
+status unchanged.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfReportSyncStatus_System_Char__CfSharp_Native_CfSyncStatus___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Windows copies a successful non-null report and remembers it until explicitly cleared or
+the machine restarts. Neither pointer is retained after this call returns. Calls for the
+same root should be serialized when their ordering matters.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span><a href="https://learn.microsoft.com/windows/win32/api/cfapi/nf-cfapi-cfreportsyncstatus">https://learn.microsoft.com/windows/win32/api/cfapi/nf-cfapi-cfreportsyncstatus</a></span></div>
+    </dd>
+  </dl>
+
+
+  <a id="CfSharp_Native_CfApi_CfRevertPlaceholder_" data-uid="CfSharp.Native.CfApi.CfRevertPlaceholder*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfRevertPlaceholder_System_IntPtr_CfSharp_Native_CfRevertFlags_System_Threading_NativeOverlapped__" data-uid="CfSharp.Native.CfApi.CfRevertPlaceholder(System.IntPtr,CfSharp.Native.CfRevertFlags,System.Threading.NativeOverlapped*)">
+  CfRevertPlaceholder(nint, CfRevertFlags, NativeOverlapped*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reverts a placeholder to an ordinary file or directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfRevertPlaceholder(nint fileHandle, CfRevertFlags revertFlags, NativeOverlapped* overlapped)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle to the placeholder with write-data or write-DAC access.</p>
+</dd>
+    <dt><code>revertFlags</code> <a class="xref" href="CfSharp.Native.CfRevertFlags.html">CfRevertFlags</a></dt>
+    <dd><p>Revert behavior; only <a class="xref" href="CfSharp.Native.CfRevertFlags.html#CfSharp_Native_CfRevertFlags_None">None</a> is defined.</p>
+</dd>
+    <dt><code>overlapped</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.nativeoverlapped">NativeOverlapped</a>*</dt>
+    <dd><p>Optional caller-owned native overlapped state that must remain valid through asynchronous
+completion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfRevertPlaceholder_System_IntPtr_CfSharp_Native_CfRevertFlags_System_Threading_NativeOverlapped___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Reversion permanently removes the Cloud Files reparse data and identity. Windows first
+hydrates incomplete file content, which can invoke the connected provider and fail if the
+content cannot be obtained.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfSetCorrelationVector_" data-uid="CfSharp.Native.CfApi.CfSetCorrelationVector*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfSetCorrelationVector_System_IntPtr_CfSharp_Native_CfCorrelationVector__" data-uid="CfSharp.Native.CfApi.CfSetCorrelationVector(System.IntPtr,CfSharp.Native.CfCorrelationVector*)">
+  CfSetCorrelationVector(nint, CfCorrelationVector*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Associates a provider-selected correlation vector with a placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfSetCorrelationVector(nint fileHandle, CfCorrelationVector* correlationVector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle to the placeholder.</p>
+</dd>
+    <dt><code>correlationVector</code> <a class="xref" href="CfSharp.Native.CfCorrelationVector.html">CfCorrelationVector</a>*</dt>
+    <dd><p>Pointer to a caller-owned initialized vector. The pointer need remain valid only until the
+call returns because Windows copies the value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. An uninitialized or malformed vector is
+rejected, but the specific failure code can differ between supported Windows versions.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfSetCorrelationVector_System_IntPtr_CfSharp_Native_CfCorrelationVector___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Correlation vectors are optional telemetry state. Providers commonly retrieve the vector
+assigned by Windows, increment its final clock component, and write the new value back.
+Calls that coordinate updates to one file require caller synchronization.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfSetInSyncState_" data-uid="CfSharp.Native.CfApi.CfSetInSyncState*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfSetInSyncState_System_IntPtr_CfSharp_Native_CfInSyncState_CfSharp_Native_CfSetInSyncFlags_System_Int64__" data-uid="CfSharp.Native.CfApi.CfSetInSyncState(System.IntPtr,CfSharp.Native.CfInSyncState,CfSharp.Native.CfSetInSyncFlags,System.Int64*)">
+  CfSetInSyncState(nint, CfInSyncState, CfSetInSyncFlags, long*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets whether a placeholder agrees with its provider state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfSetInSyncState(nint fileHandle, CfInSyncState inSyncState, CfSetInSyncFlags inSyncFlags, long* inSyncUsn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle to the placeholder with write-data or write-DAC access.</p>
+</dd>
+    <dt><code>inSyncState</code> <a class="xref" href="CfSharp.Native.CfInSyncState.html">CfInSyncState</a></dt>
+    <dd><p>New synchronization state.</p>
+</dd>
+    <dt><code>inSyncFlags</code> <a class="xref" href="CfSharp.Native.CfSetInSyncFlags.html">CfSetInSyncFlags</a></dt>
+    <dd><p>State-update flags; only <a class="xref" href="CfSharp.Native.CfSetInSyncFlags.html#CfSharp_Native_CfSetInSyncFlags_None">None</a> is currently defined.</p>
+</dd>
+    <dt><code>inSyncUsn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>*</dt>
+    <dd><p>Optional input/output update sequence number. A nonzero input makes the change conditional;
+on success Windows writes the final value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfSetInSyncState_System_IntPtr_CfSharp_Native_CfInSyncState_CfSharp_Native_CfSetInSyncFlags_System_Int64___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The function is synchronous. Callers coordinating an upload acknowledgement should pass
+the observed USN to avoid marking a locally changed item in sync.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfSetPinState_" data-uid="CfSharp.Native.CfApi.CfSetPinState*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfSetPinState_System_IntPtr_CfSharp_Native_CfPinState_CfSharp_Native_CfSetPinFlags_System_Threading_NativeOverlapped__" data-uid="CfSharp.Native.CfApi.CfSetPinState(System.IntPtr,CfSharp.Native.CfPinState,CfSharp.Native.CfSetPinFlags,System.Threading.NativeOverlapped*)">
+  CfSetPinState(nint, CfPinState, CfSetPinFlags, NativeOverlapped*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the user's requested pin state for a placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfSetPinState(nint fileHandle, CfPinState pinState, CfSetPinFlags pinFlags, NativeOverlapped* overlapped)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle to the placeholder.</p>
+</dd>
+    <dt><code>pinState</code> <a class="xref" href="CfSharp.Native.CfPinState.html">CfPinState</a></dt>
+    <dd><p>Requested local-availability state.</p>
+</dd>
+    <dt><code>pinFlags</code> <a class="xref" href="CfSharp.Native.CfSetPinFlags.html">CfSetPinFlags</a></dt>
+    <dd><p>Flags controlling recursive directory application.</p>
+</dd>
+    <dt><code>overlapped</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.nativeoverlapped">NativeOverlapped</a>*</dt>
+    <dd><p>Optional caller-owned native overlapped state that must remain valid through asynchronous
+completion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfSetPinState_System_IntPtr_CfSharp_Native_CfPinState_CfSharp_Native_CfSetPinFlags_System_Threading_NativeOverlapped___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This API records user intent and may be called by applications other than the provider.
+Recursive calls can partially apply unless <a class="xref" href="CfSharp.Native.CfSetPinFlags.html#CfSharp_Native_CfSetPinFlags_RecurseStopOnError">RecurseStopOnError</a>
+is specified; the native API does not return per-descendant results.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfUnregisterSyncRoot_" data-uid="CfSharp.Native.CfApi.CfUnregisterSyncRoot*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfUnregisterSyncRoot_System_Char__" data-uid="CfSharp.Native.CfApi.CfUnregisterSyncRoot(System.Char*)">
+  CfUnregisterSyncRoot(char*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Persistently unregisters a previously registered Cloud Files sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfUnregisterSyncRoot(char* syncRootPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>syncRootPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>*</dt>
+    <dd><p>Pointer to the null-terminated, fully qualified UTF-16 path of the registered root.
+The pointer need remain valid only until this call returns.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfUnregisterSyncRoot_System_Char___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The operation fails while a provider is connected. It traverses the tree: fully
+hydrated placeholders are reverted to normal items, while incomplete placeholders
+may be permanently removed. Callers should therefore treat this as account-removal
+or uninstall behavior rather than process-session cleanup.
+</p>
+<p>The function retains no buffers and may be called concurrently for separate roots.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfUpdatePlaceholder_" data-uid="CfSharp.Native.CfApi.CfUpdatePlaceholder*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfUpdatePlaceholder_System_IntPtr_CfSharp_Native_CfFsMetadata__System_Void__System_UInt32_CfSharp_Native_CfFileRange__System_UInt32_CfSharp_Native_CfUpdateFlags_System_Int64__System_Threading_NativeOverlapped__" data-uid="CfSharp.Native.CfApi.CfUpdatePlaceholder(System.IntPtr,CfSharp.Native.CfFsMetadata*,System.Void*,System.UInt32,CfSharp.Native.CfFileRange*,System.UInt32,CfSharp.Native.CfUpdateFlags,System.Int64*,System.Threading.NativeOverlapped*)">
+  CfUpdatePlaceholder(nint, CfFsMetadata*, void*, uint, CfFileRange*, uint, CfUpdateFlags, long*, NativeOverlapped*)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates metadata, identity, validity ranges, or state on an existing placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfUpdatePlaceholder(nint fileHandle, CfFsMetadata* fsMetadata, void* fileIdentity, uint fileIdentityLength, CfFileRange* dehydrateRangeArray, uint dehydrateRangeCount, CfUpdateFlags updateFlags, long* updateUsn, NativeOverlapped* overlapped)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Open Win32 handle to the placeholder with write-data or write-DAC access. Dehydrating an
+updated file requires an exclusive handle.</p>
+</dd>
+    <dt><code>fsMetadata</code> <a class="xref" href="CfSharp.Native.CfFsMetadata.html">CfFsMetadata</a>*</dt>
+    <dd><p>Optional pointer to replacement file-system metadata. Unless passthrough is requested,
+zero-valued timestamps and attributes mean unchanged; a zero file size still means zero.</p>
+</dd>
+    <dt><code>fileIdentity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd><p>Optional pointer to replacement opaque identity bytes.</p>
+</dd>
+    <dt><code>fileIdentityLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Length of <code class="paramref">fileIdentity</code> in bytes; cannot exceed
+<a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_MaxFileIdentityLength">MaxFileIdentityLength</a>.</p>
+</dd>
+    <dt><code>dehydrateRangeArray</code> <a class="xref" href="CfSharp.Native.CfFileRange.html">CfFileRange</a>*</dt>
+    <dd><p>Optional pointer to page-aligned ranges whose local content becomes invalid.</p>
+</dd>
+    <dt><code>dehydrateRangeCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Number of entries in <code class="paramref">dehydrateRangeArray</code>.</p>
+</dd>
+    <dt><code>updateFlags</code> <a class="xref" href="CfSharp.Native.CfUpdateFlags.html">CfUpdateFlags</a></dt>
+    <dd><p>Flags selecting the placeholder changes and preconditions.</p>
+</dd>
+    <dt><code>updateUsn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>*</dt>
+    <dd><p>Optional input/output update sequence number. A nonzero input makes the operation
+conditional; on success Windows writes the final value.</p>
+</dd>
+    <dt><code>overlapped</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.nativeoverlapped">NativeOverlapped</a>*</dt>
+    <dd><p>Optional caller-owned native overlapped state. For asynchronous completion, all pointed-to
+buffers and the structure must remain valid until completion is observed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation, including the HRESULT form of
+<code>ERROR_IO_PENDING</code> for an asynchronous operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfUpdatePlaceholder_System_IntPtr_CfSharp_Native_CfFsMetadata__System_Void__System_UInt32_CfSharp_Native_CfFileRange__System_UInt32_CfSharp_Native_CfUpdateFlags_System_Int64__System_Threading_NativeOverlapped___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The operation is atomic with respect to its requested range invalidation: if any supplied
+range cannot be dehydrated, the update fails rather than leaving torn content. Supplying
+<a class="xref" href="CfSharp.Native.CfUpdateFlags.html#CfSharp_Native_CfUpdateFlags_Dehydrate">Dehydrate</a> causes the range array to be ignored.</p>
+</div>
+
+
+
+
+  <a id="CfSharp_Native_CfApi_CfUpdateSyncProviderStatus_" data-uid="CfSharp.Native.CfApi.CfUpdateSyncProviderStatus*"></a>
+
+  <h3 id="CfSharp_Native_CfApi_CfUpdateSyncProviderStatus_CfSharp_Native_CfConnectionKey_CfSharp_Native_CfSyncProviderStatus_" data-uid="CfSharp.Native.CfApi.CfUpdateSyncProviderStatus(CfSharp.Native.CfConnectionKey,CfSharp.Native.CfSyncProviderStatus)">
+  CfUpdateSyncProviderStatus(CfConnectionKey, CfSyncProviderStatus)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the activity or terminal status reported for a connected provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern int CfUpdateSyncProviderStatus(CfConnectionKey connectionKey, CfSyncProviderStatus providerStatus)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>connectionKey</code> <a class="xref" href="CfSharp.Native.CfConnectionKey.html">CfConnectionKey</a></dt>
+    <dd><p>Opaque key of the active provider connection.</p>
+</dd>
+    <dt><code>providerStatus</code> <a class="xref" href="CfSharp.Native.CfSyncProviderStatus.html">CfSyncProviderStatus</a></dt>
+    <dd><p>Status flags or terminal state to report.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The native <code>HRESULT</code> without translation. A value of zero is <code>S_OK</code>;
+negative values indicate failure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="CfSharp_Native_CfApi_CfUpdateSyncProviderStatus_CfSharp_Native_CfConnectionKey_CfSharp_Native_CfSyncProviderStatus__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The function retains no managed memory and may be called concurrently.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

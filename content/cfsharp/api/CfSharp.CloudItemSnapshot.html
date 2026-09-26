@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CloudItemSnapshot | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CloudItemSnapshot | CfSharp documentation ">
+      
+      <meta name="description" content="Captures immutable local and durable state observed for one cloud item.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudItemSnapshot">
+
+
+
+  <h1 id="CfSharp_CloudItemSnapshot" data-uid="CfSharp.CloudItemSnapshot" class="text-break">
+Class CloudItemSnapshot  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Captures immutable local and durable state observed for one cloud item.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CloudItemSnapshot</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CloudItemSnapshot</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_CloudItemSnapshot_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Each <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_InspectAsync_System_Threading_CancellationToken_">InspectAsync(CancellationToken)</a> call creates a new snapshot. A snapshot owns its
+placeholder-identity bytes and contains no native handles, mutable file-system objects, or
+live database resources. It is safe for concurrent reads.
+</p>
+<p>
+Missing local items produce a snapshot with <a class="xref" href="CfSharp.CloudItemSnapshot.html#CfSharp_CloudItemSnapshot_Exists">Exists</a> set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+rather than throwing. Durable identity and tombstone properties may still be present. Nullable
+metadata means that the corresponding fact was not available at inspection time.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_CloudItemSnapshot_Attributes_" data-uid="CfSharp.CloudItemSnapshot.Attributes*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_Attributes" data-uid="CfSharp.CloudItemSnapshot.Attributes">
+  Attributes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the observed Win32 attributes, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when absent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileAttributes? Attributes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileattributes">FileAttributes</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_ContentAvailability_" data-uid="CfSharp.CloudItemSnapshot.ContentAvailability*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_ContentAvailability" data-uid="CfSharp.CloudItemSnapshot.ContentAvailability">
+  ContentAvailability
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the observed local content availability derived from native state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudContentAvailability ContentAvailability { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudContentAvailability.html">CloudContentAvailability</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_CreationTime_" data-uid="CfSharp.CloudItemSnapshot.CreationTime*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_CreationTime" data-uid="CfSharp.CloudItemSnapshot.CreationTime">
+  CreationTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the observed UTC creation time, when available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? CreationTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_DurableStateUpdatedAt_" data-uid="CfSharp.CloudItemSnapshot.DurableStateUpdatedAt*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_DurableStateUpdatedAt" data-uid="CfSharp.CloudItemSnapshot.DurableStateUpdatedAt">
+  DurableStateUpdatedAt
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets when durable item state was last updated, when such state exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? DurableStateUpdatedAt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_Exists_" data-uid="CfSharp.CloudItemSnapshot.Exists*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_Exists" data-uid="CfSharp.CloudItemSnapshot.Exists">
+  Exists
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the item existed locally when inspected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Exists { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_InspectedAt_" data-uid="CfSharp.CloudItemSnapshot.InspectedAt*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_InspectedAt" data-uid="CfSharp.CloudItemSnapshot.InspectedAt">
+  InspectedAt
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the UTC instant at which this fresh inspection completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset InspectedAt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_IsPlaceholder_" data-uid="CfSharp.CloudItemSnapshot.IsPlaceholder*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_IsPlaceholder" data-uid="CfSharp.CloudItemSnapshot.IsPlaceholder">
+  IsPlaceholder
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether Windows identified the item as a Cloud Files placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPlaceholder { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_IsTombstone_" data-uid="CfSharp.CloudItemSnapshot.IsTombstone*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_IsTombstone" data-uid="CfSharp.CloudItemSnapshot.IsTombstone">
+  IsTombstone
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether durable state preserves a deletion tombstone for this path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTombstone { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_ItemId_" data-uid="CfSharp.CloudItemSnapshot.ItemId*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_ItemId" data-uid="CfSharp.CloudItemSnapshot.ItemId">
+  ItemId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the stable CfSharp item identifier from durable state, when known.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid? ItemId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_Kind_" data-uid="CfSharp.CloudItemSnapshot.Kind*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_Kind" data-uid="CfSharp.CloudItemSnapshot.Kind">
+  Kind
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this reference represents a file or directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudItemKind Kind { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudItemKind.html">CloudItemKind</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_LastAccessTime_" data-uid="CfSharp.CloudItemSnapshot.LastAccessTime*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_LastAccessTime" data-uid="CfSharp.CloudItemSnapshot.LastAccessTime">
+  LastAccessTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the observed UTC last-access time, when available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? LastAccessTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_LastWriteTime_" data-uid="CfSharp.CloudItemSnapshot.LastWriteTime*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_LastWriteTime" data-uid="CfSharp.CloudItemSnapshot.LastWriteTime">
+  LastWriteTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the observed UTC last-write time, when available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset? LastWriteTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_Length_" data-uid="CfSharp.CloudItemSnapshot.Length*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_Length" data-uid="CfSharp.CloudItemSnapshot.Length">
+  Length
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the logical file length, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for directories or absence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? Length { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_LocalFileId_" data-uid="CfSharp.CloudItemSnapshot.LocalFileId*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_LocalFileId" data-uid="CfSharp.CloudItemSnapshot.LocalFileId">
+  LocalFileId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the volume-local file identifier, when available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? LocalFileId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_ModifiedDataSize_" data-uid="CfSharp.CloudItemSnapshot.ModifiedDataSize*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_ModifiedDataSize" data-uid="CfSharp.CloudItemSnapshot.ModifiedDataSize">
+  ModifiedDataSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of locally modified on-disk bytes, when applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? ModifiedDataSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_OnDiskDataSize_" data-uid="CfSharp.CloudItemSnapshot.OnDiskDataSize*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_OnDiskDataSize" data-uid="CfSharp.CloudItemSnapshot.OnDiskDataSize">
+  OnDiskDataSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of placeholder content bytes physically present, when applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? OnDiskDataSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_PinState_" data-uid="CfSharp.CloudItemSnapshot.PinState*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_PinState" data-uid="CfSharp.CloudItemSnapshot.PinState">
+  PinState
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the user-requested pin intent reported by Windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudPinState PinState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudPinState.html">CloudPinState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_PlaceholderIdentity_" data-uid="CfSharp.CloudItemSnapshot.PlaceholderIdentity*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_PlaceholderIdentity" data-uid="CfSharp.CloudItemSnapshot.PlaceholderIdentity">
+  PlaceholderIdentity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an owned copy of the opaque placeholder identity reported by Windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlyMemory&lt;byte&gt; PlaceholderIdentity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_PlaceholderState_" data-uid="CfSharp.CloudItemSnapshot.PlaceholderState*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_PlaceholderState" data-uid="CfSharp.CloudItemSnapshot.PlaceholderState">
+  PlaceholderState
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all independent Cloud Files state bits reported by Windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudPlaceholderState PlaceholderState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudPlaceholderState.html">CloudPlaceholderState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_PropertyDataSize_" data-uid="CfSharp.CloudItemSnapshot.PropertyDataSize*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_PropertyDataSize" data-uid="CfSharp.CloudItemSnapshot.PropertyDataSize">
+  PropertyDataSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the bytes used by placeholder properties, when applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? PropertyDataSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_RemoteId_" data-uid="CfSharp.CloudItemSnapshot.RemoteId*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_RemoteId" data-uid="CfSharp.CloudItemSnapshot.RemoteId">
+  RemoteId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the provider-defined stable remote identifier, when known.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? RemoteId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_RemoteRevision_" data-uid="CfSharp.CloudItemSnapshot.RemoteRevision*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_RemoteRevision" data-uid="CfSharp.CloudItemSnapshot.RemoteRevision">
+  RemoteRevision
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the last mutually acknowledged remote revision, when known.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? RemoteRevision { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_SyncRootFileId_" data-uid="CfSharp.CloudItemSnapshot.SyncRootFileId*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_SyncRootFileId" data-uid="CfSharp.CloudItemSnapshot.SyncRootFileId">
+  SyncRootFileId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the volume-local identifier of the containing sync root, when available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? SyncRootFileId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_SynchronizationState_" data-uid="CfSharp.CloudItemSnapshot.SynchronizationState*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_SynchronizationState" data-uid="CfSharp.CloudItemSnapshot.SynchronizationState">
+  SynchronizationState
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether placeholder content and metadata agree with provider state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudSynchronizationState SynchronizationState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudSynchronizationState.html">CloudSynchronizationState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItemSnapshot_ValidatedDataSize_" data-uid="CfSharp.CloudItemSnapshot.ValidatedDataSize*"></a>
+
+  <h3 id="CfSharp_CloudItemSnapshot_ValidatedDataSize" data-uid="CfSharp.CloudItemSnapshot.ValidatedDataSize">
+  ValidatedDataSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of on-disk bytes validated against provider state, when applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? ValidatedDataSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

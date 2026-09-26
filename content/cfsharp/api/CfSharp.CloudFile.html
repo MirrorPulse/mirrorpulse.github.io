@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CloudFile | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CloudFile | CfSharp documentation ">
+      
+      <meta name="description" content="Represents an immutable path-bound file reference.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudFile">
+
+
+
+  <h1 id="CfSharp_CloudFile" data-uid="CfSharp.CloudFile" class="text-break">
+Class CloudFile  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an immutable path-bound file reference.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CloudFile : CloudItem</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="CfSharp.CloudItem.html">CloudItem</a></div>
+      <div><span class="xref">CloudFile</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_InspectAsync_System_Threading_CancellationToken_">CloudItem.InspectAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_ToString">CloudItem.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_AcquireLeaseAsync_CfSharp_CloudItemLeaseOptions_System_Threading_CancellationToken_">CloudItem.AcquireLeaseAsync(CloudItemLeaseOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_MoveToAsync_CfSharp_CloudDirectory_System_String_CfSharp_CloudMoveOptions_System_Threading_CancellationToken_">CloudItem.MoveToAsync(CloudDirectory, string, CloudMoveOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_DeleteAsync_System_Threading_CancellationToken_">CloudItem.DeleteAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_SetPinStateAsync_CfSharp_CloudPinTarget_System_Threading_CancellationToken_">CloudItem.SetPinStateAsync(CloudPinTarget, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_SetInSyncAsync_System_Boolean_CfSharp_CloudInSyncChangeOptions_System_Threading_CancellationToken_">CloudItem.SetInSyncAsync(bool, CloudInSyncChangeOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_ConvertToPlaceholderAsync_CfSharp_CloudPlaceholderIdentity_CfSharp_CloudPlaceholderConversionOptions_System_Threading_CancellationToken_">CloudItem.ConvertToPlaceholderAsync(CloudPlaceholderIdentity, CloudPlaceholderConversionOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_UpdatePlaceholderAsync_CfSharp_CloudPlaceholderPatch_System_Threading_CancellationToken_">CloudItem.UpdatePlaceholderAsync(CloudPlaceholderPatch, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_RevertToRegularItemAsync_System_Threading_CancellationToken_">CloudItem.RevertToRegularItemAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_Kind">CloudItem.Kind</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_FullPath">CloudItem.FullPath</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_RelativePath">CloudItem.RelativePath</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_Name">CloudItem.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="CfSharp.CloudItem.html#CfSharp_CloudItem_Parent">CloudItem.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_CloudFile_DehydrateAsync_" data-uid="CfSharp.CloudFile.DehydrateAsync*"></a>
+
+  <h3 id="CfSharp_CloudFile_DehydrateAsync_CfSharp_CloudFileRange_CfSharp_CloudDehydrationOptions_System_Threading_CancellationToken_" data-uid="CfSharp.CloudFile.DehydrateAsync(CfSharp.CloudFileRange,CfSharp.CloudDehydrationOptions,System.Threading.CancellationToken)">
+  DehydrateAsync(CloudFileRange, CloudDehydrationOptions?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes locally present content from a file range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask DehydrateAsync(CloudFileRange range, CloudDehydrationOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>range</code> <a class="xref" href="CfSharp.CloudFileRange.html">CloudFileRange</a></dt>
+    <dd><p>Finite range or range extending through end of file.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="CfSharp.CloudDehydrationOptions.html">CloudDehydrationOptions</a></dt>
+    <dd><p>Foreground or background classification, or null for foreground.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before the synchronous native call.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd><p>An operation that completes after Windows dehydrates the requested bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects dehydration, including for pinned, out-of-sync, or always-full files.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFile_GetRangesAsync_" data-uid="CfSharp.CloudFile.GetRangesAsync*"></a>
+
+  <h3 id="CfSharp_CloudFile_GetRangesAsync_CfSharp_CloudPlaceholderRangeKind_CfSharp_CloudFileRange_System_Threading_CancellationToken_" data-uid="CfSharp.CloudFile.GetRangesAsync(CfSharp.CloudPlaceholderRangeKind,CfSharp.CloudFileRange,System.Threading.CancellationToken)">
+  GetRangesAsync(CloudPlaceholderRangeKind, CloudFileRange, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns normalized immutable placeholder ranges in the requested interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;IReadOnlyList&lt;CloudFileRange&gt;&gt; GetRangesAsync(CloudPlaceholderRangeKind kind, CloudFileRange range, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kind</code> <a class="xref" href="CfSharp.CloudPlaceholderRangeKind.html">CloudPlaceholderRangeKind</a></dt>
+    <dd><p>On-disk, provider-validated, or locally modified data.</p>
+</dd>
+    <dt><code>range</code> <a class="xref" href="CfSharp.CloudFileRange.html">CloudFileRange</a></dt>
+    <dd><p>Finite query interval or interval extending through end of file.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before each synchronous query attempt.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="CfSharp.CloudFileRange.html">CloudFileRange</a>&gt;&gt;</dt>
+    <dd><p>Ordered non-overlapping ranges. The returned collection is caller-owned.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the range query.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFile_HydrateAsync_" data-uid="CfSharp.CloudFile.HydrateAsync*"></a>
+
+  <h3 id="CfSharp_CloudFile_HydrateAsync_CfSharp_CloudFileRange_System_Threading_CancellationToken_" data-uid="CfSharp.CloudFile.HydrateAsync(CfSharp.CloudFileRange,System.Threading.CancellationToken)">
+  HydrateAsync(CloudFileRange, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures that a file range is present locally.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask HydrateAsync(CloudFileRange range, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>range</code> <a class="xref" href="CfSharp.CloudFileRange.html">CloudFileRange</a></dt>
+    <dd><p>Finite range or range extending through end of file.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before the synchronous native call.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd><p>An operation that completes after Windows hydrates the requested bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows or the connected provider rejects hydration.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudFile_SetAvailabilityAsync_" data-uid="CfSharp.CloudFile.SetAvailabilityAsync*"></a>
+
+  <h3 id="CfSharp_CloudFile_SetAvailabilityAsync_CfSharp_CloudAvailabilityTarget_System_Threading_CancellationToken_" data-uid="CfSharp.CloudFile.SetAvailabilityAsync(CfSharp.CloudAvailabilityTarget,System.Threading.CancellationToken)">
+  SetAvailabilityAsync(CloudAvailabilityTarget, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Moves this placeholder file to one of three user-facing availability targets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudAvailabilityChangeResult&gt; SetAvailabilityAsync(CloudAvailabilityTarget target, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="CfSharp.CloudAvailabilityTarget.html">CloudAvailabilityTarget</a></dt>
+    <dd><p>Online-only, locally available, or always available.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed between pin and content steps.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudAvailabilityChangeResult.html">CloudAvailabilityChangeResult</a>&gt;</dt>
+    <dd><p>Completed substeps and a fresh final snapshot.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudAvailabilityTransitionException.html">CloudAvailabilityTransitionException</a></dt>
+    <dd><p>A native step failed. The exception retains its <a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a> and a
+snapshot describing any earlier step that completed.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

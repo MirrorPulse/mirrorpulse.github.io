@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ICloudDemandProvider | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ICloudDemandProvider | CfSharp documentation ">
+      
+      <meta name="description" content="Extends file hydration with the demand operations used by the Phase 6 runtime.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.ICloudDemandProvider">
+
+
+
+  <h1 id="CfSharp_ICloudDemandProvider" data-uid="CfSharp.ICloudDemandProvider" class="text-break">
+Interface ICloudDemandProvider  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Extends file hydration with the demand operations used by the Phase 6 runtime.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICloudDemandProvider : ICloudFileContentProvider</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="CfSharp.ICloudFileContentProvider.html#CfSharp_ICloudFileContentProvider_OpenReadAsync_CfSharp_CloudFileFetchRequest_System_Threading_CancellationToken_">ICloudFileContentProvider.OpenReadAsync(CloudFileFetchRequest, CancellationToken)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_ICloudDemandProvider_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>The interface keeps the existing file-stream contract and adds optional default operations.
+A provider may implement only the callback families it supports; unsupported operations are
+rejected by the session with a deterministic Cloud Files failure. All methods may be called
+concurrently and must honor the supplied cancellation token.</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_ICloudDemandProvider_ApproveDehydrateAsync_" data-uid="CfSharp.ICloudDemandProvider.ApproveDehydrateAsync*"></a>
+
+  <h3 id="CfSharp_ICloudDemandProvider_ApproveDehydrateAsync_CfSharp_CloudProviderDehydrateRequest_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudDemandProvider.ApproveDehydrateAsync(CfSharp.CloudProviderDehydrateRequest,System.Threading.CancellationToken)">
+  ApproveDehydrateAsync(CloudProviderDehydrateRequest, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Approves or rejects a dehydration request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;CloudProviderPolicyDecision&gt; ApproveDehydrateAsync(CloudProviderDehydrateRequest request, CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="CfSharp.CloudProviderDehydrateRequest.html">CloudProviderDehydrateRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudProviderPolicyDecision.html">CloudProviderPolicyDecision</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudDemandProvider_ApproveDeleteAsync_" data-uid="CfSharp.ICloudDemandProvider.ApproveDeleteAsync*"></a>
+
+  <h3 id="CfSharp_ICloudDemandProvider_ApproveDeleteAsync_CfSharp_CloudProviderDeleteRequest_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudDemandProvider.ApproveDeleteAsync(CfSharp.CloudProviderDeleteRequest,System.Threading.CancellationToken)">
+  ApproveDeleteAsync(CloudProviderDeleteRequest, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Approves or rejects a delete request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;CloudProviderPolicyDecision&gt; ApproveDeleteAsync(CloudProviderDeleteRequest request, CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="CfSharp.CloudProviderDeleteRequest.html">CloudProviderDeleteRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudProviderPolicyDecision.html">CloudProviderPolicyDecision</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudDemandProvider_ApproveRenameAsync_" data-uid="CfSharp.ICloudDemandProvider.ApproveRenameAsync*"></a>
+
+  <h3 id="CfSharp_ICloudDemandProvider_ApproveRenameAsync_CfSharp_CloudProviderRenameRequest_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudDemandProvider.ApproveRenameAsync(CfSharp.CloudProviderRenameRequest,System.Threading.CancellationToken)">
+  ApproveRenameAsync(CloudProviderRenameRequest, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Approves or rejects a rename or move request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;CloudProviderPolicyDecision&gt; ApproveRenameAsync(CloudProviderRenameRequest request, CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="CfSharp.CloudProviderRenameRequest.html">CloudProviderRenameRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudProviderPolicyDecision.html">CloudProviderPolicyDecision</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudDemandProvider_FetchChildrenAsync_" data-uid="CfSharp.ICloudDemandProvider.FetchChildrenAsync*"></a>
+
+  <h3 id="CfSharp_ICloudDemandProvider_FetchChildrenAsync_CfSharp_CloudProviderFetchPlaceholdersRequest_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudDemandProvider.FetchChildrenAsync(CfSharp.CloudProviderFetchPlaceholdersRequest,System.Threading.CancellationToken)">
+  FetchChildrenAsync(CloudProviderFetchPlaceholdersRequest, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supplies one ordered page of child placeholders for a directory request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;CloudProviderDirectoryPage&gt; FetchChildrenAsync(CloudProviderFetchPlaceholdersRequest request, CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="CfSharp.CloudProviderFetchPlaceholdersRequest.html">CloudProviderFetchPlaceholdersRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudProviderDirectoryPage.html">CloudProviderDirectoryPage</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudDemandProvider_OnCompletionAsync_" data-uid="CfSharp.ICloudDemandProvider.OnCompletionAsync*"></a>
+
+  <h3 id="CfSharp_ICloudDemandProvider_OnCompletionAsync_CfSharp_CloudProviderCompletionNotification_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudDemandProvider.OnCompletionAsync(CfSharp.CloudProviderCompletionNotification,System.Threading.CancellationToken)">
+  OnCompletionAsync(CloudProviderCompletionNotification, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Receives an asynchronous completion notification.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask OnCompletionAsync(CloudProviderCompletionNotification notification, CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>notification</code> <a class="xref" href="CfSharp.CloudProviderCompletionNotification.html">CloudProviderCompletionNotification</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudDemandProvider_ValidateDataAsync_" data-uid="CfSharp.ICloudDemandProvider.ValidateDataAsync*"></a>
+
+  <h3 id="CfSharp_ICloudDemandProvider_ValidateDataAsync_CfSharp_CloudProviderValidateDataRequest_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudDemandProvider.ValidateDataAsync(CfSharp.CloudProviderValidateDataRequest,System.Threading.CancellationToken)">
+  ValidateDataAsync(CloudProviderValidateDataRequest, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates a range of hydrated file data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;CloudProviderValidationResult&gt; ValidateDataAsync(CloudProviderValidateDataRequest request, CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="CfSharp.CloudProviderValidateDataRequest.html">CloudProviderValidateDataRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudProviderValidationResult.html">CloudProviderValidationResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

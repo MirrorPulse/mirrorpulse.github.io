@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ICloudItemStateRepository | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ICloudItemStateRepository | CfSharp documentation ">
+      
+      <meta name="description" content="Reads and writes durable item identity and revision records.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.ICloudItemStateRepository">
+
+
+
+  <h1 id="CfSharp_ICloudItemStateRepository" data-uid="CfSharp.ICloudItemStateRepository" class="text-break">
+Interface ICloudItemStateRepository  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Reads and writes durable item identity and revision records.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICloudItemStateRepository</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_ICloudItemStateRepository_GetByItemIdAsync_" data-uid="CfSharp.ICloudItemStateRepository.GetByItemIdAsync*"></a>
+
+  <h3 id="CfSharp_ICloudItemStateRepository_GetByItemIdAsync_System_Guid_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudItemStateRepository.GetByItemIdAsync(System.Guid,System.Threading.CancellationToken)">
+  GetByItemIdAsync(Guid, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds an item by its stable CfSharp identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;CloudItemState?&gt; GetByItemIdAsync(Guid itemId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>itemId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudItemState.html">CloudItemState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudItemStateRepository_GetByRelativePathAsync_" data-uid="CfSharp.ICloudItemStateRepository.GetByRelativePathAsync*"></a>
+
+  <h3 id="CfSharp_ICloudItemStateRepository_GetByRelativePathAsync_System_String_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudItemStateRepository.GetByRelativePathAsync(System.String,System.Threading.CancellationToken)">
+  GetByRelativePathAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds an item by its normalized path relative to the sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;CloudItemState?&gt; GetByRelativePathAsync(string relativePath, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>relativePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudItemState.html">CloudItemState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudItemStateRepository_GetByRemoteIdAsync_" data-uid="CfSharp.ICloudItemStateRepository.GetByRemoteIdAsync*"></a>
+
+  <h3 id="CfSharp_ICloudItemStateRepository_GetByRemoteIdAsync_System_String_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudItemStateRepository.GetByRemoteIdAsync(System.String,System.Threading.CancellationToken)">
+  GetByRemoteIdAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds an item by its provider-defined stable remote identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;CloudItemState?&gt; GetByRemoteIdAsync(string remoteId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>remoteId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudItemState.html">CloudItemState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudItemStateRepository_ListSubtreeAsync_" data-uid="CfSharp.ICloudItemStateRepository.ListSubtreeAsync*"></a>
+
+  <h3 id="CfSharp_ICloudItemStateRepository_ListSubtreeAsync_System_String_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudItemStateRepository.ListSubtreeAsync(System.String,System.Threading.CancellationToken)">
+  ListSubtreeAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists an item and its separator-delimited descendants in deterministic order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;IReadOnlyList&lt;CloudItemState&gt;&gt; ListSubtreeAsync(string relativePath, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>relativePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Canonical relative subtree path, or an empty string to list the complete sync-root state.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels the transactional read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="CfSharp.CloudItemState.html">CloudItemState</a>&gt;&gt;</dt>
+    <dd><p>A caller-owned snapshot ordered by path depth and then ordinal case-insensitive path.
+Matching is ordinal case-insensitive and observes directory-segment boundaries.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudItemStateRepository_RemoveAsync_" data-uid="CfSharp.ICloudItemStateRepository.RemoveAsync*"></a>
+
+  <h3 id="CfSharp_ICloudItemStateRepository_RemoveAsync_System_Guid_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudItemStateRepository.RemoveAsync(System.Guid,System.Threading.CancellationToken)">
+  RemoveAsync(Guid, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes an item record without modifying the file system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask RemoveAsync(Guid itemId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>itemId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_ICloudItemStateRepository_UpsertAsync_" data-uid="CfSharp.ICloudItemStateRepository.UpsertAsync*"></a>
+
+  <h3 id="CfSharp_ICloudItemStateRepository_UpsertAsync_CfSharp_CloudItemState_System_Threading_CancellationToken_" data-uid="CfSharp.ICloudItemStateRepository.UpsertAsync(CfSharp.CloudItemState,System.Threading.CancellationToken)">
+  UpsertAsync(CloudItemState, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts a new item or replaces the record with the same item identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask UpsertAsync(CloudItemState item, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <a class="xref" href="CfSharp.CloudItemState.html">CloudItemState</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

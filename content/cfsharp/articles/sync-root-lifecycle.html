@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Sync-root lifecycle | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Sync-root lifecycle | CfSharp documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MirrorPulse/CfSharp/blob/main/artifacts/docs/workspace/articles/sync-root-lifecycle.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="sync-root-lifecycle">Sync-root lifecycle</h1>
+
+<p>A Windows sync-root registration is persistent OS state. It is not the same thing as a process
+session and must not be removed merely because a provider process is stopping.</p>
+<h2 id="register-once-for-an-account">Register once for an account</h2>
+<p>Build a validated registration specification and register the local directory explicitly:</p>
+<pre><code class="lang-csharp">SyncRootRegistrationOptions registration =
+    SyncRootRegistrationOptions.CreateBuilder(&quot;Example Cloud&quot;, &quot;1.0.0&quot;)
+        .WithProviderId(providerId)
+        .WithSyncRootIdentity(accountIdentity)
+        .WithRootMarkedInSync()
+        .Build();
+
+CloudSyncRoot root = CloudSyncRoot.Register(localDirectory, registration);
+CloudSyncRootInfo info = root.GetInfo();
+</code></pre>
+<p>Registration requires a valid local directory and provider identity. Windows owns the persistent
+registration after the call succeeds.</p>
+<h2 id="start-a-process-session">Start a process session</h2>
+<p><code>CloudFileSystem.StartAsync</code> opens the configured durable store, verifies or applies the persistent
+registration, and connects the optional content provider. Work admitted after start holds an
+explicit operation lease.</p>
+<p>Disposal rejects new work, waits for admitted operations, stops the provider session, and closes
+durable state. It intentionally leaves the sync-root registration installed.</p>
+<h2 id="unregister-only-for-removal">Unregister only for removal</h2>
+<p>Call <code>CloudSyncRoot.Unregister()</code> only when removing an account or uninstalling the provider. Windows
+may traverse the tree and remove placeholder content that is not locally complete. For routine
+shutdown, dispose the process-scoped <code>CloudFileSystem</code> instead.</p>
+<h2 id="recovery-rule">Recovery rule</h2>
+<p>If a process exits unexpectedly, reopen the same state store and sync root. Do not create a second
+database for the same root or infer completion from an in-memory callback token. Durable checkpoints
+and transaction boundaries are the recovery source of truth.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MirrorPulse/CfSharp/blob/main/artifacts/docs/workspace/articles/sync-root-lifecycle.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

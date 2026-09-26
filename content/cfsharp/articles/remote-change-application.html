@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Remote change application | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Remote change application | CfSharp documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MirrorPulse/CfSharp/blob/main/artifacts/docs/workspace/articles/remote-change-application.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="remote-change-application">Remote change application</h1>
+
+<p>Remote transport, authentication, cursors, content bytes, and business conflict policy belong to
+the host application. CfSharp applies an immutable batch to the local namespace and records durable
+progress around it.</p>
+<h2 id="submit-an-immutable-batch">Submit an immutable batch</h2>
+<pre><code class="lang-csharp">CloudRemoteChangeBatch batch = new(
+    &quot;provider-batch-42&quot;,
+    initialCursor,
+    changes,
+    finalCursor);
+
+CloudRemoteApplyResult result = await fileSystem.ApplyRemoteChangesAsync(
+    batch,
+    new CloudRemoteApplyOptions { ConflictResolver = conflictResolver },
+    cancellationToken);
+</code></pre>
+<p>Each entry has a durable result. The cursor advances only after the corresponding work is committed.
+If a process stops after a partial batch, submitting the same immutable batch resumes at the safe
+checkpoint. A retry is expected behavior, not evidence that the provider should create duplicate
+namespace entries.</p>
+<h2 id="conflicts-and-directories">Conflicts and directories</h2>
+<p>Conflicts are durable records that the application can resolve explicitly. Directory metadata can
+be queried without creating local placeholders; materialized synchronized-directory views are
+separate and side-effect free. Neither view performs hidden remote network access.</p>
+<h2 id="content-bytes">Content bytes</h2>
+<p>Remote file upserts carry metadata and length. A configured content provider hydrates bytes later in
+response to Windows demand. Keep authentication tokens, transport cursors, and remote business
+payloads in application-owned storage rather than the CfSharp state database.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MirrorPulse/CfSharp/blob/main/artifacts/docs/workspace/articles/remote-change-application.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct CfSyncRegistration | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct CfSyncRegistration | CfSharp documentation ">
+      
+      <meta name="description" content="Provides the provider and identity data used to register a sync root.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.Native.CfSyncRegistration">
+
+
+
+  <h1 id="CfSharp_Native_CfSyncRegistration" data-uid="CfSharp.Native.CfSyncRegistration" class="text-break">
+Struct CfSyncRegistration  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a>.<a class="xref" href="CfSharp.Native.html">Native</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.Native.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides the provider and identity data used to register a sync root.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct CfSyncRegistration</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_Native_CfSyncRegistration_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+This is the blittable managed representation of <code>CF_SYNC_REGISTRATION</code>. Before
+registration, <a class="xref" href="CfSharp.Native.CfSyncRegistration.html#CfSharp_Native_CfSyncRegistration_StructSize">StructSize</a> must be set to the native size of this structure.
+</p>
+<p>
+All pointer fields are borrowed. Their targets must remain valid and pinned for the
+complete <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_CfRegisterSyncRoot_System_Char__CfSharp_Native_CfSyncRegistration__CfSharp_Native_CfSyncPolicies__CfSharp_Native_CfRegisterFlags_">CfRegisterSyncRoot(char*, CfSyncRegistration*, CfSyncPolicies*, CfRegisterFlags)</a> call. Windows persistently copies the
+strings and identity blobs before that call returns; callers retain ownership and must
+release or unpin their memory afterward.
+</p>
+<p>
+Instances are not thread-safe while being mutated. Separate initialized values may be
+used concurrently for independent registration calls.
+</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="CfSharp_Native_CfSyncRegistration_FileIdentity" data-uid="CfSharp.Native.CfSyncRegistration.FileIdentity">
+  FileIdentity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pointer to an optional provider-defined file identity for the root placeholder of at
+most <a class="xref" href="CfSharp.Native.CfApi.html#CfSharp_Native_CfApi_MaxFileIdentityLength">MaxFileIdentityLength</a> bytes. Set this to
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when <a class="xref" href="CfSharp.Native.CfSyncRegistration.html#CfSharp_Native_CfSyncRegistration_FileIdentityLength">FileIdentityLength</a> is zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void* FileIdentity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfSyncRegistration_FileIdentityLength" data-uid="CfSharp.Native.CfSyncRegistration.FileIdentityLength">
+  FileIdentityLength
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of <a class="xref" href="CfSharp.Native.CfSyncRegistration.html#CfSharp_Native_CfSyncRegistration_FileIdentity">FileIdentity</a> in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint FileIdentityLength</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfSyncRegistration_ProviderId" data-uid="CfSharp.Native.CfSyncRegistration.ProviderId">
+  ProviderId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stable provider identifier used for telemetry correlation. A zero GUID asks Windows
+to derive an identifier from <a class="xref" href="CfSharp.Native.CfSyncRegistration.html#CfSharp_Native_CfSyncRegistration_ProviderName">ProviderName</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid ProviderId</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfSyncRegistration_ProviderName" data-uid="CfSharp.Native.CfSyncRegistration.ProviderName">
+  ProviderName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pointer to a null-terminated UTF-16 provider display name of at most 255 characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public char* ProviderName</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfSyncRegistration_ProviderVersion" data-uid="CfSharp.Native.CfSyncRegistration.ProviderVersion">
+  ProviderVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pointer to a null-terminated UTF-16 provider version of at most 255 characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public char* ProviderVersion</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfSyncRegistration_StructSize" data-uid="CfSharp.Native.CfSyncRegistration.StructSize">
+  StructSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Size of this structure in bytes. Set this to <code>sizeof(CfSyncRegistration)</code> before use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint StructSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfSyncRegistration_SyncRootIdentity" data-uid="CfSharp.Native.CfSyncRegistration.SyncRootIdentity">
+  SyncRootIdentity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pointer to an optional provider-defined sync-root identity of at most 64 KiB.
+Set this to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when <a class="xref" href="CfSharp.Native.CfSyncRegistration.html#CfSharp_Native_CfSyncRegistration_SyncRootIdentityLength">SyncRootIdentityLength</a> is zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void* SyncRootIdentity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">void</a>*</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="CfSharp_Native_CfSyncRegistration_SyncRootIdentityLength" data-uid="CfSharp.Native.CfSyncRegistration.SyncRootIdentityLength">
+  SyncRootIdentityLength
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of <a class="xref" href="CfSharp.Native.CfSyncRegistration.html#CfSharp_Native_CfSyncRegistration_SyncRootIdentity">SyncRootIdentity</a> in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint SyncRootIdentityLength</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

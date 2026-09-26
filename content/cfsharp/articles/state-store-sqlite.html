@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>SQLite state store | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="SQLite state store | CfSharp documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MirrorPulse/CfSharp/blob/main/artifacts/docs/workspace/articles/state-store-sqlite.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="sqlite-state-store">SQLite state store</h1>
+
+<p><code>CfSharp.Storage.Sqlite</code> is the official durable implementation of the core state contracts. The
+application supplies its absolute path and owns its backup and retention policy.</p>
+<h2 id="choose-a-safe-location">Choose a safe location</h2>
+<p>The database must be outside the managed sync root and must not contain file content, credentials,
+or provider-specific business data. A per-account location under a protected application-data
+directory is a practical default:</p>
+<pre><code class="lang-text">C:\ProgramData\ExampleProvider\Accounts\account-42\cfsharp.db
+</code></pre>
+<p>One database is bound to one sync root and one active CfSharp owner. Do not open the same database
+from two unrelated provider sessions.</p>
+<h2 id="transaction-semantics">Transaction semantics</h2>
+<p>The provider uses transactions, foreign keys, WAL mode, bounded lock waits, and durable checkpoints.
+Dispose an uncommitted transaction to roll back. Windows namespace operations and SQLite transactions
+cannot be one physical transaction; if the namespace succeeds and the store fails, the managed
+exception identifies the coordination boundary so the application can reconcile.</p>
+<h2 id="backup-and-recovery">Backup and recovery</h2>
+<p>Treat the database as coordination state that must be backed up according to the account's policy.
+After a crash, reopen the same path and let durable checkpoints, tombstones, and journal state drive
+replay. Do not repair the file by deleting the WAL or by replacing the database with an empty file.</p>
+<h2 id="custom-stores">Custom stores</h2>
+<p>Applications that need another database can implement <code>ICloudStateStoreFactory</code>,
+<code>ICloudStateStore</code>, and <code>ICloudStateTransaction</code>. Preserve the same commit, rollback, ownership,
+checkpoint, and retry semantics; the high-level API does not require SQLite.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MirrorPulse/CfSharp/blob/main/artifacts/docs/workspace/articles/state-store-sqlite.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

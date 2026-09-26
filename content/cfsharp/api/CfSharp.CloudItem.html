@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CloudItem | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CloudItem | CfSharp documentation ">
+      
+      <meta name="description" content="Represents an immutable, path-bound item within one cloud file system.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="CfSharp.CloudItem">
+
+
+
+  <h1 id="CfSharp_CloudItem" data-uid="CfSharp.CloudItem" class="text-break">
+Class CloudItem  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="CfSharp.html">CfSharp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>CfSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an immutable, path-bound item within one cloud file system.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class CloudItem</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CloudItem</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="CfSharp.CloudDirectory.html">CloudDirectory</a></div>
+      <div><a class="xref" href="CfSharp.CloudFile.html">CloudFile</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="CfSharp_CloudItem_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This object contains only its owning facade, canonical paths, and expected item kind. It owns
+no native handle and caches no mutable file-system or durable state. Property reads are safe
+from concurrent threads. Operations require the owning <a class="xref" href="CfSharp.CloudFileSystem.html">CloudFileSystem</a> to remain
+started.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="CfSharp_CloudItem_FullPath_" data-uid="CfSharp.CloudItem.FullPath*"></a>
+
+  <h3 id="CfSharp_CloudItem_FullPath" data-uid="CfSharp.CloudItem.FullPath">
+  FullPath
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the canonical absolute local path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FullPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItem_Kind_" data-uid="CfSharp.CloudItem.Kind*"></a>
+
+  <h3 id="CfSharp_CloudItem_Kind" data-uid="CfSharp.CloudItem.Kind">
+  Kind
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether this reference expects a file or directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudItemKind Kind { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudItemKind.html">CloudItemKind</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItem_Name_" data-uid="CfSharp.CloudItem.Name*"></a>
+
+  <h3 id="CfSharp_CloudItem_Name" data-uid="CfSharp.CloudItem.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the final path component, or the root directory name for the root item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItem_Parent_" data-uid="CfSharp.CloudItem.Parent*"></a>
+
+  <h3 id="CfSharp_CloudItem_Parent" data-uid="CfSharp.CloudItem.Parent">
+  Parent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the immutable parent-directory reference, or null for the sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloudDirectory? Parent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudDirectory.html">CloudDirectory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItem_RelativePath_" data-uid="CfSharp.CloudItem.RelativePath*"></a>
+
+  <h3 id="CfSharp_CloudItem_RelativePath" data-uid="CfSharp.CloudItem.RelativePath">
+  RelativePath
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the canonical path relative to the owning sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RelativePath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="CfSharp_CloudItem_AcquireLeaseAsync_" data-uid="CfSharp.CloudItem.AcquireLeaseAsync*"></a>
+
+  <h3 id="CfSharp_CloudItem_AcquireLeaseAsync_CfSharp_CloudItemLeaseOptions_System_Threading_CancellationToken_" data-uid="CfSharp.CloudItem.AcquireLeaseAsync(CfSharp.CloudItemLeaseOptions,System.Threading.CancellationToken)">
+  AcquireLeaseAsync(CloudItemLeaseOptions?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens a safe lifetime lease over this item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudItemLease&gt; AcquireLeaseAsync(CloudItemLeaseOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="CfSharp.CloudItemLeaseOptions.html">CloudItemLeaseOptions</a></dt>
+    <dd><p>Access and oplock options, or read-only defaults.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token checked before admitting the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudItemLease.html">CloudItemLease</a>&gt;</dt>
+    <dd><p>A lease that exposes no raw handle and owns the open lifetime.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The option combination is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>No connected provider can own a transfer lease.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The owning file system is stopping or disposed.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the protected open.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudItem_ConvertToPlaceholderAsync_" data-uid="CfSharp.CloudItem.ConvertToPlaceholderAsync*"></a>
+
+  <h3 id="CfSharp_CloudItem_ConvertToPlaceholderAsync_CfSharp_CloudPlaceholderIdentity_CfSharp_CloudPlaceholderConversionOptions_System_Threading_CancellationToken_" data-uid="CfSharp.CloudItem.ConvertToPlaceholderAsync(CfSharp.CloudPlaceholderIdentity,CfSharp.CloudPlaceholderConversionOptions,System.Threading.CancellationToken)">
+  ConvertToPlaceholderAsync(CloudPlaceholderIdentity, CloudPlaceholderConversionOptions?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts this existing ordinary item into a Cloud Files placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudPlaceholderMutationResult&gt; ConvertToPlaceholderAsync(CloudPlaceholderIdentity identity, CloudPlaceholderConversionOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>identity</code> <a class="xref" href="CfSharp.CloudPlaceholderIdentity.html">CloudPlaceholderIdentity</a></dt>
+    <dd><p>Stable CfSharp and provider identity stored with the item.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="CfSharp.CloudPlaceholderConversionOptions.html">CloudPlaceholderConversionOptions</a></dt>
+    <dd><p>Conversion behavior, or null for content-preserving defaults.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before the synchronous native call and during durable-state access.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudPlaceholderMutationResult.html">CloudPlaceholderMutationResult</a>&gt;</dt>
+    <dd><p>A final USN, fresh snapshot, and durable-state outcome.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">identity</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>An option does not apply to this item kind.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects conversion.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudItemCoordinationException.html">CloudItemCoordinationException</a></dt>
+    <dd><p>Windows converted the item but durable identity state could not be committed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudItem_DeleteAsync_" data-uid="CfSharp.CloudItem.DeleteAsync*"></a>
+
+  <h3 id="CfSharp_CloudItem_DeleteAsync_System_Threading_CancellationToken_" data-uid="CfSharp.CloudItem.DeleteAsync(System.Threading.CancellationToken)">
+  DeleteAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes this file or empty directory without following a file-system link.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudItemDeleteResult&gt; DeleteAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before the synchronous deletion and during durable-state work.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudItemDeleteResult.html">CloudItemDeleteResult</a>&gt;</dt>
+    <dd><p>A missing-item snapshot and whether durable identity became a tombstone. When deleting an
+empty directory, all durable descendants are tombstoned as one transaction so orphaned
+placeholder state cannot survive an earlier external child deletion.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The sync root was selected.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
+    <dd><p>The item no longer exists.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the deletion.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudItemCoordinationException.html">CloudItemCoordinationException</a></dt>
+    <dd><p>Windows deleted the item but its tombstone could not be committed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Cancellation was observed before the synchronous deletion.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudItem_InspectAsync_" data-uid="CfSharp.CloudItem.InspectAsync*"></a>
+
+  <h3 id="CfSharp_CloudItem_InspectAsync_System_Threading_CancellationToken_" data-uid="CfSharp.CloudItem.InspectAsync(System.Threading.CancellationToken)">
+  InspectAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads fresh local and durable state without retaining a native handle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudItemSnapshot&gt; InspectAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token that cancels state-store access.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudItemSnapshot.html">CloudItemSnapshot</a>&gt;</dt>
+    <dd><p>A new immutable snapshot. Missing items are represented explicitly.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The owning file system has not started, or the existing item has another kind.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The owning file system is stopping or disposed.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows cannot inspect Cloud Files metadata.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudItem_MoveToAsync_" data-uid="CfSharp.CloudItem.MoveToAsync*"></a>
+
+  <h3 id="CfSharp_CloudItem_MoveToAsync_CfSharp_CloudDirectory_System_String_CfSharp_CloudMoveOptions_System_Threading_CancellationToken_" data-uid="CfSharp.CloudItem.MoveToAsync(CfSharp.CloudDirectory,System.String,CfSharp.CloudMoveOptions,System.Threading.CancellationToken)">
+  MoveToAsync(CloudDirectory, string, CloudMoveOptions?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Moves or renames this item within the owning sync root.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudItemMoveResult&gt; MoveToAsync(CloudDirectory destination, string name, CloudMoveOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="CfSharp.CloudDirectory.html">CloudDirectory</a></dt>
+    <dd><p>Existing destination directory owned by the same file system.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>One valid destination child name.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="CfSharp.CloudMoveOptions.html">CloudMoveOptions</a></dt>
+    <dd><p>Collision behavior, or null for no replacement.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before the synchronous file-system move and during durable-state work.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudItemMoveResult.html">CloudItemMoveResult</a>&gt;</dt>
+    <dd><p>A new immutable reference and snapshot at the destination. This reference remains bound to
+the old path and is not mutated.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>The destination belongs to another file system, the name is invalid, or replacement was
+requested for a directory.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>The sync root was selected, the destination lies below the source directory, or durable
+state already identifies an unrelated destination item.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the namespace move.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudItemCoordinationException.html">CloudItemCoordinationException</a></dt>
+    <dd><p>Windows moved the item but durable subtree paths could not be committed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Cancellation was observed before the synchronous move or during pre-move state access.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudItem_RevertToRegularItemAsync_" data-uid="CfSharp.CloudItem.RevertToRegularItemAsync*"></a>
+
+  <h3 id="CfSharp_CloudItem_RevertToRegularItemAsync_System_Threading_CancellationToken_" data-uid="CfSharp.CloudItem.RevertToRegularItemAsync(System.Threading.CancellationToken)">
+  RevertToRegularItemAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reverts this placeholder to an ordinary file or directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudPlaceholderMutationResult&gt; RevertToRegularItemAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before the synchronous native call and during durable-state access. Reverting
+an incomplete file may synchronously request content from the connected provider.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudPlaceholderMutationResult.html">CloudPlaceholderMutationResult</a>&gt;</dt>
+    <dd><p>A fresh ordinary-item snapshot and durable-state removal outcome.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects reversion or required file hydration fails.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudItemCoordinationException.html">CloudItemCoordinationException</a></dt>
+    <dd><p>Windows reverted the item but durable identity state could not be removed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudItem_SetInSyncAsync_" data-uid="CfSharp.CloudItem.SetInSyncAsync*"></a>
+
+  <h3 id="CfSharp_CloudItem_SetInSyncAsync_System_Boolean_CfSharp_CloudInSyncChangeOptions_System_Threading_CancellationToken_" data-uid="CfSharp.CloudItem.SetInSyncAsync(System.Boolean,CfSharp.CloudInSyncChangeOptions,System.Threading.CancellationToken)">
+  SetInSyncAsync(bool, CloudInSyncChangeOptions?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets synchronization state, optionally conditioned on the current USN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudStateChangeResult&gt; SetInSyncAsync(bool inSync, CloudInSyncChangeOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inSync</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether local state agrees with provider state.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="CfSharp.CloudInSyncChangeOptions.html">CloudInSyncChangeOptions</a></dt>
+    <dd><p>Optional positive expected USN, or null for no condition.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before the synchronous native call.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudStateChangeResult.html">CloudStateChangeResult</a>&gt;</dt>
+    <dd><p>The Windows-returned USN and a fresh snapshot.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the state or USN condition.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudItem_SetPinStateAsync_" data-uid="CfSharp.CloudItem.SetPinStateAsync*"></a>
+
+  <h3 id="CfSharp_CloudItem_SetPinStateAsync_CfSharp_CloudPinTarget_System_Threading_CancellationToken_" data-uid="CfSharp.CloudItem.SetPinStateAsync(CfSharp.CloudPinTarget,System.Threading.CancellationToken)">
+  SetPinStateAsync(CloudPinTarget, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets this placeholder's explicit pin intent without changing synchronization state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudStateChangeResult&gt; SetPinStateAsync(CloudPinTarget target, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="CfSharp.CloudPinTarget.html">CloudPinTarget</a></dt>
+    <dd><p>Pin, unpin, exclude, clear, or inherit intent.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before the synchronous native call.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudStateChangeResult.html">CloudStateChangeResult</a>&gt;</dt>
+    <dd><p>A fresh snapshot after the state change.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the requested pin state.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="CfSharp_CloudItem_ToString_" data-uid="CfSharp.CloudItem.ToString*"></a>
+
+  <h3 id="CfSharp_CloudItem_ToString" data-uid="CfSharp.CloudItem.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="CfSharp_CloudItem_UpdatePlaceholderAsync_" data-uid="CfSharp.CloudItem.UpdatePlaceholderAsync*"></a>
+
+  <h3 id="CfSharp_CloudItem_UpdatePlaceholderAsync_CfSharp_CloudPlaceholderPatch_System_Threading_CancellationToken_" data-uid="CfSharp.CloudItem.UpdatePlaceholderAsync(CfSharp.CloudPlaceholderPatch,System.Threading.CancellationToken)">
+  UpdatePlaceholderAsync(CloudPlaceholderPatch, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies one explicit atomic patch to this existing placeholder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;CloudPlaceholderMutationResult&gt; UpdatePlaceholderAsync(CloudPlaceholderPatch patch, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>patch</code> <a class="xref" href="CfSharp.CloudPlaceholderPatch.html">CloudPlaceholderPatch</a></dt>
+    <dd><p>Validated explicit metadata, identity, state, and range changes.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token observed before the synchronous native call and during durable-state access.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="CfSharp.CloudPlaceholderMutationResult.html">CloudPlaceholderMutationResult</a>&gt;</dt>
+    <dd><p>A final USN, fresh snapshot, and durable-state outcome.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">patch</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>A patch field does not apply to this item kind.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudFilesException.html">CloudFilesException</a></dt>
+    <dd><p>Windows rejects the update or its USN condition.</p>
+</dd>
+    <dt><a class="xref" href="CfSharp.CloudItemCoordinationException.html">CloudItemCoordinationException</a></dt>
+    <dd><p>Windows updated identity but durable state could not be committed.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
