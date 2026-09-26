@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "project": "CfSharp",
-  "sourceCommit": "870a8069cbf710c7dacce153c0faab0fc530dfee",
-  "generatedAtUtc": "2026-09-26T15:34:20.3426808Z",
+  "sourceCommit": "7642301e32983fae198ba1138b1edef11347f6a3",
+  "generatedAtUtc": "2026-09-26T16:26:18.5747307Z",
   "generator": {
     "name": "DocFX",
     "version": "2.81.0"
@@ -33,13 +33,13 @@
     },
     {
       "path": "toc.html",
-      "bytes": 68199,
-      "sha256": "5F5195840DDFDA9BEEEFB3C8585245F7BC59BAD3B503C082A293AD3200636D40"
+      "bytes": 68326,
+      "sha256": "23AC823515F1C6D6012B321202DD08C0F56D171C4F33B9F15D7A106DC98FC9B0"
     },
     {
       "path": "toc.json",
-      "bytes": 56652,
-      "sha256": "FBADF55A69C2556E3496267A81E0958F917D94F246B6EC86B36A99D92DF8502B"
+      "bytes": 56663,
+      "sha256": "E647B891CDB1CA8B57AA71C641F7AB72549F4DC50CE6785C851ED686C393CF9F"
     },
     {
       "path": "xrefmap.yml",
@@ -2548,13 +2548,13 @@
     },
     {
       "path": "public/main.css",
-      "bytes": 0,
-      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      "bytes": 7058,
+      "sha256": "EBAB90409D6881FA89A77939F0DF29D83A034EC2381E8235DE0C2F694CED47A7"
     },
     {
       "path": "public/main.js",
-      "bytes": 20568,
-      "sha256": "766F774A98F771F3FF68A409FD7A45F1CB014D5974CC1F9AEF42E64B8783009D"
+      "bytes": 43,
+      "sha256": "8CC67A164D8A35CC8C9F0B806C367A5A1038A6C5904ECA930298CEA2CD7320F7"
     },
     {
       "path": "public/mermaid.core-6N53LQ3H.min.js",
