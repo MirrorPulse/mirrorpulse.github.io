@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "project": "CfSharp",
-  "sourceCommit": "ce5e545850984f404f889c2c7d1cf29ade8a4125",
-  "generatedAtUtc": "2026-09-27T02:48:06.6569532Z",
+  "sourceCommit": "f640b353eb2f18f0abba80c53feef123d1d80e49",
+  "generatedAtUtc": "2026-09-27T02:57:32.0400964Z",
   "generator": {
     "name": "DocFX",
     "version": "2.81.0"
@@ -2553,13 +2553,13 @@
     },
     {
       "path": "public/main.css",
-      "bytes": 9500,
-      "sha256": "490A989A14F08AC97F6E514241D9A7C506337E2A63881426C54A1C834F29D1B1"
+      "bytes": 10355,
+      "sha256": "08366FD1ED37B3E47C5704372B5880E8DEE47682CC246972DAA1D55E879ECE71"
     },
     {
       "path": "public/main.js",
-      "bytes": 1968,
-      "sha256": "8B1176F61E3FC4B36A33D70B86032EFFC3A42845F2B42938A0651E33328EC35F"
+      "bytes": 4439,
+      "sha256": "DEAF8881A838B86C9A3BDD93AA1F21A4A78E43B4A0F5361345AEE61781F897CA"
     },
     {
       "path": "public/mermaid.core-6N53LQ3H.min.js",
