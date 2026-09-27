@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Release and branch model | CfSharp documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Release and branch model | CfSharp documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MirrorPulse/CfSharp/blob/main/docs/releasing.md#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+        <script type="module" src="../public/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="CfSharp">
+            CfSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="release-and-branch-model">Release and branch model</h1>
+
+<p>CfSharp keeps only two long-lived branches:</p>
+<ul>
+<li><code>main</code> is the stable line. It accepts pull requests from <code>develop</code> only, requires the
+repository CI and branch-policy checks, and does not accept direct pushes.</li>
+<li><code>develop</code> is the integration line. It may receive direct development pushes and pull requests.
+The preview workflow is started manually from this branch.</li>
+</ul>
+<p>Short-lived feature or fix branches are created from <code>develop</code> and are removed after their pull
+request is merged. A pull request targeting <code>main</code> must come from the repository's <code>develop</code> branch
+and carry exactly one release label:</p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Version change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>breaking</code></td>
+<td>increment major, reset minor and patch</td>
+</tr>
+<tr>
+<td><code>feature</code></td>
+<td>increment minor, reset patch</td>
+</tr>
+<tr>
+<td><code>fix</code></td>
+<td>increment patch</td>
+</tr>
+</tbody>
+</table>
+<p>The release workflows query the public NuGet flat-container index for all three CfSharp packages
+before calculating a version. Package projects keep <code>VersionPrefix</code> at <code>0.0.0</code>; every <code>dotnet pack</code>
+invocation supplies an explicit version. This prevents a stale project-file version from becoming a
+published package version.</p>
+<h2 id="preview-releases">Preview releases</h2>
+<p>Run <strong>Preview release</strong> manually with <code>develop</code> selected and type <code>PUBLISH</code> in the confirmation
+field. The workflow increments the current NuGet preview counter, runs the Release/API/trim/AOT and
+test gates, prepares the three packages and symbols, publishes them through NuGet trusted publishing,
+and creates a prerelease tag and GitHub release. The first run starts at <code>0.1.0-preview.1</code> when no
+CfSharp package exists on NuGet.org.</p>
+<p>Before the first run, configure the NuGet trusted-publishing policy with:</p>
+<ul>
+<li>Repository owner: <code>MirrorPulse</code>;</li>
+<li>Repository: <code>CfSharp</code>;</li>
+<li>Workflow file: <code>preview.yml</code>;</li>
+<li>Environment: <code>preview</code>;</li>
+<li>GitHub Actions secret <code>NUGET_USER</code>: the NuGet profile name, not an email address.</li>
+</ul>
+<p>The workflow requests a short-lived OIDC credential; no long-lived NuGet API key is stored in the
+repository.</p>
+<h2 id="stable-releases">Stable releases</h2>
+<p>When a <code>develop</code> pull request is merged into <code>main</code>, the stable workflow starts automatically. The
+<code>stable</code> environment remains the approval gate for the stable publication policy. After approval, it
+calculates the next stable version from NuGet, runs the full release gates, publishes all three
+packages, creates the matching <code>v&lt;version&gt;</code> tag, and creates the GitHub release.</p>
+<p>Configure a second NuGet trusted-publishing policy with workflow file <code>release.yml</code> and environment
+<code>stable</code>, using the same <code>NUGET_USER</code> secret. The first <code>breaking</code> release from an empty NuGet
+namespace calculates <code>1.0.0</code>.</p>
+<h2 id="version-and-artifact-rules">Version and artifact rules</h2>
+<ul>
+<li><code>CfSharp.Native</code>, <code>CfSharp</code>, and <code>CfSharp.Storage.Sqlite</code> always share one calculated version.</li>
+<li>Preview and stable workflows retain package, symbol, manifest, support-matrix, SBOM, test, and
+clean-consumer evidence as GitHub artifacts.</li>
+<li>The sample MSIX is a sample host rather than a distributable product; formal MSIX release signing
+is not a CfSharp publication gate.</li>
+<li>A separate release-candidate channel and post-release observation program are intentionally not
+part of the current release model.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MirrorPulse/CfSharp/blob/main/docs/releasing.md#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright © MirrorPulse Team. Licensed under Apache-2.0.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

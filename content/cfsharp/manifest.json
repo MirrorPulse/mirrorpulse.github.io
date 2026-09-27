@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "project": "CfSharp",
-  "sourceCommit": "21b67353af7b75eb9a236b1c0754b2da5412d598",
-  "generatedAtUtc": "2026-09-26T17:20:43.1945925Z",
+  "sourceCommit": "ce5e545850984f404f889c2c7d1cf29ade8a4125",
+  "generatedAtUtc": "2026-09-27T02:48:06.6569532Z",
   "generator": {
     "name": "DocFX",
     "version": "2.81.0"
@@ -18,13 +18,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 10428,
-      "sha256": "461AFF7E3774F4741E915D4D58FC02936F7733D7E8A9B96B447FE1D1504AEF5E"
+      "bytes": 10599,
+      "sha256": "C5C58D9ADC3AD3AB475E1A628AA8AA38864C4550459B89EC06A7B24797F5A9F9"
     },
     {
       "path": "index.json",
-      "bytes": 486457,
-      "sha256": "C15472D528A78E48B506BF9E09808BD170AA5BB387F79757579CEB4DDDF52B35"
+      "bytes": 489800,
+      "sha256": "30BCFA5281646399AFCC55AF1B5C704C81B68C51B58CC1C499ECC3DABBE93D01"
     },
     {
       "path": "logo.svg",
@@ -1373,13 +1373,13 @@
     },
     {
       "path": "articles/index.html",
-      "bytes": 6134,
-      "sha256": "C138B9025A29578C1830154432DCC4DEDD2A2C61C56774B8A7EE786031398C99"
+      "bytes": 6250,
+      "sha256": "7F812F62AC3C2DE647FE821981F8122CB501E1D92B6CD665ABE5FCB0D22EDFD1"
     },
     {
       "path": "articles/installation.html",
-      "bytes": 6030,
-      "sha256": "AED5FC8F0E4CD8FCFDFB5578E91678C4A99BC301289CC352D62B4AD8D34AE648"
+      "bytes": 6116,
+      "sha256": "4D9CE7DB9AE8789E0DD886D54CCEFDD1214BF162AFA559C21E43B1068E66DE5A"
     },
     {
       "path": "articles/local-change-feed.html",
@@ -1395,6 +1395,11 @@
       "path": "articles/platform-support.html",
       "bytes": 6043,
       "sha256": "AF9EEC2BD8CAB51B801ADE7878561FF865B5A94AF88B0363AF37E9D615AC514B"
+    },
+    {
+      "path": "articles/releasing.html",
+      "bytes": 7793,
+      "sha256": "44EB8D5E2EA79471FFF1161A5813B757BB65D299F3B3E452C2336F615B296E00"
     },
     {
       "path": "articles/remote-change-application.html",

@@ -82,8 +82,9 @@ idiomatic C# API. It keeps the complete Windows Cloud Files surface reachable wh
 of native structure layout, callback lifetime, cancellation, durable coordination, and failure
 translation.</p>
 <blockquote>
-<p><strong>Development preview:</strong> CfSharp is under active development. Packages have not been released
-to NuGet yet. Build from source while the first preview is being prepared.</p>
+<p><strong>Preview channel:</strong> CfSharp preview packages are published from <code>develop</code> by the manually
+triggered Preview release workflow. Stable <code>1.0.0</code> is reserved for the protected <code>main</code> release
+path.</p>
 </blockquote>
 <h2 id="what-is-included">What is included</h2>
 <table>
@@ -176,8 +177,10 @@ does not unregister the persistent Windows sync-root registration. Call
 <li><a href="articles/platform-support.html">Platform support</a></li>
 <li><a href="articles/troubleshooting.html">Troubleshooting</a></li>
 </ul>
-<p>The generated API reference will be published with the documentation site at
-<code>https://mirrorpulse.github.io/cfsharp/</code> when the first preview documentation pipeline is enabled.</p>
+<p>The generated API reference is published with the documentation site at
+<code>https://mirrorpulse.github.io/cfsharp/</code>.</p>
+<p>Release automation, NuGet trusted publishing, version calculation, and branch rules are described in
+the <a href="articles/releasing.html">release and branch model</a>.</p>
 <h2 id="development-notes">Development notes</h2>
 <p>The repository is Windows-first and keeps unsafe interop isolated in <code>CfSharp.Native</code>. Public APIs
 document ownership, lifetime, thread-safety, platform requirements, failure modes, and relevant
